@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--  fontawesome -->
+
+    <script src="https://kit.fontawesome.com/b73881b7c2.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <div class="container pt-5">
+
+
+        <!-- <div class="w-80 mx-auto">
+            <div class="search-filter d-none d-md-flex ">
+                <div class="form-floating  flex-2 destinations-formfloat">
+                    <input type="text" class="destination form-control" placeholder="Search destinations">
+                    <label for="checkout">Where</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class=" form-control" name="daterange" value="01/01/2018 - 01/15/2018" />
+                    <label for="checkin" class="bg-transparent"><img src="images/calendar.png" alt="">Check in<img
+                            src="images/calendar.png" alt="" style="    margin-left: 60px;">Check Out</label>
+                </div>
+                <div class="form-floating ml-70 ">
+                    <input type="number" class=" form-control" placeholder="Search destinations">
+                    <label for="checkout"><img src="images/user.png" alt="">Who</label>
+                </div>
+
+                <button class="search-button"> <i class="fa fa-search" aria-hidden="true"></i> search</button>
+
+            </div>
+        </div> -->
+
+        <div class="topper-column">
+            <div class=" ">
+                <h2 class="fs-32 my-sm-13">
+                    <b>Ultra Luxury Palm Tower with St Regis The Palm Fac</b>
+                </h2>
+
+                <div class="d-flex justify-content-between align-items-start locationandothers">
+                    <ul class="d-flex flex-wrap">
+                        <li class=" d-flex align-items-center"><i class="fa  fa-heart" aria-hidden="true"></i>
+                            <span>89%</span>
+                        </li>
+                        <li class=" d-flex align-items-center"><i class="fa  fa-circle" aria-hidden="true"></i>
+
+                            <span><a href="">83 reviews</a></span>
+                        </li>
+                        <li class=" d-flex align-items-center sm-mt-12"><i class="fa d-none d-md-inline-block fa-circle"
+                                aria-hidden="true"></i>
+                            <a href="" class="no-wrap">Dubai, United Arab Emirates</a>
+                        </li>
+                    </ul>
+
+                    <ul class="d-flex savashare">
+                        <li class="save d-flex align-items-center"><img src="images/save.svg" alt="" class="mr-4 ">
+                            <span class=""><a href="" class="text-decoration-none">Save</a></span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="images/sahre.svg" alt="" class="mr-4">
+                            <span class=""><a href="">Share</a></span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- hotel-gallery -->
+
+
+            <div class="hotel-gallery">
+                <div class="row overflow-borderradius position-relative">
+                    <div class="col-lg-6 ">
+                        <img src="images/hotel/image-1.png" class="h-100 p1" alt="">
+                    </div>
+
+                    <div class="col-lg-6 d-none d-md-inline-block">
+                        <div class="row">
+                            <div class="col-md-6 p1">
+                                <img src="images/hotel/image-2.png" alt="">
+                            </div>
+
+                            <div class="col-md-6 p1">
+                                <img src="images/hotel/image-3.png" alt="">
+                            </div>
+
+                            <div class="col-md-6 p1">
+                                <img src="images/hotel/image-4.png" alt="">
+                            </div>
+
+                            <div class="col-md-6 p1">
+                                <img src="images/hotel/image-5.png" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-dark d-flex view-more-photos"><img src="images/grid.png" alt=""
+                            class="">View all photos</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Below gallery -->
+
+        <div class="row ">
+            <div class="col-md-8">
+                <div class="dropdown-custom d-md-none">
+                    <div class="d-flex dropdown-custom-toggle mb-8">
+                        <div class="form-field">
+                            <span class="roomcount"></span>
+                            <span class="rooms">Rooms</span>
+                        </div>,
+                        <div id="totalguests" class="totalguests inputfield"></div>
+                        <span>Guest</span>
+                        <img src="images/checron-bol-ddown.svg" class="ms-12" alt="">
+                    </div>
+                    <ul class="dropdown-menu p-0 border-0">
+                        <div class="rooms-num room-info b-20 border bg-white">
+                            <div class="p-24">
+                                <div class="rooms counter mb-20 d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 me-5"><b>Rooms</b></p>
+                                    <div class="d-flex">
+                                        <span role="button" class="decrement incdec">-</span>
+                                        <input type="number"
+                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                            id="inputRooms" placeholder="0" readonly>
+                                        <span role="button" class="roomincrement incdec">+</span>
+                                    </div>
+                                </div>
+                                <div class="adults counter mb-20 d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 me-5"><b>Adults</b></p>
+                                    <div class="d-flex">
+                                        <span role="button" class="decrement incdec">-</span>
+                                        <input type="number"
+                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                            id="input" placeholder="0" readonly>
+                                        <span role="button" class="adultincrement incdec">+</span>
+                                    </div>
+                                </div>
+                                <div class="childrens counter d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 me-5"><b>Childrens</b></p>
+                                    <div class="d-flex">
+                                        <span role="button" class="decrement incdec m1">-</span>
+                                        <input type="number"
+                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                            id="input" placeholder="0" readonly>
+                                        <span role="button" class="childreincrement incdec">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-0">
+                            <div class="p-24">
+                                <div class="children-ages">
+                                    <div
+                                        class="childrens mb-20 counter d-flex justify-content-between align-items-center">
+                                        <p class="mb-0 me-5"><b>AGE</b></p>
+                                    </div>
+                                    <div class="childrens counter d-flex justify-content-between align-items-center">
+                                        <p class="mb-0 me-5"><b>CHILD 1</b></p>
+                                        <select class="form-select border-dark">
+                                            <option selected="">12</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <!-- <div class="border-top mt-1 d-flex justify-content-around">
+                                    <button class="Reset">Reset</button>
+                                    <button class="apply">Apply</button>
+                                </div> -->
+                            </div>
+
+                        </div>
+                    </ul>
+                </div>
+
+
+                <div class="check-in-checkout d-md-none">
+                    <form action="">
+                        <div class="d-flex ellipseflex mb-33">
+                            <div class="d-flex mr-10 ">
+                                <img src="images/Ellipse 1857.svg" alt="">
+                                <img src="images/Ellipse 1858.svg" alt="">
+                                <img src="images/Ellipse 1859.svg" alt="">
+                            </div>
+                            <div>
+                                <b class="fs18">
+                                    Compare Prices from 70+ <br> Partners
+                                </b>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="d-flex whole-checkinout datepickercont justify-content-center position-relative">
+                            <div class="checkin">
+                                <div class="position-relative d-flex">
+                                    <img src="images/calendar.png" class="calendar" alt="">
+                                    <div class="w-100">
+                                        <label for="datefilter">check in</label>
+                                        <input type="text" name="datefilter" id="checkin" placeholder="date">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkout pointer-events-none disabled">
+                                <div class="position-relative d-flex ">
+                                    <img src="images/calendar.png" class="calendar" alt="">
+                                    <div class="w-100">
+                                        <label for="datefilter">check in</label>
+                                        <input type="text" name="datefilter" id="checkout" placeholder="date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button>Get price</button>
+                    </form>
+                </div>
+
+
+                <section class="overview">
+                    <h5 class="mb-8 fs24"><b>Overview</b></h5>
+
+                    <p class="mx-690px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book.<b class="d-md-none"><i class="fs12">Read
+                                More</i></b> </p>
+
+                    <a href="" class="view-more text-decoration-none fs18 d-none d-md-inline-block"><b
+                            class="d-flex align-items-center"><span class="mr-8">View More</span>
+                            <img src="images/arrow-down.svg" class="" alt=""> </b></a>
+                </section>
+                <hr class="d-block">
+
+                <div class="row align-items-start">
+
+                    <div class="col-10 col-md-11">
+                        <div class="d-flex ">
+                            <h6 class="fs22 mb-17"><b>Highly Rated</b></h6>
+                        </div>
+                        <div class="d-flex flex-wrap ">
+                            <div class="key-facts    bg-light ">friendly staff</div>
+                            <div class="key-facts    bg-light ">great location</div>
+                            <div class="key-facts    bg-light ">amazing hotel</div>
+                            <div class="key-facts    bg-light ">easy access</div>
+                            <div class="key-facts    bg-light ">first class</div>
+                            <div class="key-facts    bg-light ">bed was so comfortable</div>
+                            <div class="key-facts    bg-light ">amazing hotel</div>
+                            <div class="key-facts    bg-light ">easy access</div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="d-block">
+
+                <section>
+                    <div class="row align-items-start">
+
+                        <div class="col-12 col-md-11">
+                            <div class="d-flex ">
+                                <h6 class="fs22 mb-17"><b>Great Location</b></h6>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mb-4 mb-md-0 col-md-3">
+                                    <b class="d-block fs14 mb-8">Shopping Mall</b>
+                                    <b>100m</b>
+                                </div>
+
+                                <div class="col-6 mb-4 mb-md-0 col-md-3">
+                                    <b class="d-block fs14 mb-8">Distance to city centre</b>
+                                    <b>11.3 Km</b>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <b class="d-block fs14 mb-8">Distance to city centre</b>
+                                    <b>11.3 Km</b>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <b class="d-block fs14 mb-8">Distance to city centre</b>
+                                    <b>11.3 Km</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <div class="row align-items-start">
+
+                        <div class="col-10 col-md-11">
+                            <div class="d-flex ">
+                                <h6 class="fs22 mb-17"><b>Popular amenities</b></h6>
+                            </div>
+                            <div class="row popular-ammenities">
+                                <div class="col-6 d-flex ammenity "> <img src="images/shopping.svg" alt="">friendly
+                                    staff</div>
+                                <div class="col-6 d-flex ammenity "> <img src="images/bridge.svg" alt="">great
+                                    location
+                                </div>
+                                <div class="col-6 d-flex ammenity "> <img src="images/wifi.svg" alt="">amazing
+                                    hotel
+                                </div>
+
+                                <div class="col-6 d-flex ammenity "> <img src="images/shopping.svg" alt="">Free
+                                    Wifi
+                                </div>
+
+                            </div>
+                            <button type="button" class="btn btn-outline-secondary btn-dark-outline ">Show all
+                                Amenities</button>
+                        </div>
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <h5 class="mb-17 fs24"><b>You may also like</b></h5>
+                    <div class="row bloglistingcarousel">
+                        <!-- Hotel item -->
+                        <div class="col-md-6 ">
+                            <!-- Card START -->
+                            <div class="card card-img-scale border-0 overflow-hidden bg-transparent">
+                                <!-- Image and overlay -->
+                                <div class="card-img-scale-wrapper rounded-3">
+                                    <!-- Image -->
+                                    <img src="images/hotel/hotel.png" class="card-img br-10 mb-12" alt="hotel image">
+
+                                </div>
+
+                                <!-- Card body -->
+                                <div class="">
+                                    <!-- Title -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="hotel-detail.html"
+                                            class="stretched-link text-decoration-none fs18 "><b>Ultra Luxury Palm
+                                                Tower
+                                                with S...</b></a>
+                                        <li class="d-flex align-items-center"><i class="fa  fa-heart"
+                                                aria-hidden="true"></i>
+                                            <span>89%</span>
+                                        </li>
+                                    </div>
+
+                                    <a href="" class="mb-12 d-block text-decoration-none">Dubai, United Arab
+                                        Emirates</a>
+
+
+                                    <div class="mt-12">
+                                        <b> ₹ 24,999</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card END -->
+                        </div>
+                        <div class="col-md-6 ">
+                            <!-- Card START -->
+                            <div class="card card-img-scale border-0 overflow-hidden bg-transparent">
+                                <!-- Image and overlay -->
+                                <div class="card-img-scale-wrapper rounded-3">
+                                    <!-- Image -->
+                                    <img src="images/hotel/hotel.png" class="card-img br-10 mb-12" alt="hotel image">
+
+                                </div>
+
+                                <!-- Card body -->
+                                <div class="">
+                                    <!-- Title -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="hotel-detail.html"
+                                            class="stretched-link text-decoration-none fs18 "><b>Ultra Luxury Palm
+                                                Tower
+                                                with S...</b></a>
+                                        <li class="d-flex align-items-center"><i class="fa  fa-heart"
+                                                aria-hidden="true"></i>
+                                            <span>89%</span>
+                                        </li>
+                                    </div>
+
+                                    <a href="" class="mb-12 d-block text-decoration-none">Dubai, United Arab
+                                        Emirates</a>
+
+
+                                    <div class="mt-12">
+                                        <b> ₹ 24,999</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card END -->
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-outline-secondary btn-dark-outline mt-44">Show More
+                        Properties</button>
+
+
+                </section>
+                <hr class="d-block">
+
+                <section class="mb-32">
+                    <h5 class="mb-17 fs24"><b>Location & Map</b></h5>
+                    <div class="map border border-1 mb-32">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d492479.18763210607!2d74.0066944!3d15.349728450000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e3!4m0!4m0!5e0!3m2!1sen!2sin!4v1689575217475!5m2!1sen!2sin"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <h6 class="mb-10 fs18"><b>Ultra Luxury Palm Tower with St Regis The Palm Fac</b></h6>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard</p>
+                </section>
+
+
+                <section>
+                    <h5 class="mb-16 fs22"><b>How to Get there</b></h5>
+                    <div class="row mx-auto d-flex">
+                        <div class="col-6 col-md-3">
+                            <div class="how-to-get-there">
+                                <img src="images/plane.svg" alt="">
+                                <div>
+                                    <p>Flight</p>
+                                    <b>2 hr 45 min</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="how-to-get-there">
+                                <img src="images/2train.svg" alt="">
+                                <div>
+                                    <p>Train</p>
+                                    <b>2 hr 45 min</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="how-to-get-there mt-4 mt-md-0">
+                                <img src="images/bus.svg" alt="">
+                                <div>
+                                    <p>Bus</p>
+                                    <b>2 hr 45 min</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </section>
+                <hr class="d-block">
+                <section>
+                    <h5 class="fs24"><b>Near “Hotel Name”</b></h5>
+                    <p class="mb-32">within 0.5 km</p>
+                    <div class="row justify-content-between">
+                        <div class="col-md-5">
+                            <div class="d-flex hotel-name align-items-center">
+                                <img src="images/image 19.png" alt="" class="hotelimage">
+                                <div class="text-center">
+                                    <div class="fs14"><img src="images/walk-directions 2.svg" class="walkingman"
+                                            alt="">Walking Distance</div>
+                                    <div><img src="images/dotted.png" class="dotted" alt=""></div>
+                                    <div>Shopping mall</div>
+                                </div>
+                                <div class="">
+                                    0.3km
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="d-flex hotel-name align-items-center">
+                                <img src="images/image 19.png" alt="" class="hotelimage">
+                                <div class="text-center">
+                                    <div class="fs14"><img src="images/walk-directions 2.svg" class="walkingman"
+                                            alt="">Walking Distance</div>
+                                    <div><img src="images/dotted.png" class="dotted" alt=""></div>
+                                    <div>Shopping mall</div>
+                                </div>
+                                <div class="">
+                                    0.3km
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary btn-dark-outline mt-44">Show More</button>
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <h5 class="fs24"><b>Nearby Restaurants</b></h5>
+                    <p class="mb-32">within 0.5 km</p>
+                    <div class="row">
+                        <div class="col-md-6 nearby-restaurant">
+                            <div class="d-flex align-items-center mb-8"><img src="images/walk-directions 2.svg"
+                                    style="margin-right: 5px;" alt="">0.3km</div>
+                            <div class="row align-items-center">
+                                <div class="col-4"><img src="images/unsplash_QGPmWrclELg.png" alt=""
+                                        class="restaurant-img w-100"></div>
+                                <div class="col-8">
+
+                                    <li class=" d-flex align-items-center fs12"><i class="fa fa-heart"
+                                            aria-hidden="true" style="margin-right: 6px;"></i>
+                                        <span>89%</span>
+                                    </li>
+                                    <div class="mb-4px"><b> La Dame de Pic London</b></div>
+                                    <div class="text-neutral-2 mb-4px">Knightsbridge</div>
+                                    <div class="text-neutral-2">£100 for One</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary btn-dark-outline mt-44">Show More
+                        Restaurants</button>
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <h5 class="fs24"><b>Nearby Convenience</b></h5>
+                    <p class="mb-32">within 0.5 km</p>
+                    <div class="row">
+                        <div class="row justify-content-between">
+                            <div class="col-md-5">
+                                <div class="d-flex hotel-name align-items-center">
+                                    <img src="images/Group 1171275350.svg" alt="" class="hotelimage me-0"
+                                        style="width: 44px;">
+                                    <div class="text-center mx-30">
+                                        <div class="fs14"><img src="images/walk-directions 2.svg" class="walkingman"
+                                                alt="">Walking Distance</div>
+                                        <div><img src="images/dotted.png" class="dotted me-0" alt=""></div>
+                                        <div>Shopping mall</div>
+                                    </div>
+                                    <div class="">
+                                        0.3km
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex hotel-name align-items-center">
+                                    <img src="images/Group 1171275350.svg" alt="" class="hotelimage me-0"
+                                        style="width: 44px;">
+                                    <div class="text-center mx-30">
+                                        <div class="fs14"><img src="images/walk-directions 2.svg" class="walkingman"
+                                                alt="">Walking Distance</div>
+                                        <div><img src="images/dotted.png" class="dotted me-0" alt=""></div>
+                                        <div>Shopping mall</div>
+                                    </div>
+                                    <div class="">
+                                        0.3km
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary btn-dark-outline mt-44">Show More
+                        Restaurants</button>
+
+
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <h5 class="mb-42 fs24"><b>Property details</b></h5>
+                    <p class="mb-32 fs18"><b>Room Types</b></p>
+                    <div class="row">
+                        <div class="col-md-6 room-type">
+                            <div class="row">
+                                <div class="col-6">
+                                    <img src="images/Rectangle 1500.png" class="h-100 br-10 w-100 object-fit-cover"
+                                        alt="">
+                                </div>
+                                <div class="col-6">
+                                    <h6 class=" fs18"><b>Classic Double Room</b></h6>
+                                    <div class="d-flex mb-10">
+                                        <img src="images/wifi.svg" class="me-2" width="25px" alt="">
+                                        <div class="fs14">Free Wifi</div>
+                                    </div>
+                                    <div class="d-flex mb-10">
+                                        <img src="images/wifi.svg" class="me-2" width="25px" alt="">
+                                        <div class="fs14">Bar/lounge</div>
+                                    </div>
+                                    <div class="d-flex mb-10">
+                                        <img src="images/wifi.svg" class="me-2" width="25px" alt="">
+                                        <div class="fs14">Swimming</div>
+                                        Pool
+                                    </div>
+                                    <div class="d-flex mb-10">
+                                        <img src="images/wifi.svg" class="me-2" width="25px" alt="">
+                                        <div class="fs14">Coffee Shop</div>
+                                    </div>
+                                    <div class="d-flex ">
+                                        <a href="" class="text-decoration-none fs14">More Details <i
+                                                class="fa fa-chevron-right " aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <h5 class="fs24 mb-42"><b>Property Amenities</b></h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class=" row">
+                                <div class="col-2">
+                                    <img src="images/wifi.svg" class="property-amenity property-amenity-image" alt="">
+                                </div>
+                                <div class="col-10">
+                                    <h6 class=" fs18"><b>Internet</b></h6>
+                                    <ul class="list-styled pl-20 text-neutral-2 line-height-32 mb-35 ">
+                                        <li class="">Available in all rooms: Free WiFi</li>
+                                        <li>Available in some public areas: Free WiFi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=" row">
+                                <div class="col-2">
+                                    <img src="images/wifi.svg" class="property-amenity property-amenity-image" alt="">
+                                </div>
+                                <div class="col-10">
+                                    <h6 class=" fs18"><b>Internet</b></h6>
+                                    <ul class="list-styled pl-20 text-neutral-2 line-height-32 mb-35 ">
+                                        <li class="">Available in all rooms: Free WiFi</li>
+                                        <li>Available in some public areas: Free WiFi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class=" row">
+                                <div class="col-2">
+                                    <img src="images/wifi.svg" class="property-amenity property-amenity-image" alt="">
+                                </div>
+                                <div class="col-10">
+                                    <h6 class=" fs18"><b>Internet</b></h6>
+                                    <ul class="list-styled pl-20 text-neutral-2 line-height-32 mb-0 ">
+                                        <li class="">Available in all rooms: Free WiFi</li>
+                                        <li>Available in some public areas: Free WiFi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <h5 class="fs24 mb-42"><b>Room Amenities</b></h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class=" row">
+                                <div class="col-2">
+                                    <img src="images/wifi.svg" class="property-amenity property-amenity-image" alt="">
+                                </div>
+                                <div class="col-10">
+                                    <h6 class=" fs18"><b>Comfort and Bedding:</b></h6>
+                                    <ul class="list-styled pl-20 text-neutral-2 line-height-32 mb-35 ">
+                                        <li class="">Comfortable beds with high-quality mattresses and pillows</li>
+                                        <li class="">Fresh linens, including sheets, pillowcases, and duvet covers
+                                        </li>
+                                        <li class="">Extra blankets and pillows</li>
+                                        <li class="">Bedside tables with lamps or reading lights</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=" row">
+                                <div class="col-2">
+                                    <img src="images/wifi.svg" class="property-amenity property-amenity-image" alt="">
+                                </div>
+                                <div class="col-10">
+                                    <h6 class=" fs18"><b>Comfort and Bedding:</b></h6>
+                                    <ul class="list-styled pl-20 text-neutral-2 line-height-32 mb-35 ">
+                                        <li class="">Comfortable beds with high-quality mattresses and pillows</li>
+                                        <li class="">Fresh linens, including sheets, pillowcases, and duvet covers
+                                        </li>
+                                        <li class="">Extra blankets and pillows</li>
+                                        <li class="">Bedside tables with lamps or reading lights</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class=" row">
+                                <div class="col-2">
+                                    <img src="images/wifi.svg" class="property-amenity property-amenity-image" alt="">
+                                </div>
+                                <div class="col-10">
+                                    <h6 class=" fs18"><b>Comfort and Bedding:</b></h6>
+                                    <ul class="list-styled pl-20 text-neutral-2 line-height-32 mb-0 ">
+                                        <li class="">Comfortable beds with high-quality mattresses and pillows</li>
+                                        <li class="">Fresh linens, including sheets, pillowcases, and duvet covers
+                                        </li>
+                                        <li class="">Extra blankets and pillows</li>
+                                        <li class="">Bedside tables with lamps or reading lights</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <h5 class="fs24 mb-42"><b>More About Hotel</b></h5>
+                    <div class="row">
+                        <div class="col-md-6 line-height-26 mb-30">
+                            <h5 class="mb-16 fs18"><b>Good To Know</b></h5>
+                            <div class="d-flex text-neutral-2">
+                                <span class="">Hotel Class</span> -
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                                <i class="fa fa-star " aria-hidden="true"></i>
+                            </div>
+
+                            <div class="text-neutral-2">Languages Spoken - English, Russian, Dutch, Hindi</div>
+                        </div>
+                        <div class="col-md-6 line-height-26 mb-30">
+                            <h5 class="mb-16 fs18"><b>Location</b></h5>
+                            <div class="d-flex text-neutral-2">
+                                <span>Dubai, United Arab Emirates</span>
+                            </div>
+
+                            <div class="text-neutral-2">Languages Spoken - English, Russian, Dutch, Hindi</div>
+                        </div>
+                        <div class="col-md-6 line-height-26  ">
+                            <h5 class="mb-16 fs18"><b>Price Range</b></h5>
+                            <div class="d-flex text-neutral-2">
+                                <span>₹24,039 - ₹33,933
+                                </span>
+                            </div>
+
+                            <div class="text-neutral-2"> (Based on average rates for a Standard Room)</div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <div class="row align-items-start">
+                        <div class="col-6 col-md-6">
+                            <h5 class="fs24 mb-16"><b>Questions & Answers</b></h5>
+                            <p class="text-neutral-2 mb-16">
+                                Browse questions from guests for anything extra you want to know about the property.
+                            </p>
+
+                            <p class="text-success fs14 mb-0">The property usually replies within a few days</p>
+                        </div>
+                        <div class="col-6 col-md-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-outline-dark ">Ask a question</button>
+
+                        </div>
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <div class="d-flex align-items-start qandans mb-42">
+                        <img src="images/image 22.png" width="51px" class="" alt="">
+                        <div>
+                            <h5 class=" fs18"><b>User Name </b></h5>
+                            <div class="fs14 mb-16">
+                                asked a question on 4 July
+                            </div>
+                            <div>
+                                <div class="text-neutral-2"> <b>Does anyone know if half board in Atlantis allows you to
+                                        dine in
+                                        the royal?</b></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start  qandans mb-42">
+                        <img src="images/image 23.png" width="51px" class="" alt="">
+                        <div>
+                            <div class="text-neutral-2">
+                                Answer From Hotel
+                            </div>
+                            <div class="fs14 mb-10">Yesterday</div>
+                            <div class="text-neutral-2">Browse questions from guests for anything extra you want to know
+                                about the property.</div>
+
+
+                        </div>
+                    </div>
+
+
+                </section>
+                <button type="button" class="btn btn-outline-secondary btn-outline-dark  ">Show More
+                    Questions</button>
+                <hr class="d-block">
+
+                <section>
+                    <div class="row align-items-start mb-74">
+                        <div class="col-md-6">
+                            <h5 class="fs24 mb-42"><b>Reviews (83)</b></h5>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-start  justify-content-center justify-content-md-end">
+
+                            <div class="dropdown mb-42 d-md-none mr-15">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sort By
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn btn-outline-secondary">Write a Review</button>
+                        </div>
+                    </div>
+                    <p class=""><b>Select topics to read reviews:</b></p>
+                    <div class="d-flex flex-wrap mb-65">
+                        <div class="key-facts    bg-light ">friendly staff</div>
+                        <div class="key-facts    bg-light ">great location</div>
+                        <div class="key-facts    bg-light ">amazing hotel</div>
+                        <div class="key-facts    bg-light ">easy access</div>
+                        <div class="key-facts    bg-light ">first class</div>
+                        <div class="key-facts    bg-light ">bed was so comfortable</div>
+                        <div class="key-facts    bg-light ">amazing hotel</div>
+                        <div class="key-facts    bg-light ">easy access</div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="d-flex justify-content-end ">
+                        <div class="dropdown mb-42 d-none d-md-inline-block">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Sort By
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-start">
+                        <div class="col-6 col-md-1">
+                            <img src="images/image 22.png" class="w-51px " alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <h5 class=" fs18"><b>User Name </b></h5>
+                            <div class="fs14">
+                                asked a question on 4 July
+                            </div>
+                        </div>
+                        <div class="col-md-8 d-flex align-items-start">
+
+                            <div>
+                                <div class=" fs18 mb-10">
+                                    <b>Great place to go with family or friends</b>
+                                </div>
+                                <p>location and service are very good.the dtifference between the rooms is high so i
+                                    would
+                                    reommend to check your room via pictures before you arive. George and driver micha
+                                    were
+                                    really nice and helpfull. the beds are not the best and the carpet on the room floor
+                                    needs to be changed. The building itself is very old and has a nice flair.
+                                    <b><i class="fs12">Read More</i></b>
+                                </p>
+
+
+                            </div>
+                            <img src="images/dots.svg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <div class="pagination text-center d-flex justify-content-center align-items-center">
+                    <span class="me-4">1/10</span>
+                    <div class="d-flex ">
+                        <a href=""><img src="images/chevron_back.svg" alt="" class=""></a>
+                        <span class="mx-2 current-page"><a href="">1</a></span>
+                        <span class="mx-2"><a href="">2</a></span>
+                        <span class="mx-2"><a href="">3</a></span>
+                        <span class="mx-2">...</span>
+                        <a href=""> <img src="images/chevron_forward.svg" alt="" class=""></a>
+
+                    </div>
+                </div>
+                <hr class="d-block">
+
+
+                <section>
+                    <h5 class="fs24 mb-42"><b>Property Policies</b></h5>
+                    <div class="row mb-30">
+                        <div class="col-md-6">
+                            <b class="fs18  d-block mb-8">Check In</b>
+                            <div class="text-neutral-2 fw-500 line-height-32">
+                                <div>Check-in from 2 PM - anytime</div>
+                                <div> Minimum check-in age - 18</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <b class="fs18  d-block mb-8">Check Out</b>
+                            <div class="text-neutral-2 fw-500 line-height-32">
+                                Check-out before noon
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <b class="fs18  d-block mb-8"> Requirements</b>
+
+                            <div class="text-neutral-2 fw-500 line-height-32">
+                                Guests are required to show a photo ID and credit card at check-in. You need to let the
+                                property
+                                know what time you'll be arriving in advance.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <b class="fs18  d-block mb-8">Cancellation/ Prepayments</b>
+                            <div class="text-neutral-2 fw-500 line-height-32">
+                                Cancellation and prepayment policies vary according to apartment type. Please enter the
+                                dates of
+                                your stay and check what conditions apply to your preferred room.
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <h5 class="fs24 mb-42"><b>Children & Beds</b></h5>
+                    <div class="row mb-30">
+                        <div class="col-md-6">
+                            <b class="fs18 mb-12 d-block">Child Policies</b>
+
+                            <div class="text-neutral-2 fw-500 line-height-32">
+                                Children of all ages are welcome. Children 18 and above are considered adults at this
+                                property. To see correct prices and occupancy info, add the number and ages of children
+                                in your group to your search.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <div>
+                                <b class="fs18 mb-30 d-block">Crib & Extra bed Policies</b>
+                                <div class="cribandbed fw-500 border-1 border br-10 ">
+                                    <div class="ms-12">Adult (18+ years)</div>
+                                    <hr class="my-16">
+                                    <div class="pe-5 ms-12 d-flex justify-content-between"> <span> Extra bed upon
+                                            request</span> <span style="color: #306FBC;">Free</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+
+                    <h5 class=" fs24 mb-10"><b>No Age Restrictions</b></h5>
+                    <div class="text-neutral-2 fw-500 fs18">
+                        There's no age requirement for check-in
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+                    <h5 class="fs24 mb-42"><b>Card Accepted at this Property Are</b></h5>
+                    <img src="images/Group 1171275509.png" alt="" class="img-fluid mb-42">
+                    <div class="text-neutral-2 fw-500">
+                        NY-LON Corporate Apartments accepts these cards and reserves the right to temporarily hold an
+                        amount prior to arrival.
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+
+
+                    <h5 class="fs24 mb-10 "><b>Smoking</b></h5>
+                    <div class="text-neutral-2 fw-500">
+                        Smoking is not allowed
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+
+                    <h5 class="fs24 mb-10 "><b>Quiet Hours</b></h5>
+                    <div class="text-neutral-2 fw-500">
+
+                        Guests need be quiet between 10:00 PM and 7:00 AM.
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+
+                    <h5 class="fs24 mb-10"><b>Pets</b></h5>
+                    <div class="text-neutral-2 fw-500">
+
+                        Pets are not allowed.
+                    </div>
+                </section>
+                <hr class="d-block">
+
+                <section>
+
+                    <h5 class="fs24 mb-10"><b>The Fine Print</b></h5>
+                    <div class="text-neutral-2 line-height-32">
+                        <div class="mb-32 fw-500">
+                            <b> We're excited to welcome you to our hotel and want to ensure you have a pleasant and
+                                informed stay. Please take a moment to review the following important details in our
+                                fine print:</b>
+                        </div>
+
+                        1. Check-in and Check-out:
+                        <ul class="list-styled ps-5">
+                            <li> Standard check-in time is at 3:00 PM, and check-out time is at 11:00 AM.</li>
+                            <li> Early check-in and late check-out options are subject to availability and may incur
+                                additional
+                                fees.</li>
+                            <li> If you anticipate arriving late or departing early, kindly let us know in advance.
+                            </li>
+                        </ul>
+
+                        2. Reservation Policies:
+                        <ul class="list-styled ps-5">
+                            <li> To secure your reservation, we require a valid credit card and may authorize the card
+                                for
+                                the
+                                first night's rate.</li>
+                            <li> Cancellation policies vary based on the room type and rate selected. Please refer to
+                                your
+                                confirmation email for detailed information.</li>
+                        </ul>
+
+
+
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="col-md-4 d-none d-md-block">
+                <div class="dropdown-custom">
+                   
+                    <div class="d-flex dropdown-custom-toggle mb-8">
+                        <div class="form-field">
+                            <span class="roomcount"></span>
+                            <span class="rooms">Rooms</span>
+                        </div>,
+                        <div id="totalguests" class="totalguests inputfield"></div>
+                        <span>Guest</span>
+                        <img src="images/checron-bol-ddown.svg" class="ms-12" alt="">
+                    </div>
+                    <ul class="dropdown-menu p-0 border-0">
+                        <div class="rooms-num room-info b-20 border bg-white">
+                            <div class="p-24">
+                                <div class="rooms counter mb-20 d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 me-5"><b>Rooms</b></p>
+                                    <div class="d-flex">
+                                        <span role="button" class="decrement incdec">-</span>
+                                        <input type="number"
+                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                            id="inputRooms" placeholder="0" readonly>
+                                        <span role="button" class="roomincrement incdec">+</span>
+                                    </div>
+                                </div>
+                                <div class="adults counter mb-20 d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 me-5"><b>Adults</b></p>
+                                    <div class="d-flex">
+                                        <span role="button" class="decrement incdec">-</span>
+                                        <input type="number"
+                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                            id="input" placeholder="0" readonly>
+                                        <span role="button" class="adultincrement incdec">+</span>
+                                    </div>
+                                </div>
+                                <div class="childrens counter d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 me-5"><b>Childrens</b></p>
+                                    <div class="d-flex">
+                                        <span role="button" class="decrement incdec m1">-</span>
+                                        <input type="number"
+                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                            id="input" placeholder="0" readonly>
+                                        <span role="button" class="childreincrement incdec">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-0">
+                            <div class="p-24">
+                                <div class="children-ages">
+                                    <div
+                                        class="childrens mb-20 counter d-flex justify-content-between align-items-center">
+                                        <p class="mb-0 me-5"><b>AGE</b></p>
+                                    </div>
+                                    <div class="childrens counter d-flex justify-content-between align-items-center">
+                                        <p class="mb-0 me-5"><b>CHILD 1</b></p>
+                                        <select class="form-select border-dark">
+                                            <option selected="">12</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <!-- <div class="border-top mt-1 d-flex justify-content-around">
+                                    <button class="Reset">Reset</button>
+                                    <button class="apply">Apply</button>
+                                </div> -->
+                            </div>
+
+                        </div>
+                    </ul>
+                </div>
+
+
+                <div class="check-in-checkout ">
+                    <form action="">
+                        <div class="d-flex ellipseflex mb-33">
+                            <div class="d-flex mr-10 ">
+                                <img src="images/Ellipse 1857.svg" alt="">
+                                <img src="images/Ellipse 1858.svg" alt="">
+                                <img src="images/Ellipse 1859.svg" alt="">
+                            </div>
+                            <div>
+                                <b class="fs18">
+                                    Compare Prices from 70+ <br> Partners
+                                </b>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="d-flex whole-checkinout datepickercont justify-content-center position-relative">
+                            <div class="checkin">
+                                <div class="position-relative d-flex">
+                                    <img src="images/calendar.png" class="calendar" alt="">
+                                    <div class="w-100">
+                                        <label for="datefilter">check in</label>
+                                        <input type="text" name="datefilter" id="checkin" placeholder="date">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkout pointer-events-none disabled">
+                                <div class="position-relative d-flex ">
+                                    <img src="images/calendar.png" class="calendar" alt="">
+                                    <div class="w-100">
+                                        <label for="datefilter">check in</label>
+                                        <input type="text" name="datefilter" id="checkout" placeholder="date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button>Get price</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+
+    <script src="index.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('input').val('')
+        });
+
+        $('.bloglistingcarousel').each(function () {
+            var slider = $(this);
+            slider.slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                mobileFirst: true,
+                arrows: false,
+                responsive: [{
+                    breakpoint: 480,
+                    settings: "unslick"
+                }]
+            });
+
+        });
+
+        $(function () {
+            $('input[name="datefilter"]').daterangepicker({
+                autoUpdateInput: false,
+                "opens": "center",
+                "autoApply": true,
+                locale: {
+                    cancelLabel: 'Clear'
+                }
+            });
+
+            $('.checkin input').on('apply.daterangepicker', function (ev, picker) {
+                $(this).val(picker.startDate.format('MM/DD/YYYY'));
+                $('#checkout').val(picker.endDate.format('MM/DD/YYYY'));
+                $('.checkout').removeClass('active-border');
+                $('.checkin').removeClass('active-border');
+
+            });
+
+            $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+                $(this).val('');
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>

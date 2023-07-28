@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--  fontawesome -->
+
+    <script src="https://kit.fontawesome.com/b73881b7c2.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.min.css">
+
+
+    <link
+        href="assets/Check-In-Out-Date-Range-Picker/Check-In-Out-Date-Range-Picker/public/theme/css/t-datepicker.min.css"
+        rel="stylesheet" type="text/css">
+    <link href="assets/Check-In-Out-Date-Range-Picker/Check-In-Out-Date-Range-Picker/public/theme/css/themes/t-datepicker-bluegrey.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic" /> -->
+</head>
+
+<body>
+    <div class="t-datepicker">
+        <div class="t-check-in"></div>
+        <div class="t-check-out"></div>
+    </div>
+    <nav class="navbar navbar-expand-sm align-items-start container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse " id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> <img src="images/Frame 61.svg" alt="" class="mb-58"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+
+        <div id="autocomplete-search-box"></div>
+
+        <div class="d-flex flex-column-reverse flex-md-column">
+            <div class="banner-container">
+                <img src="/images/homepagebanner.png" class="img-fluid d-block w-100" alt="">
+                <div class="banner-text">
+                    Discover New Destinations
+                </div>
+            </div>
+            <div class="body typeahed mx-auto" align="center">
+                <div class="d-flex justify-content-center mb-20">
+                    <span class="tab-switch active">
+                        Explore
+                    </span>
+                </div>
+                <div class="autoComplete_wrapper">
+                    <img src="images/search.svg" class="search-icon" alt="">
+                    <input id="autoComplete" type="text" tabindex="1">
+                </div>
+                <div class="selection"></div>
+            </div>
+        </div>
+        <div class="partner-with-us">
+            <h6>Partners with</h6>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-4 col-md-2 parnetlogo"><img src="/images/bookin-sites/image 202.svg" alt=""></div>
+                <div class="col-4 col-md-2 parnetlogo"><img src="/images/bookin-sites/image 203.svg" alt=""></div>
+                <div class="col-4 col-md-2 parnetlogo"><img src="/images/bookin-sites/image 206.svg" alt=""></div>
+                <div class="col-4 col-md-2 parnetlogo"><img src="/images/bookin-sites/image 207.svg" alt=""></div>
+                <div class="col-4 col-md-2 parnetlogo"><img src="/images/bookin-sites/image 208.svg" alt=""></div>
+                <div class="col-4 col-md-2 parnetlogo"><img src="/images/bookin-sites/image 209.svg" alt=""></div>
+            </div>
+        </div>
+        <section class="popular-cities">
+            <h5>Top 8 Popular Cities</h5>
+            <p>See what’s popular with other travellers</p>
+            <div class="grid-wrapper bloglistingcarousel">
+                <div class="image-wrap">
+                    <div class="text-block">
+                        Morocco
+                    </div>
+                    <img src="/images/popular-cities/Rectangle 23.png" alt="" />
+                </div>
+                <div class="image-wrap">
+                    <div class="text-block">
+                        Morocco
+                    </div>
+                    <img src="/images/popular-cities/Rectangle 26.png" alt="" />
+                </div>
+
+                <div class="image-wrap">
+                    <div class="text-block">
+                        Morocco
+                    </div>
+                    <img src="/images/popular-cities/Rectangle 31.png" alt="" />
+                </div>
+                <div class="image-wrap">
+                    <div class="text-block">
+                        Morocco
+                    </div>
+                    <img src="/images/popular-cities/Rectangle 30.png" alt="">
+                </div>
+                <div class="image-wrap">
+                    <div class="text-block">
+                        Morocco
+                    </div>
+                    <img src="/images/popular-cities/Rectangle 26.png" alt="" />
+                </div>
+                <div class="image-wrap mt-top">
+                    <div class="text-block">
+                        Morocco
+                    </div>
+                    <img src="/images/popular-cities/Rectangle 23.png" alt="" />
+                </div>
+                <div class="image-wrap">
+                    <div class="text-block">
+                        Morocco
+                    </div>
+                    <img src="/images/popular-cities/Rectangle 30.png" alt="">
+                </div>
+
+                <div class="image-wrap mt-top">
+                    <div class="text-block">
+                        Morocco
+                    </div>
+                    <img src="/images/popular-cities/Rectangle 31.png" alt="" />
+                </div>
+
+
+            </div>
+        </section>
+        <section class="popular-cities">
+            <h5>Top 8 Popular Cities</h5>
+            <p>See what’s popular with other travellers</p>
+
+
+            <div class="row">
+                <div class="col-md-4 text-center">
+
+                    <img src="images/Frame 61.svg" alt="" class="mb-20 d-flex justify-content-center mx-auto">
+                    <b class="fs18 mb-8 d-block">Search for the best hotel deals</b>
+                    <p class="color707070"> Compare deals from 3M+ hotels and accommodations in one place</p>
+
+                </div>
+                <div class="col-md-4 text-center">
+
+                    <img src="images/Frame 61.svg" alt="" class="mb-20 d-flex justify-content-center mx-auto">
+                    <b class="fs18 mb-8 d-block">Stays for every need </b>
+                    <p class="color707070"> Compare deals from 3M+ hotels and accommodations in one place</p>
+                </div>
+                <div class="col-md-4 text-center">
+
+                    <img src="images/Frame 61.svg" alt="" class="mb-20 d-flex justify-content-center mx-auto">
+                    <b class="fs18 mb-8 d-block">Search for the best hotel deals</b>
+                    <p class="color707070"> Compare deals from 3M+ hotels and accommodations in one place</p>
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+    <script
+        src="assets/Check-In-Out-Date-Range-Picker/Check-In-Out-Date-Range-Picker/public/theme/js/t-datepicker.min.js"></script>
+
+    <script src="index.js"></script>
+    <script src="autocomplete.js"></script>
+
+
+    <script>
+        $(function () {
+
+            $('.t-datepicker').tDatePicker({
+
+                // auto close after selection
+                autoClose: true,
+
+                // animation speed in milliseconds
+                durationArrowTop: 200,
+
+                // the number of calendars
+                numCalendar: 2,
+
+                // localization
+                titleCheckIn: 'Check In',
+                titleCheckOut: 'Check Out',
+                titleToday: 'Today',
+                titleDateRange: 'night',
+                titleDateRanges: 'nights',
+                titleDays: [''],
+                titleMonths: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Septemper', 'October', 'November', "December"],
+
+                // the max length of the title
+                titleMonthsLimitShow: 3,
+
+                // replace moth names
+                replaceTitleMonths: null,
+
+                // e.g. 'dd-mm-yy'
+                showDateTheme: null,
+
+                // icon options
+                iconArrowTop: true,
+                iconDate: '&#x279C;',
+                arrowPrev: '&#x276E;',
+                arrowNext: '&#x276F;',
+                // https://fontawesome.com/v4.7.0/icons/
+                // iconDate: '<i class="li-calendar-empty"></i><i class="li-arrow-right"></i>',
+                // arrowPrev: '<i class="fa fa-chevron-left"></i>',
+                // arrowNext: '<i class="fa fa-chevron-right"></i>',
+
+                // shows today title
+                toDayShowTitle: true,
+
+                // showss dange range title
+                dateRangesShowTitle: true,
+
+                // highlights today
+                toDayHighlighted: false,
+
+                // highlights next day
+                nextDayHighlighted: false,
+
+                // an array of days
+                daysOfWeekHighlighted: [0, 6],
+
+                // custom date format
+                formatDate: 'yyyy-mm-dd',
+
+                // dateCheckIn: '25/06/2018',  // DD/MM/YY
+                // dateCheckOut: '26/06/2018', // DD/MM/YY
+                dateCheckIn: null,
+                dateCheckOut: null,
+                startDate: null,
+                endDate: null,
+
+                // limits the number of months
+                limitPrevMonth: 0,
+                limitNextMonth: 11,
+
+                // limits the number of days
+                limitDateRanges: 31,
+
+                // true -> full days || false - 1 day
+                showFullDateRanges: false,
+
+                // DATA HOLIDAYS
+                // Data holidays
+                fnDataEvent: null
+
+            });
+
+        });
+    </script>
+
+
+    <!-- <script>
+        const { autocomplete } = window["@algolia/autocomplete-js"];
+        const recentSearchesPlugin  = window[ '@algolia/autocomplete-plugin-recent-searches'];
+
+        const autocomplete_id = "#autocomplete-search-box";
+   
+        function CreateAutoComplete(appid, search_api_key, index_name) {
+            console.log("CreateAutoComplete Called");
+            autocomplete({
+                container: autocomplete_id,
+                placeholder: "Type T to get completions",
+                plugins: [recentSearchesPlugin],
+                openOnFocus: true,
+                onSubmit(c) {
+                    console.log("submit", c);
+                },
+                getSources() {
+                    return [
+                        {
+                            sourceId: "links",
+                            getItems({ query }) {
+                                const items = [
+                                    { label: "Twitter", url: "https://twitter.com" },
+                                    { label: "GitHub", url: "https://github.com" }
+                                ];
+
+                                return items.filter(({ label }) =>
+                                    label.toLowerCase().includes(query.toLowerCase())
+                                );
+                            },
+                            getItemUrl({ item }) {
+                                console.log("GetItemURL", item);
+                                console.log("returning", item.url);
+                                return item.url;
+                            },
+                            templates: {
+                                item({ item }) {
+                                    return item.label;
+                                }
+                            }
+                        }
+                    ];
+                }
+            });
+        }
+
+        var delayInMilliseconds = 4000;
+        console.log("Will load Auto Complet in", delayInMilliseconds, "ms");
+        setTimeout(function () {
+            CreateAutoComplete();
+        }, delayInMilliseconds);
+
+    </script> -->
+</body>
+
+</html>
