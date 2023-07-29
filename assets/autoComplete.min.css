@@ -95,8 +95,6 @@
     height: 74px;
     position: relative;
     transition: all .2s ease;
-    align-items: center;
-    display: flex;
     cursor: pointer;
 }
 

@@ -780,6 +780,8 @@ mark {
 
 .search-icon {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 .search-icon .search {
   height: 54px;
