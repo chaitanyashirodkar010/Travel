@@ -16,24 +16,18 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.min.css">
-
-
-    <link
-        href="assets/Check-In-Out-Date-Range-Picker/Check-In-Out-Date-Range-Picker/public/theme/css/t-datepicker.min.css"
-        rel="stylesheet" type="text/css">
-    <link href="assets/Check-In-Out-Date-Range-Picker/Check-In-Out-Date-Range-Picker/public/theme/css/themes/t-datepicker-bluegrey.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/autoComplete.min.css">
+    <link href="assets/t-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/t-datepicker-bluegrey.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic" /> -->
+
 </head>
 
 <body>
-    <div class="t-datepicker">
-        <div class="t-check-in"></div>
-        <div class="t-check-out"></div>
-    </div>
+
+
+
+
     <nav class="navbar navbar-expand-sm align-items-start container">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
@@ -48,7 +42,6 @@
     </nav>
     <div class="container">
 
-        <div id="autocomplete-search-box"></div>
 
         <div class="d-flex flex-column-reverse flex-md-column">
             <div class="banner-container">
@@ -59,15 +52,123 @@
             </div>
             <div class="body typeahed mx-auto" align="center">
                 <div class="d-flex justify-content-center mb-20">
-                    <span class="tab-switch active">
-                        Explore
-                    </span>
+
+
+                    <ul class="nav nav-tabs border-0 w-100 justify-content-center w-50" id="myTab" role="tablist">
+                        <li class="nav-item border-0 w-50" role="presentation">
+                            <button class="nav-link active tab-switch" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                aria-selected="true"><span class="tab-switch active">
+                                    Explore
+                                </span></button>
+                        </li>
+                        <li class="nav-item border-0 w-50" role="presentation">
+                            <button class="nav-link tab-switch" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                        </li>
+                    </ul>
+
+
+
                 </div>
-                <div class="autoComplete_wrapper">
-                    <img src="images/search.svg" class="search-icon" alt="">
-                    <input id="autoComplete" type="text" tabindex="1">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                        tabindex="0">
+                        <div class="explore-search">
+                            <div class="search-box-icon">
+                                <img src="images/search.svg" class="search-icon" alt="">
+                            </div>
+                            <input id="autoComplete" type="text" tabindex="1" placeholder="&#xF002; Search">
+                        </div>
+                    </div>
+
+
+
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                        tabindex="0">
+                        <div class="search-filter remove-highlight d-none d-md-flex ">
+                            <div class="search-locations">
+                                <label for="checkout" class="label">Where</label>
+                                <div class="autoComplete_wrapper">
+                                    <input id="autoComplete" type="text" tabindex="1">
+                                </div>
+                            </div>
+
+                            <div class="t-datepicker">
+                                <div class="t-check-in"></div>
+                                <div class="t-check-out"></div>
+                            </div>
+
+                            <div class="dropdown-custom">
+
+                                <div class="dropdown-custom-toggle ">
+                                    <label for="checkout" class="label">Who</label>
+                                    <input type="number" id="totalguests" class="border-0 totalguests"
+                                        placeholder="Add no. of guests" readonly>
+                                </div>
+                                <ul class="dropdown-menu p-0 border-0">
+                                    <div class="rooms-num room-info b-20 border bg-white">
+                                        <div class="p-24">
+
+                                            <div
+                                                class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p class="person">Adult</p>
+                                                    <p class="age"> Ages 13 or above</p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span role="button" class="decrement dec">-</span>
+                                                    <input type="number"
+                                                        class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                        placeholder="0" readonly>
+                                                    <span role="button" class="adultincrement incdec">+</span>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p class="person">Children</p>
+                                                    <p class="age"> Ages 2-12</p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span role="button" class="decrement dec">-</span>
+                                                    <input type="number"
+                                                        class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                        placeholder="0" readonly>
+                                                    <span role="button" class="adultincrement incdec">+</span>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="adults counter d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p class="person">Infants</p>
+                                                    <p class="age"> Under 2</p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span role="button" class="decrement dec">-</span>
+                                                    <input type="number"
+                                                        class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                        placeholder="0" readonly>
+                                                    <span role="button" class="adultincrement incdec">+</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+
+                            <div class="search-icon">
+                                <div class="search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="selection"></div>
+                <div class="selection d-none"></div>
             </div>
         </div>
         <div class="partner-with-us">
@@ -181,8 +282,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
-    <script
-        src="assets/Check-In-Out-Date-Range-Picker/Check-In-Out-Date-Range-Picker/public/theme/js/t-datepicker.min.js"></script>
+    <script src="assets/t-datepicker.min.js"></script>
 
     <script src="index.js"></script>
     <script src="autocomplete.js"></script>
@@ -203,12 +303,12 @@
                 numCalendar: 2,
 
                 // localization
-                titleCheckIn: 'Check In',
-                titleCheckOut: 'Check Out',
+                titleCheckIn: 'Add Dates',
+                titleCheckOut: 'Add Dates',
                 titleToday: 'Today',
                 titleDateRange: 'night',
                 titleDateRanges: 'nights',
-                titleDays: [''],
+                titleDays: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
                 titleMonths: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Septemper', 'October', 'November', "December"],
 
                 // the max length of the title
@@ -221,7 +321,7 @@
                 showDateTheme: null,
 
                 // icon options
-                iconArrowTop: true,
+                iconArrowTop: false,
                 iconDate: '&#x279C;',
                 arrowPrev: '&#x276E;',
                 arrowNext: '&#x276F;',

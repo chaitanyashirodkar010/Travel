@@ -11,7 +11,16 @@
     width: 100%;
     font-size: 14px;
     line-height: 1.4em;
-    max-width: 650px
+    max-width: 276px
+}
+
+.t-datepicker {
+    position: relative;
+}
+
+
+.t-datepicker>div {
+    border: none;
 }
 
 .t-check-in,
@@ -81,16 +90,11 @@
     border-bottom-color: #fff
 }
 
-.t-dates {
-    padding: 10px 15px;
-    height: 38px;
-    box-sizing: border-box
-}
 
 .t-datepicker-day {
     border-width: 1px;
     border-style: solid;
-    top: 51px;
+    top: 90px;
     overflow: hidden;
     position: absolute;
     z-index: 9998;
@@ -170,6 +174,12 @@
 .t-start {
     width: 56.658px;
     height: 56.658px;
+    color: #222;
+
+}
+
+.t-range {
+    font-weight: 600;
 }
 
 .t-arrow {
@@ -244,7 +254,7 @@
 
 
 .t-start~.t-range {
-    background: linear-gradient(270deg, #EDF1F3 0%, rgba(255, 255, 255, 0.40) 100%) !important;
+    background: linear-gradient(270deg, #EDF1F3 0%, #ffffff66 100%) !important;
 }
 
 
@@ -256,14 +266,226 @@
 
 
 .t-range:has(+ .t-end) {
-    background: linear-gradient(90deg, #EDF1F3 0%, rgba(255, 255, 255, 0.4) 100%) !important;
+    background: linear-gradient(90deg, #EDF1F3 0%, #ffffff66 100%) !important;
 }
 
 .t-month {
-    font-size: 19px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 thead>tr:nth-child(2) {
+    font-size: 9px;
+    color: #B0B0B0;
+}
+
+.t-hover-day-content {
     display: none;
+}
+
+
+
+.t-dates span {
+    color: #717171;
+}
+
+.t-dates label {
+    color: #717171;
+}
+
+.t-datepicker.t-datepicker-open {
+    border-radius: 50px !important;
+    border: 1px solid #DDD !important;
+    background: #FFF !important;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
+}
+
+.t-table-condensed td,
+.t-table-condensed th {
+    width: 56.658px;
+    height: 56.658px;
+}
+
+
+
+.t-check-in,
+.t-check-out {
+    border-color: #ededed;
+}
+
+.t-check-in {
+    border-right-color: #e8e8e8;
+}
+
+.t-date-title {
+    color: #e91e63;
+}
+
+.t-special-day:before {
+    border-color: #e91e63 #e91e63 transparent transparent;
+}
+
+.t-datepicker-day {
+    border-color: #ededed;
+    background: #fff;
+}
+
+.t-day,
+.t-disabled,
+.t-end,
+.t-range,
+.t-start {
+    background: #fff;
+    border-color: #fff;
+}
+
+.t-disabled {
+    background: 0 0
+}
+
+.t-highlighted {
+    color: #000000;
+}
+
+.t-highlighted.t-disabled {
+    background: #fafafa;
+}
+
+
+
+.t-range,
+.t-range-limit {
+    color: #000000;
+}
+
+.t-range {
+    background: #EDF1F3;
+}
+
+.t-range-limit {
+    background: #EDF1F3;
+}
+
+.t-range-limit.t-end,
+.t-range-limit.t-start {
+    color: #222222;
+    background: #EDF1F3;
+}
+
+
+.t-hover-day,
+.t-hover-day-content,
+.t-hover-day:hover {
+    color: #fff;
+    background: #000000;
+}
+
+.t-hover-day::after {
+    border-color: #000000 transparent transparent;
+}
+
+.t-today,
+.t-today .t-hover-day-content {
+    background: #aeaeae;
+}
+
+.t-today::after {
+    border-top-color: #aeaeae;
+}
+
+.t-today:hover,
+.t-today:hover .t-hover-day-content {
+    background: #000000;
+}
+
+.t-today:hover::after {
+    border-top-color: #000000;
+}
+
+.t-end.t-today,
+.t-start.t-today {
+    color: #fff;
+}
+
+
+
+.t-datepicker-days {
+    width: max-content;
+}
+
+
+
+
+
+.t-start,
+.t-end,
+.t-hover-day {
+    width: 56.658px;
+    height: 56.658px;
+    background-color: #dddddd;
+    color: #222222;
+    border-radius: 50%;
+    position: relative;
+}
+
+.t-start::after,
+.t-end::after,
+.t-hover-day::after {
+    content: '';
+    width: 56.658px;
+    height: 56.658px;
+    position: absolute;
+    background-color: transparent;
+    border: thin solid #B0B0B0;
+    border-radius: 50px;
+    left: 0;
+    top: 0;
+}
+
+.t-datepicker-days .t-table-wrap {
+    padding: 0;
+    width: 50%;
+    margin-left: 0;
+}
+
+td.t-day.t-range-limit.t-hover-day {
+    position: relative;
+}
+
+.t-hover-day,
+.t-hover-day-content,
+.t-hover-day:hover {
+    color: black;
+    background: transparent;
+}
+
+.t-dates {
+    color: transparent;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    padding-top: 40px;
+
+}
+
+.t-date-check-in::after {
+    content: 'Check-in';
+    position: absolute;
+    left: 29px;
+    color: black;
+    top: 17px;
+}
+
+.t-date-check-out::after {
+    content: 'Check-out';
+    position: absolute;
+    left: 29px;
+    color: black;
+    top: 17px;
+}
+
+.t-check-in .t-date-info-title,
+.t-check-out .t-date-info-title {
+    top: 40px;
+    left: 30px;
 }

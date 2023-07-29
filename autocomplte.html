@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: black;
+            color: white;
+            padding-top: 60px;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .algolia-autocomplete {
+            width: 100%;
+        }
+
+        .algolia-autocomplete .aa-input,
+        .algolia-autocomplete .aa-hint {
+            width: 100%;
+        }
+
+        .algolia-autocomplete .aa-hint {
+            color: #999;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu {
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #999;
+            border-top: none;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+            cursor: pointer;
+            padding: 5px 4px;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+            background-color: #b2d7ff;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        #search-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <form action="#" class="form">
+
+                    <div class="logo">
+                        <img src="https://www.placesapi.co.uk/img/placesapi-logo-white.png">
+                    </div>
+
+                    <p>Algolia Autocomplete with Recent Searches plugin.</p>
+                    <p>Hit enter to save the current search to local storage.</p>
+
+                    <div id="search-container"></div>
+
+                    <br>
+
+                    <p style="margin-top:10px;">
+                    <p><strong>Note:</strong> You'll need to add your own PlacesAPI key for this demo to function.</p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-recent-searches"></script>
+    <script>
+        const { autocomplete, getAlgoliaResults } = window["@algolia/autocomplete-js"];
+        const { createLocalStorageRecentSearchesPlugin } = window["@algolia/autocomplete-plugin-recent-searches"];
+
+        const recentSearchesPlugin = createLocalStorageRecentSearchesPlugin(
+            {
+                key: "RECENT_SEARCH",
+                limit: 5,
+            }
+        );
+
+        const searchClient = algoliasearch(
+            "DM340JGS49",
+            "ADD_YOUR_API_KEY_HERE"
+        );
+
+        autocomplete({
+            container: "#search-container",
+            detachedMediaQuery: "none",
+            placeholder: "Search for places...",
+            plugins: [recentSearchesPlugin],
+            getSources() {
+                return [
+                    {
+                        sourceId: "places",
+                        getItems({ query }) {
+                            return getAlgoliaResults({
+                                searchClient,
+                                queries: [
+                                    {
+                                        indexName: "places",
+                                        query,
+                                        params: {
+                                            filters: 'NOT country_code:"ie" AND NOT country_code:"us"'
+                                        }
+                                    },
+                                ],
+                            });
+                        },
+                        templates: {
+                            item({ item }) {
+                                return `${item.name}, ${item.county}, ${item.country}`;
+                            },
+                        },
+                        onSelect: function (event) {
+                            event.setQuery(
+                                event.item.name +
+                                ", " +
+                                event.item.county +
+                                ", " +
+                                event.item.country
+                            );
+                        },
+                    },
+                ];
+            },
+        });
+    </script>
+</body>
+
+</html>

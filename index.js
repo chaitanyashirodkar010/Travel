@@ -1,137 +1,103 @@
 
 $(document).ready(function () {
-    const minus = $('.decrement');
+
+
+
     const input = $('.inputfield');
-    const roomincrement = $('.roomincrement')
-    const adultincrement = $('.adultincrement')
-    const childreincrement = $('.childreincrement')
-    var totalPoints = childronnum + adultrnum;
-    var childronnum = 0;
-    var adultrnum = 0;
+
     const totalguests = $('.totalguests');
-    // const plus = $('.increment');
-    // const reset = $('.Reset');
-    // const apply = $('.apply');
-    // const totalguests = $('.totalguests');
-    // const inputrooms = $('#inputRooms');
-    // const roomcount = $('.roomcount');
 
-    input.text(0);
 
-    minus.click(function () {
 
-        var value = $(this).siblings(input).val();
-        if (value > 1) {
-            value--;
-        }
-        $(this).siblings(input).val(value);
-        $(this).siblings(input).val(value);
+    $(".adults").each(function (index) {
+        $('.incdec').on("click", function (event) {
+            event.stopImmediatePropagation();
+            let value = 0;
+            value = $(this).siblings(input).next().val();
+
+            ++value;
+            $(this).siblings(input).next().val(value);
+
+
+
+
+            var sum = 0;
+            $('.inputfield').each(function () {
+                sum += +$(this).val();
+            });
+            $(".totalguests").val(sum);
+
+
+        });
     });
 
-    roomincrement.click(function () {
-        var value = $(this).siblings(input).val();
-        value++;
-        $(this).siblings(input).val(value);
-        $('.roomcount').text(value)
-    })
+    $(".adults").each(function (index) {
+        $('.decrement').on("click", function (event) {
+            event.stopImmediatePropagation();
+            let value = 0;
+            value = $(this).siblings(input).val();
 
-    adultincrement.click(function () {
-        var value = $(this).siblings(input).val();
-        value++;
-        $(this).siblings(input).val(value);
-        adultrnum = value;
-        totalPoints = childronnum + adultrnum
-        totalguests.text(totalPoints);
-    })
-    childreincrement.click(function () {
-        var value = $(this).siblings(input).val();
-        value++;
-        $(this).siblings(input).val(value);
-        childronnum = value;
-        totalPoints = childronnum + adultrnum
-        totalguests.text(totalPoints);
-    })
+            --value;
+            $(this).siblings(input).val(value);
+
+
+            var sum = 0;
+            $('.inputfield').each(function () {
+                sum += +$(this).val();
+            });
+            $(".totalguests").val(sum);
+
+        });
+    });
+
 
 
 
     $('.dropdown-custom-toggle').click(function (e) {
         e.preventDefault();
         $('.dropdown-menu').addClass('show');
+        $('.dropdown-custom').addClass('active');
+        $('.t-datepicker-day').remove()
+        $('.t-datepicker').removeClass('t-datepicker-open');
+
+
     });
+
+
+    $('.search-filter').click(function (e) {
+        e.preventDefault();
+        $(this).removeClass('remove-highlight');
+    });
+
+
     $(window).click(function () {
         $('.dropdown-menu').removeClass('show');
+        $('.dropdown-custom').removeClass('active');
     });
 
     $('.dropdown-custom').click(function (event) {
         event.stopPropagation();
     });
-    // $(reset).click(function (e) {
-    //     e.preventDefault();
-    //     input.val(0)
-    //     $('#inputRooms').val(0)
-    //     childronnum.parseFloat($(this).val()) + totalPoints
+
+    // $('.search-filter').click(function (event) {
+    //     event.stopPropagation();
     // });
 
 
-    // $(apply).click(function (e) {
-    //     e.preventDefault();
-    //     var totalPoints = 0;
-    //     $('.counter .inputfield').each(function () {
-    //         totalPoints = parseFloat($(this).val()) + totalPoints;
-    //     });
-    //     totalguests.text(totalPoints - 1);
-    //     roomcount.text(inputrooms.val())
-    // });
 
 });
-// $('.checkin').click(function (e) {
-//     e.preventDefault();
-//     $(this).addClass('active-border');
-//     $('.checkout').removeClass('active-border');
-
-// });
-// $('.checkout').click(function (e) {
-//     e.preventDefault();
-//     $('.checkin').removeClass('active-border');
-//     $(this).removeClass('disabled');
-//     $(this).addClass('active-border');
-// });
 
 
-// $('.view-more').click(function (e) { 
-//     e.preventDefault();
-//     $('input[name="datefilter"]').data('daterangepicker').show();
 
-// });
 
-$(".check-in-checkout").click(function (e) {
-    var pWidth = $(this).innerWidth(); //use .outerWidth() if you want borders
-    var pOffset = $(this).offset();
-    var x = e.pageX - pOffset.left;
-    if (pWidth / 2 > x) {
-        $('.checkout').removeClass('active-border');
-        $('.checkin').addClass('active-border');
-        $('.checkout').removeClass('disabled');
+
+
+$(document).click(function (event) {
+    var $target = $(event.target);
+    if (!$target.closest('.search-filter').length) {
+        $('.search-filter').addClass('remove-highlight');
     }
-    else {
-        $('.checkin').removeClass('active-border');
-        $('.checkout').addClass('active-border');
-    }
-
 });
-
-$(window).click(function () {
-    $('.checkout').removeClass('active-border');
-    $('.checkin').removeClass('active-border');
-});
-
-$('.check-in-checkout').click(function (event) {
-    event.stopPropagation();
-});
-
-
-
-
 
 
 
@@ -183,4 +149,108 @@ $(function () {
     $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
         $(this).val('');
     });
+
+
+
+
 });
+
+
+
+
+
+
+
+
+
+// const minus = $('.decrement');
+// const input = $('.inputfield');
+// const roomincrement = $('.roomincrement')
+// const adultincrement = $('.adultincrement')
+// const childreincrement = $('.childreincrement')
+// var totalPoints = childronnum + adultrnum;
+// var childronnum = 0;
+// var adultrnum = 0;
+// const totalguests = $('.totalguests');
+// // const plus = $('.increment');
+// // const reset = $('.Reset');
+// // const apply = $('.apply');
+// // const totalguests = $('.totalguests');
+// // const inputrooms = $('#inputRooms');
+// // const roomcount = $('.roomcount');
+
+// input.text(0);
+
+// minus.click(function () {
+
+//     var value = $(this).siblings(input).val();
+//     if (value > 1) {
+//         value--;
+//     }
+//     $(this).siblings(input).val(value);
+//     $(this).siblings(input).val(value);
+// });
+
+// roomincrement.click(function () {
+//     var value = $(this).siblings(input).val();
+//     value++;
+//     $(this).siblings(input).val(value);
+//     $('.roomcount').text(value)
+// })
+
+// adultincrement.click(function () {
+//     var value = $(this).siblings(input).val();
+//     value++;
+//     $(this).siblings(input).val(value);
+//     adultrnum = value;
+//     totalPoints = childronnum + adultrnum
+//     totalguests.text(totalPoints);
+// })
+// childreincrement.click(function () {
+//     var value = $(this).siblings(input).val();
+//     value++;
+//     $(this).siblings(input).val(value);
+//     childronnum = value;
+//     totalPoints = childronnum + adultrnum
+//     totalguests.text(totalPoints);
+// })
+
+
+// $(reset).click(function (e) {
+//     e.preventDefault();
+//     input.val(0)
+//     $('#inputRooms').val(0)
+//     childronnum.parseFloat($(this).val()) + totalPoints
+// });
+
+
+// $(apply).click(function (e) {
+//     e.preventDefault();
+//     var totalPoints = 0;
+//     $('.counter .inputfield').each(function () {
+//         totalPoints = parseFloat($(this).val()) + totalPoints;
+//     });
+//     totalguests.text(totalPoints - 1);
+//     roomcount.text(inputrooms.val())
+// });// $('.checkin').click(function (e) {
+//     e.preventDefault();
+//     $(this).addClass('active-border');
+//     $('.checkout').removeClass('active-border');
+
+// });
+// $('.checkout').click(function (e) {
+//     e.preventDefault();
+//     $('.checkin').removeClass('active-border');
+//     $(this).removeClass('disabled');
+//     $(this).addClass('active-border');
+// });
+
+
+// $('.view-more').click(function (e) {
+//     e.preventDefault();
+//     $('input[name="datefilter"]').data('daterangepicker').show();
+
+// });
+
+
+
