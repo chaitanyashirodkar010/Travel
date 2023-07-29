@@ -454,7 +454,7 @@ td.t-day.t-range-limit.t-hover-day {
 .t-hover-day,
 .t-hover-day-content,
 .t-hover-day:hover {
-    color: black;
+    color: #717171;
     background: transparent;
 }
 
@@ -472,7 +472,7 @@ td.t-day.t-range-limit.t-hover-day {
     content: 'Check-in';
     position: absolute;
     left: 29px;
-    color: black;
+    color: #717171;
     top: 17px;
 }
 
@@ -480,7 +480,7 @@ td.t-day.t-range-limit.t-hover-day {
     content: 'Check-out';
     position: absolute;
     left: 29px;
-    color: black;
+    color: #717171;
     top: 17px;
 }
 

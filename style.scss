@@ -893,6 +893,7 @@ mark {
 .remove-highlight {
   background: #ffffff;
 
+  border: 1px solid #DDD;
   .t-datepicker::after {
     content: '';
     position: absolute;

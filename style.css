@@ -801,6 +801,7 @@ mark {
 
 .remove-highlight {
   background: #ffffff;
+  border: 1px solid #DDD;
 }
 .remove-highlight .t-datepicker::after {
   content: "";

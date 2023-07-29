@@ -84,7 +84,6 @@
     margin: auto;
     padding-right: 16px;
     border-radius: 52px;
-    border: 1px solid #DDD;
     background: #FFF;
 }
 
@@ -118,7 +117,8 @@
 .label {
     position: absolute;
     left: 32px;
-    color: black;
+    color: #717171;
+
     top: 17px;
     z-index: 9;
     font-size: 14px;
