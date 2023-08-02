@@ -66,7 +66,7 @@
                         <li class="nav-item border-0 w-50" role="presentation">
                             <button class="nav-link tab-switch" id="profile-tab" data-bs-toggle="tab"
                                 data-bs-target="#profile-tab-pane" type="button" role="tab"
-                                aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                                aria-controls="profile-tab-pane" aria-selected="false">Hotels</button>
                         </li>
                     </ul>
 
@@ -88,7 +88,7 @@
 
                     <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
                         tabindex="0">
-                        <div class="search-filter remove-highlight d-none d-md-flex ">
+                        <div class="search-filter remove-highlight d-md-flex">
                             <div class="search-locations">
                                 <label for="checkout" class="label">Where</label>
                                 <div class="autoComplete_wrapper">
@@ -112,7 +112,6 @@
                                 <ul class="dropdown-menu p-0 border-0">
                                     <div class="rooms-num room-info b-20 border bg-white">
                                         <div class="p-24">
-
                                             <div
                                                 class="adults counter mb-30 d-flex justify-content-between align-items-center">
                                                 <div>
@@ -127,7 +126,7 @@
                                                     <span role="button" class="adultincrement incdec">+</span>
                                                 </div>
                                             </div>
-
+    
                                             <div
                                                 class="adults counter mb-30 d-flex justify-content-between align-items-center">
                                                 <div>
@@ -139,12 +138,12 @@
                                                     <input type="number"
                                                         class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
                                                         placeholder="0" readonly>
-                                                    <span role="button" id="childrenAdd" class="adultincrement incdec">+</span>
+                                                    <span role="button" id="childrenAdd"
+                                                        class="adultincrement incdec">+</span>
                                                 </div>
                                             </div>
-
-                                            <div
-                                                class="adults counter d-flex justify-content-between align-items-center">
+    
+                                            <div class="adults counter d-flex justify-content-between align-items-center">
                                                 <div>
                                                     <p class="person">Infants</p>
                                                     <p class="age"> Under 2</p>
@@ -157,13 +156,16 @@
                                                     <span role="button" class="adultincrement incdec">+</span>
                                                 </div>
                                             </div>
-                                            <div id="childrenDetails"></div>
                                         </div>
+                                        <div id="childrenDetails">
+    
+                                        </div>
+    
                                     </div>
                                 </ul>
                             </div>
 
-                            <div class="search-icon">
+                            <div class="search-icon d-none d-md-flex">
                                 <div class="search">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </div>

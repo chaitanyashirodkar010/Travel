@@ -23,6 +23,18 @@
     border: none;
 }
 
+@media only screen and (max-width: 992px) {
+    .t-datepicker>div {
+        border-radius: 8px;
+        background: #F7F7F7;
+        margin-right: 8px;
+    }
+    .t-datepicker>div:last-child {
+
+        margin-right: 0;
+    }
+}
+
 .t-check-in,
 .t-check-out {
     border-width: 1px;
@@ -389,10 +401,12 @@ thead>tr:nth-child(2) {
 .t-today .t-hover-day-content {
     background: #aeaeae;
 }
-.t-today{
+
+.t-today {
     color: #222222;
 
 }
+
 .t-today::after {
     border-top-color: #aeaeae;
 }

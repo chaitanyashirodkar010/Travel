@@ -15,9 +15,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <script src="assets/autoComplete.js"></script>	
-    <link rel="stylesheet" href="assets/autoComplete.min.css">	
-    <link href="assets/t-datepicker.min.css" rel="stylesheet" type="text/css">	
+    <script src="assets/autoComplete.js"></script>
+    <link rel="stylesheet" href="assets/autoComplete.min.css">
+    <link href="assets/t-datepicker.min.css" rel="stylesheet" type="text/css">
     <link href="assets/t-datepicker-bluegrey.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
 
@@ -34,7 +34,7 @@
     <div class="container pt-5">
 
 
-        
+
         <div class="topper-column">
             <div class=" ">
                 <h2 class="fs-32 my-sm-13">
@@ -109,87 +109,9 @@
 
         <!-- Below gallery -->
 
-        <div class="row ">
+        <div class="row flex-column-reverse flex-md-row">
             <div class="col-md-8">
-                <div class="dropdown-custom d-md-none">
-                    <div class="d-flex dropdown-custom-toggle mb-8">
-                        <div class="form-field">
-                            <span class="roomcount"></span>
-                            <span class="rooms">Rooms</span>
-                        </div>,
-                        <div id="totalguests" class="totalguests inputfield"></div>
-                        <span>Guest</span>
-                        <img src="images/checron-bol-ddown.svg" class="ms-12" alt="">
-                    </div>
-                    <ul class="dropdown-menu p-0 border-0">
-                        <div class="rooms-num room-info b-20 border bg-white">
-                            <div class="p-24">
-                                <div class="rooms counter mb-20 d-flex justify-content-between align-items-center">
-                                    <p class="mb-0 me-5"><b>Rooms</b></p>
-                                    <div class="d-flex">
-                                        <span role="button" class="decrement incdec">-</span>
-                                        <input type="number"
-                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                            id="inputRooms" placeholder="0" readonly>
-                                        <span role="button" class="roomincrement incdec">+</span>
-                                    </div>
-                                </div>
-                                <div class="adults counter mb-20 d-flex justify-content-between align-items-center">
-                                    <p class="mb-0 me-5"><b>Adults</b></p>
-                                    <div class="d-flex">
-                                        <span role="button" class="decrement incdec">-</span>
-                                        <input type="number"
-                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                            id="input" placeholder="0" readonly>
-                                        <span role="button" class="adultincrement incdec">+</span>
-                                    </div>
-                                </div>
-                                <div class="childrens counter d-flex justify-content-between align-items-center">
-                                    <p class="mb-0 me-5"><b>Childrens</b></p>
-                                    <div class="d-flex">
-                                        <span role="button" class="decrement incdec m1">-</span>
-                                        <input type="number"
-                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                            id="input" placeholder="0" readonly>
-                                        <span role="button" class="childreincrement incdec">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="my-0">
-                            <div class="p-24">
-                                <div class="children-ages">
-                                    <div
-                                        class="childrens mb-20 counter d-flex justify-content-between align-items-center">
-                                        <p class="mb-0 me-5"><b>AGE</b></p>
-                                    </div>
-                                    <div class="childrens counter d-flex justify-content-between align-items-center">
-                                        <p class="mb-0 me-5"><b>CHILD 1</b></p>
-                                        <select class="form-select border-dark">
-                                            <option selected="">12</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                        </select>
-                                    </div>
 
-                                </div>
-                                <!-- <div class="border-top mt-1 d-flex justify-content-around">
-                                    <button class="Reset">Reset</button>
-                                    <button class="apply">Apply</button>
-                                </div> -->
-                            </div>
-
-                        </div>
-                    </ul>
-                </div>
-
-
-          
 
 
                 <section class="overview">
@@ -208,55 +130,44 @@
                             <img src="images/arrow-down.svg" class="" alt=""> </b></a>
                 </section>
                 <hr class="d-block">
-
-                <div class="row align-items-start">
-
-                    <div class="col-10 col-md-11">
-                        <div class="d-flex ">
-                            <h6 class="fs22 mb-17"><b>Highly Rated</b></h6>
-                        </div>
-                        <div class="d-flex flex-wrap ">
-                            <div class="key-facts    bg-light ">friendly staff</div>
-                            <div class="key-facts    bg-light ">great location</div>
-                            <div class="key-facts    bg-light ">amazing hotel</div>
-                            <div class="key-facts    bg-light ">easy access</div>
-                            <div class="key-facts    bg-light ">first class</div>
-                            <div class="key-facts    bg-light ">bed was so comfortable</div>
-                            <div class="key-facts    bg-light ">amazing hotel</div>
-                            <div class="key-facts    bg-light ">easy access</div>
-                        </div>
-                    </div>
+                <div class="d-flex ">
+                    <h6 class="fs22 mb-17"><b>Highly Rated</b></h6>
+                </div>
+                <div class="d-flex flex-wrap ">
+                    <div class="key-facts    bg-light ">friendly staff</div>
+                    <div class="key-facts    bg-light ">great location</div>
+                    <div class="key-facts    bg-light ">amazing hotel</div>
+                    <div class="key-facts    bg-light ">easy access</div>
+                    <div class="key-facts    bg-light ">first class</div>
+                    <div class="key-facts    bg-light ">bed was so comfortable</div>
+                    <div class="key-facts    bg-light ">amazing hotel</div>
+                    <div class="key-facts    bg-light ">easy access</div>
                 </div>
                 <hr class="d-block">
 
                 <section>
-                    <div class="row align-items-start">
+                    <div class="d-flex ">
+                        <h6 class="fs22 mb-17"><b>Great Location</b></h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-4 mb-md-0 col-md-3">
+                            <b class="d-block fs14 mb-8">Shopping Mall</b>
+                            <b>100m</b>
+                        </div>
 
-                        <div class="col-12 col-md-11">
-                            <div class="d-flex ">
-                                <h6 class="fs22 mb-17"><b>Great Location</b></h6>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 mb-4 mb-md-0 col-md-3">
-                                    <b class="d-block fs14 mb-8">Shopping Mall</b>
-                                    <b>100m</b>
-                                </div>
+                        <div class="col-6 mb-4 mb-md-0 col-md-3">
+                            <b class="d-block fs14 mb-8">Distance to city centre</b>
+                            <b>11.3 Km</b>
+                        </div>
 
-                                <div class="col-6 mb-4 mb-md-0 col-md-3">
-                                    <b class="d-block fs14 mb-8">Distance to city centre</b>
-                                    <b>11.3 Km</b>
-                                </div>
+                        <div class="col-6 col-md-3">
+                            <b class="d-block fs14 mb-8">Distance to city centre</b>
+                            <b>11.3 Km</b>
+                        </div>
 
-                                <div class="col-6 col-md-3">
-                                    <b class="d-block fs14 mb-8">Distance to city centre</b>
-                                    <b>11.3 Km</b>
-                                </div>
-
-                                <div class="col-6 col-md-3">
-                                    <b class="d-block fs14 mb-8">Distance to city centre</b>
-                                    <b>11.3 Km</b>
-                                </div>
-                            </div>
+                        <div class="col-6 col-md-3">
+                            <b class="d-block fs14 mb-8">Distance to city centre</b>
+                            <b>11.3 Km</b>
                         </div>
                     </div>
                 </section>
@@ -393,7 +304,7 @@
 
                 <section>
                     <h5 class="mb-16 fs22"><b>How to Get there</b></h5>
-                    <div class="row mx-auto d-flex">
+                    <div class="row d-flex">
                         <div class="col-6 col-md-3">
                             <div class="how-to-get-there">
                                 <img src="images/plane.svg" alt="">
@@ -544,11 +455,11 @@
                     <div class="row">
                         <div class="col-md-6 room-type">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-5 col-md-6">
                                     <img src="images/Rectangle 1500.png" class="h-100 br-10 w-100 object-fit-cover"
                                         alt="">
                                 </div>
-                                <div class="col-6">
+                                <div class="col-7 ps-3 col-md-6">
                                     <h6 class=" fs18"><b>Classic Double Room</b></h6>
                                     <div class="d-flex mb-10">
                                         <img src="images/wifi.svg" class="me-2" width="25px" alt="">
@@ -729,18 +640,18 @@
 
                 <section>
                     <div class="row align-items-start">
-                        <div class="col-6 col-md-6">
-                            <h5 class="fs24 mb-16"><b>Questions & Answers</b></h5>
+                        <div class="d-flex justify-content-between align-items-center  mb-16">
+                            <h5 class="fs24"><b>Questions & Answers</b></h5>
+                            <button type="button" class="btn btn-outline-dark ">Ask a question</button>
+                        </div>
+                        <div class="col-12 col-md-6">
                             <p class="text-neutral-2 mb-16">
                                 Browse questions from guests for anything extra you want to know about the property.
                             </p>
 
                             <p class="text-success fs14 mb-0">The property usually replies within a few days</p>
                         </div>
-                        <div class="col-6 col-md-6 d-flex justify-content-end">
-                            <button type="button" class="btn btn-outline-dark ">Ask a question</button>
 
-                        </div>
                     </div>
                 </section>
                 <hr class="d-block">
@@ -788,7 +699,7 @@
                         </div>
                         <div class="col-md-6 d-flex align-items-start  justify-content-center justify-content-md-end">
 
-                            <div class="dropdown mb-42 d-md-none mr-15">
+                            <div class="dropdown flex-sm-1 mb-42 d-md-none mr-15">
                                 <button class="btn btn-outline-secondary dropdown-toggle" type="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Sort By
@@ -799,7 +710,7 @@
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </div>
-                            <button type="button" class="btn btn-outline-secondary">Write a Review</button>
+                            <button type="button" class="btn flex-sm-1 btn-outline-secondary">Write a Review</button>
                         </div>
                     </div>
                     <p class=""><b>Select topics to read reviews:</b></p>
@@ -880,14 +791,14 @@
                 <section>
                     <h5 class="fs24 mb-42"><b>Property Policies</b></h5>
                     <div class="row mb-30">
-                        <div class="col-md-6">
+                        <div class="col-md-6 my-3 my-md-0">
                             <b class="fs18  d-block mb-8">Check In</b>
                             <div class="text-neutral-2 fw-500 line-height-32">
                                 <div>Check-in from 2 PM - anytime</div>
                                 <div> Minimum check-in age - 18</div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 my-3 my-md-0">
                             <b class="fs18  d-block mb-8">Check Out</b>
                             <div class="text-neutral-2 fw-500 line-height-32">
                                 Check-out before noon
@@ -896,7 +807,7 @@
                     </div>
 
                     <div class="row ">
-                        <div class="col-md-6">
+                        <div class="col-md-6 my-3 my-md-0">
                             <b class="fs18  d-block mb-8"> Requirements</b>
 
                             <div class="text-neutral-2 fw-500 line-height-32">
@@ -905,7 +816,7 @@
                                 know what time you'll be arriving in advance.
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 my-3 my-md-0">
                             <b class="fs18  d-block mb-8">Cancellation/ Prepayments</b>
                             <div class="text-neutral-2 fw-500 line-height-32">
                                 Cancellation and prepayment policies vary according to apartment type. Please enter the
@@ -1035,11 +946,11 @@
             </div>
 
 
-            <div class="col-md-4 d-none d-md-block">
-               
+            <div class="col-md-4">
+
                 <div class="check-in-checkout ">
                     <form action="">
-                        <div class="d-flex ellipseflex mb-33">
+                        <div class="d-flex ellipseflex mb-29">
                             <div class="d-flex mr-10 ">
                                 <img src="images/Ellipse 1857.svg" alt="">
                                 <img src="images/Ellipse 1858.svg" alt="">
@@ -1047,20 +958,38 @@
                             </div>
                             <div>
                                 <b class="fs18">
-                                    Compare Prices from 70+ <br> Partners
+                                    Compare Prices from 70+ Partners
                                 </b>
                             </div>
                         </div>
                         <div class="dropdown-custom">
 
-                            <div class="dropdown-custom-toggle position-relative">
-                               1 Room, 2 Guests
-                   
+
+                            <div class="d-flex dropdown-custom-toggle mb-13">
+                                <div class="form-field">
+                                    <span class="roomcount"></span>
+                                    <span class="rooms ms-1">Rooms </span>
+                                </div>,
+                                <div class="guest  ms-1"></div>
+                                <span class=" ms-1"> Guest</span>
+                                <img src="images/checron-bol-ddown.svg" class="ms-12" alt="">
                             </div>
                             <ul class="dropdown-menu p-0 border-0">
                                 <div class="rooms-num room-info b-20 border bg-white">
                                     <div class="p-24">
-
+                                        <div
+                                            class="rooms counter mb-30 d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <p class="person">Rooms</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span role="button" class="roomsdecrement roomsdec">-</span>
+                                                <input type="number"
+                                                    class="border d-flex align-items-center rounded-3 border-1 border-dark roominputfield"
+                                                    placeholder="0" readonly>
+                                                <span role="button" class="roomincrement roomsincdec">+</span>
+                                            </div>
+                                        </div>
                                         <div
                                             class="adults counter mb-30 d-flex justify-content-between align-items-center">
                                             <div>
@@ -1083,16 +1012,16 @@
                                                 <p class="age"> Ages 2-12</p>
                                             </div>
                                             <div class="d-flex align-items-center">
-                                                <span role="button" class="decrement dec">-</span>
+                                                <span role="button" id="childrenSubtract" class="decrement dec">-</span>
                                                 <input type="number"
                                                     class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
                                                     placeholder="0" readonly>
-                                                <span role="button" class="adultincrement incdec">+</span>
+                                                <span role="button" id="childrenAdd"
+                                                    class="adultincrement incdec">+</span>
                                             </div>
                                         </div>
 
-                                        <div
-                                            class="adults counter d-flex justify-content-between align-items-center">
+                                        <div class="adults counter d-flex justify-content-between align-items-center">
                                             <div>
                                                 <p class="person">Infants</p>
                                                 <p class="age"> Under 2</p>
@@ -1106,6 +1035,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div id="childrenDetails">
+
+                                    </div>
+
                                 </div>
                             </ul>
                         </div>

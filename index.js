@@ -21,14 +21,14 @@ $(document).ready(function () {
 
             if (event.currentTarget.id.includes("children")) {
                 if(value == 1){
-                    $("#childrenDetails").append(`<div>
-                        <p class="person">AGE</p>
+                    $("#childrenDetails").append(`<div class="mb-25" style="border-top:1px solid #707070;">
+                        <p class="person px-24" style="margin-top:20px;">AGE</p>
                     </div>`);
                 }
                 $("#childrenDetails").append(`<div
-                    class="adults counter d-flex justify-content-between align-items-center">
+                    class="adults px-24 counter d-flex justify-content-between align-items-center mb-25">
                     <div>
-                        <p class="person">child ${value}</p>
+                        <p class="person">CHILD ${value}</p>
                     </div>
                     <div class="d-flex align-items-center">
                         <select name="age" id="age">
@@ -53,8 +53,10 @@ $(document).ready(function () {
             $('.inputfield').each(function () {
                 sum += +$(this).val();
             });
+   
             $(".totalguests").val(sum);
 
+            $(".guest").text(sum);
 
 
 
@@ -201,9 +203,9 @@ $(function () {
 
 
 
-// const minus = $('.decrement');
-// const input = $('.inputfield');
-// const roomincrement = $('.roomincrement')
+const minus = $('.roomsdecrement');
+const input = $('.roominputfield');
+
 // const adultincrement = $('.adultincrement')
 // const childreincrement = $('.childreincrement')
 // var totalPoints = childronnum + adultrnum;
@@ -214,27 +216,31 @@ $(function () {
 // // const reset = $('.Reset');
 // // const apply = $('.apply');
 // // const totalguests = $('.totalguests');
-// // const inputrooms = $('#inputRooms');
-// // const roomcount = $('.roomcount');
+const roomincrement = $('.roomincrement')
+const inputrooms = $('#inputRooms');
+const roomcount = $('.roomcount');
+
+roomincrement.click(function () {
+    var value = $(this).siblings(input).val();
+    value++;
+    console.log(value);
+    
+    $(this).siblings(input).val(value);
+    $('.roomcount').text(value)
+})
 
 // input.text(0);
 
-// minus.click(function () {
+ minus.click(function () {
 
-//     var value = $(this).siblings(input).val();
-//     if (value > 1) {
-//         value--;
-//     }
-//     $(this).siblings(input).val(value);
-//     $(this).siblings(input).val(value);
-// });
+     var value = $(this).siblings(input).val();
+     if (value > 1) {
+         value--;
+     }
+     $(this).siblings(input).val(value);
+     $('.roomcount').text(value)
+ });
 
-// roomincrement.click(function () {
-//     var value = $(this).siblings(input).val();
-//     value++;
-//     $(this).siblings(input).val(value);
-//     $('.roomcount').text(value)
-// })
 
 // adultincrement.click(function () {
 //     var value = $(this).siblings(input).val();

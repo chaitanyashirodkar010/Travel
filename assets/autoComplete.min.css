@@ -80,11 +80,18 @@
 }
 
 .search-filter {
-    width: 915px;
     margin: auto;
     padding-right: 16px;
-    border-radius: 52px;
+
     background: #FFF;
+}
+
+@media only screen and (min-width: 600px) {
+
+
+    .search-filter {
+        border-radius: 52px;
+    }
 }
 
 .autoComplete_wrapper {
@@ -97,7 +104,12 @@
     transition: all .2s ease;
     cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
 
+    .search-filter>div {background: #F7F7F7;
+        margin: 10px;
+    }
+}
 .search-filter input {
     height: 74px;
 }
