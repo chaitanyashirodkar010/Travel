@@ -2,55 +2,23 @@ const autoCompleteJS = new autoComplete({
     selector: "#autoCompletetwo",
     placeHolder: "Search for Food...",
     data: {
-        src: async () => {
-            try {
-                // Loading placeholder text
-                document
-                    .getElementById("autoCompletetwo")
-                    .setAttribute("placeholder", "Loading...");
-                // Fetch External Data Source
-                const source = await fetch(
-                    "https://tarekraafat.github.io/autoComplete.js/demo/db/generic.json"
-                );
-                const data = await source.json();
-                // Post Loading placeholder text
-                document
-                    .getElementById("autoCompletetwo")
-                    .setAttribute("placeholder", autoCompleteJS.placeHolder);
-                // Returns Fetched data
-                return data;
-            } catch (error) {
-                return error;
-            }
-        },
-        keys: ["food", "cities", "animals"],
+        src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
         cache: true,
-        filter: (list) => {
-            // Filter duplicates
-            // incase of multiple data keys usage
-            const filteredResults = Array.from(
-                new Set(list.map((value) => value.match))
-            ).map((food) => {
-                return list.find((value) => value.match === food);
-            });
-
-            return filteredResults;
-        }
     },
-    placeHolder: "Search",
     resultsList: {
         element: (list, data) => {
-            const info = document.createElement("p");
-            if (data.results.length > 0) {
-                info.innerHTML = `Displaying <strong>${data.results.length}</strong> out of <strong>${data.matches.length}</strong> results`;
-            } else {
-                info.innerHTML = `No results found`;
+            if (!data.results.length) {
+                // Create "No Results" message element
+                const message = document.createElement("div");
+                // Add class to the created element
+                message.setAttribute("class", "no_result");
+                // Add message text content
+                message.innerHTML = `<span>Found No Results for "${data.query}"</span>`;
+                // Append message element to the results list
+                list.prepend(message);
             }
-            list.prepend(info);
         },
         noResults: true,
-        maxResults: 15,
-        tabSelect: true
     },
     resultItem: {
         element: (item, data) => {

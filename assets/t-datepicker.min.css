@@ -389,7 +389,10 @@ thead>tr:nth-child(2) {
 .t-today .t-hover-day-content {
     background: #aeaeae;
 }
+.t-today{
+    color: #222222;
 
+}
 .t-today::after {
     border-top-color: #aeaeae;
 }
@@ -405,7 +408,8 @@ thead>tr:nth-child(2) {
 
 .t-end.t-today,
 .t-start.t-today {
-    color: #fff;
+    color: #222222;
+
 }
 
 
