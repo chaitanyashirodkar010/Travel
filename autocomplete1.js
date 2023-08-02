@@ -1,12 +1,12 @@
-
-// The autoComplete.js Engine instance creator
 const autoCompleteJS = new autoComplete({
+    selector: "#autoCompletetwo",
+    placeHolder: "Search for Food...",
     data: {
         src: async () => {
             try {
                 // Loading placeholder text
                 document
-                    .getElementById("autoComplete")
+                    .getElementById("autoCompletetwo")
                     .setAttribute("placeholder", "Loading...");
                 // Fetch External Data Source
                 const source = await fetch(
@@ -15,7 +15,7 @@ const autoCompleteJS = new autoComplete({
                 const data = await source.json();
                 // Post Loading placeholder text
                 document
-                    .getElementById("autoComplete")
+                    .getElementById("autoCompletetwo")
                     .setAttribute("placeholder", autoCompleteJS.placeHolder);
                 // Returns Fetched data
                 return data;
@@ -52,9 +52,6 @@ const autoCompleteJS = new autoComplete({
         maxResults: 15,
         tabSelect: true
     },
-
-
-
     resultItem: {
         element: (item, data) => {
             // Modify Results Item Style
@@ -72,107 +69,20 @@ const autoCompleteJS = new autoComplete({
 </clipPath>
 </defs>
 </svg>
-   <div style="margin-left: 16px;"><span style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;color: #B0B0B0;font-size: 14px;font-weight: 400;">${data.match}
-      </span>
-      <span style="display: flex; align-items: center;color: #B0B0B0;font-size: 12px;font-weight: 400;">
-        ${data.key}
-      </span>  </div>`;
+<div style="margin-left: 16px;"><span style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;color: #B0B0B0;font-size: 14px;font-weight: 400;">${data.match}
+</span>
+<span style="display: flex; align-items: center;color: #B0B0B0;font-size: 12px;font-weight: 400;">
+${data.key}
+</span>  </div>`;
         },
         highlight: true
     },
     events: {
         input: {
-            focus: () => {
-                if (autoCompleteJS.input.value.length) autoCompleteJS.start();
+            selection: (event) => {
+                const selection = event.detail.selection.value;
+                autoCompleteJS.input.value = selection;
             }
         }
     }
 });
-
-// autoCompleteJS.input.addEventListener("init", function (event) {
-//   console.log(event);
-// });
-
-// autoCompleteJS.input.addEventListener("response", function (event) {
-//   console.log(event.detail);
-// });
-
-// autoCompleteJS.input.addEventListener("results", function (event) {
-//   console.log(event.detail);
-// });
-
-// autoCompleteJS.input.addEventListener("open", function (event) {
-//   console.log(event.detail);
-// });
-
-// autoCompleteJS.input.addEventListener("navigate", function (event) {
-//   console.log(event.detail);
-// });
-
-autoCompleteJS.input.addEventListener("selection", function (event) {
-    const feedback = event.detail;
-    autoCompleteJS.input.blur();
-    // Prepare User's Selected Value
-    const selection = feedback.selection.value[feedback.selection.key];
-    // Render selected choice to selection div
-    document.querySelector(".selection").innerHTML = selection;
-    // Replace Input value with the selected value
-    autoCompleteJS.input.value = selection;
-    // Console log autoComplete data feedback
-    console.log(feedback);
-});
-
-// autoCompleteJS.input.addEventListener("close", function (event) {
-//   console.log(event.detail);
-// });
-
-// Toggle Search Engine Type/Mode
-document.querySelector(".toggler").addEventListener("click", () => {
-    // Holds the toggle button selection/alignment
-    const toggle = document.querySelector(".toggle").style.justifyContent;
-
-    if (toggle === "flex-start" || toggle === "") {
-        // Set Search Engine mode to Loose
-        document.querySelector(".toggle").style.justifyContent = "flex-end";
-        document.querySelector(".toggler").innerHTML = "Loose";
-        autoCompleteJS.searchEngine = "loose";
-    } else {
-        // Set Search Engine mode to Strict
-        document.querySelector(".toggle").style.justifyContent = "flex-start";
-        document.querySelector(".toggler").innerHTML = "Strict";
-        autoCompleteJS.searchEngine = "strict";
-    }
-});
-
-// Blur/unBlur page elements
-const action = (action) => {
-    const title = document.querySelector("h1");
-    const mode = document.querySelector(".mode");
-    const selection = document.querySelector(".selection");
-    const footer = document.querySelector(".footer");
-
-    if (action === "dim") {
-        title.style.opacity = 1;
-        mode.style.opacity = 1;
-        selection.style.opacity = 1;
-    } else {
-        title.style.opacity = 0.3;
-        mode.style.opacity = 0.2;
-        selection.style.opacity = 0.1;
-    }
-};
-
-// Blur/unBlur page elements on input focus
-["focus", "blur"].forEach((eventType) => {
-    autoCompleteJS.input.addEventListener(eventType, () => {
-        // Blur page elements
-        if (eventType === "blur") {
-            action("dim");
-        } else if (eventType === "focus") {
-            // unBlur page elements
-            action("light");
-        }
-    });
-});
-
-

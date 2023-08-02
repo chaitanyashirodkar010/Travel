@@ -15,6 +15,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="assets/autoComplete.js"></script>	
+    <link rel="stylesheet" href="assets/autoComplete.min.css">	
+    <link href="assets/t-datepicker.min.css" rel="stylesheet" type="text/css">	
+    <link href="assets/t-datepicker-bluegrey.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
 
 
@@ -185,49 +189,7 @@
                 </div>
 
 
-                <div class="check-in-checkout d-md-none">
-                    <form action="">
-                        <div class="d-flex ellipseflex mb-33">
-                            <div class="d-flex mr-10 ">
-                                <img src="images/Ellipse 1857.svg" alt="">
-                                <img src="images/Ellipse 1858.svg" alt="">
-                                <img src="images/Ellipse 1859.svg" alt="">
-                            </div>
-                            <div>
-                                <b class="fs18">
-                                    Compare Prices from 70+ <br> Partners
-                                </b>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="d-flex whole-checkinout datepickercont justify-content-center position-relative">
-                            <div class="checkin">
-                                <div class="position-relative d-flex">
-                                    <img src="images/calendar.png" class="calendar" alt="">
-                                    <div class="w-100">
-                                        <label for="datefilter">check in</label>
-                                        <input type="text" name="datefilter" id="checkin" placeholder="date">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="checkout pointer-events-none disabled">
-                                <div class="position-relative d-flex ">
-                                    <img src="images/calendar.png" class="calendar" alt="">
-                                    <div class="w-100">
-                                        <label for="datefilter">check in</label>
-                                        <input type="text" name="datefilter" id="checkout" placeholder="date">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button>Get price</button>
-                    </form>
-                </div>
+          
 
 
                 <section class="overview">
@@ -1074,85 +1036,7 @@
 
 
             <div class="col-md-4 d-none d-md-block">
-                <div class="dropdown-custom">
-                   
-                    <div class="d-flex dropdown-custom-toggle mb-8">
-                        <div class="form-field">
-                            <span class="roomcount"></span>
-                            <span class="rooms">Rooms</span>
-                        </div>,
-                        <div id="totalguests" class="totalguests inputfield"></div>
-                        <span>Guest</span>
-                        <img src="images/checron-bol-ddown.svg" class="ms-12" alt="">
-                    </div>
-                    <ul class="dropdown-menu p-0 border-0">
-                        <div class="rooms-num room-info b-20 border bg-white">
-                            <div class="p-24">
-                                <div class="rooms counter mb-20 d-flex justify-content-between align-items-center">
-                                    <p class="mb-0 me-5"><b>Rooms</b></p>
-                                    <div class="d-flex">
-                                        <span role="button" class="decrement incdec">-</span>
-                                        <input type="number"
-                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                            id="inputRooms" placeholder="0" readonly>
-                                        <span role="button" class="roomincrement incdec">+</span>
-                                    </div>
-                                </div>
-                                <div class="adults counter mb-20 d-flex justify-content-between align-items-center">
-                                    <p class="mb-0 me-5"><b>Adults</b></p>
-                                    <div class="d-flex">
-                                        <span role="button" class="decrement incdec">-</span>
-                                        <input type="number"
-                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                            id="input" placeholder="0" readonly>
-                                        <span role="button" class="adultincrement incdec">+</span>
-                                    </div>
-                                </div>
-                                <div class="childrens counter d-flex justify-content-between align-items-center">
-                                    <p class="mb-0 me-5"><b>Childrens</b></p>
-                                    <div class="d-flex">
-                                        <span role="button" class="decrement incdec m1">-</span>
-                                        <input type="number"
-                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                            id="input" placeholder="0" readonly>
-                                        <span role="button" class="childreincrement incdec">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="my-0">
-                            <div class="p-24">
-                                <div class="children-ages">
-                                    <div
-                                        class="childrens mb-20 counter d-flex justify-content-between align-items-center">
-                                        <p class="mb-0 me-5"><b>AGE</b></p>
-                                    </div>
-                                    <div class="childrens counter d-flex justify-content-between align-items-center">
-                                        <p class="mb-0 me-5"><b>CHILD 1</b></p>
-                                        <select class="form-select border-dark">
-                                            <option selected="">12</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                        </select>
-                                    </div>
-
-                                </div>
-                                <!-- <div class="border-top mt-1 d-flex justify-content-around">
-                                    <button class="Reset">Reset</button>
-                                    <button class="apply">Apply</button>
-                                </div> -->
-                            </div>
-
-                        </div>
-                    </ul>
-                </div>
-
-
+               
                 <div class="check-in-checkout ">
                     <form action="">
                         <div class="d-flex ellipseflex mb-33">
@@ -1167,31 +1051,68 @@
                                 </b>
                             </div>
                         </div>
+                        <div class="dropdown-custom">
 
+                            <div class="dropdown-custom-toggle position-relative">
+                               1 Room, 2 Guests
+                   
+                            </div>
+                            <ul class="dropdown-menu p-0 border-0">
+                                <div class="rooms-num room-info b-20 border bg-white">
+                                    <div class="p-24">
 
+                                        <div
+                                            class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <p class="person">Adult</p>
+                                                <p class="age"> Ages 13 or above</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span role="button" class="decrement dec">-</span>
+                                                <input type="number"
+                                                    class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                    placeholder="0" readonly>
+                                                <span role="button" class="adultincrement incdec">+</span>
+                                            </div>
+                                        </div>
 
+                                        <div
+                                            class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <p class="person">Children</p>
+                                                <p class="age"> Ages 2-12</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span role="button" class="decrement dec">-</span>
+                                                <input type="number"
+                                                    class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                    placeholder="0" readonly>
+                                                <span role="button" class="adultincrement incdec">+</span>
+                                            </div>
+                                        </div>
 
-
-                        <div class="d-flex whole-checkinout datepickercont justify-content-center position-relative">
-                            <div class="checkin">
-                                <div class="position-relative d-flex">
-                                    <img src="images/calendar.png" class="calendar" alt="">
-                                    <div class="w-100">
-                                        <label for="datefilter">check in</label>
-                                        <input type="text" name="datefilter" id="checkin" placeholder="date">
+                                        <div
+                                            class="adults counter d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <p class="person">Infants</p>
+                                                <p class="age"> Under 2</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span role="button" class="decrement dec">-</span>
+                                                <input type="number"
+                                                    class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                    placeholder="0" readonly>
+                                                <span role="button" class="adultincrement incdec">+</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </ul>
+                        </div>
 
-                            <div class="checkout pointer-events-none disabled">
-                                <div class="position-relative d-flex ">
-                                    <img src="images/calendar.png" class="calendar" alt="">
-                                    <div class="w-100">
-                                        <label for="datefilter">check in</label>
-                                        <input type="text" name="datefilter" id="checkout" placeholder="date">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="t-datepicker">
+                            <div class="t-check-in"></div>
+                            <div class="t-check-out"></div>
                         </div>
                         <button>Get price</button>
                     </form>
@@ -1212,7 +1133,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
 
+    <script src="assets/t-datepicker.min.js"></script>
+
     <script src="index.js"></script>
+
+    <script src="autocomplete1.js"></script>
+    <script src="autocomplete2.js"></script>
+    <script src="datepicker-homepage.js"></script>
+    <script src="datepicker-hotelpage.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -1235,28 +1163,28 @@
 
         });
 
-        $(function () {
-            $('input[name="datefilter"]').daterangepicker({
-                autoUpdateInput: false,
-                "opens": "center",
-                "autoApply": true,
-                locale: {
-                    cancelLabel: 'Clear'
-                }
-            });
+        // $(function () {
+        //     $('input[name="datefilter"]').daterangepicker({
+        //         autoUpdateInput: false,
+        //         "opens": "center",
+        //         "autoApply": true,
+        //         locale: {
+        //             cancelLabel: 'Clear'
+        //         }
+        //     });
 
-            $('.checkin input').on('apply.daterangepicker', function (ev, picker) {
-                $(this).val(picker.startDate.format('MM/DD/YYYY'));
-                $('#checkout').val(picker.endDate.format('MM/DD/YYYY'));
-                $('.checkout').removeClass('active-border');
-                $('.checkin').removeClass('active-border');
+        //     $('.checkin input').on('apply.daterangepicker', function (ev, picker) {
+        //         $(this).val(picker.startDate.format('MM/DD/YYYY'));
+        //         $('#checkout').val(picker.endDate.format('MM/DD/YYYY'));
+        //         $('.checkout').removeClass('active-border');
+        //         $('.checkin').removeClass('active-border');
 
-            });
+        //     });
 
-            $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
-                $(this).val('');
-            });
-        });
+        //     $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+        //         $(this).val('');
+        //     });
+        // });
 
 
 
