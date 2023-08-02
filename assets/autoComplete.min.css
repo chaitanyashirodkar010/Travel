@@ -1,9 +1,9 @@
-.autoComplete_wrapper {
+.autoComplete1_wrapper {
     display: inline-block;
     position: relative
 }
 
-.autoComplete_wrapper>input {
+.autoComplete1_wrapper>input {
 
     margin: 0;
     box-sizing: border-box;
@@ -18,7 +18,7 @@
 
 
 
-.autoComplete_wrapper>ul {
+.autoComplete1_wrapper ul {
     position: absolute;
     max-height: 226px;
     overflow-y: scroll;
@@ -47,14 +47,14 @@
     left: -10px;
 }
 
-.autoComplete_wrapper>ul:empty,
-.autoComplete_wrapper>ul[hidden] {
+.autoComplete1_wrapper>ul:empty,
+.autoComplete1_wrapper>ul[hidden] {
     display: block;
     opacity: 0;
     transform: scale(0)
 }
 
-.autoComplete_wrapper>ul>li {
+.autoComplete1_wrapper>ul>li {
     margin: 0;
     padding: 0;
     text-align: left;
@@ -69,11 +69,11 @@
     padding: 16px 0;
 }
 
-.autoComplete_wrapper>ul>li:last-child {
+.autoComplete1_wrapper>ul>li:last-child {
     border-bottom: 0;
 }
 
-.autoComplete_wrapper>ul>li mark {
+.autoComplete1_wrapper>ul>li mark {
     background-color: transparent;
     color: #ff7a7a;
     font-weight: 700
@@ -87,7 +87,7 @@
     background: #FFF;
 }
 
-.autoComplete_wrapper {
+.autoComplete1_wrapper {
     border-radius: 52px;
 }
 
@@ -126,7 +126,7 @@
     padding-left: 32px;
 }
 
-.search-filter .autoComplete_wrapper>input:focus {
+.search-filter .autoComplete1_wrapper>input:focus {
     border-radius: 50px !important;
     border: 1px solid #DDD !important;
     background: #FFF !important;

@@ -15,7 +15,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+    <script src="assets/autoComplete.js"></script>
     <link rel="stylesheet" href="assets/autoComplete.min.css">
     <link href="assets/t-datepicker.min.css" rel="stylesheet" type="text/css">
     <link href="assets/t-datepicker-bluegrey.css" rel="stylesheet" type="text/css">
@@ -91,7 +91,7 @@
                             <div class="search-locations">
                                 <label for="checkout" class="label">Where</label>
                                 <div class="autoComplete_wrapper">
-                                    <input id="autoComplete" type="text" tabindex="1">
+                                    <input id="autoComplete2" type="text" tabindex="1" placeholder="&#xF002; Search">
                                 </div>
                             </div>
 
@@ -169,6 +169,8 @@
                     </div>
                 </div>
                 <div class="selection d-none"></div>
+                <div class="selection2 d-none"></div>
+
             </div>
         </div>
         <div class="partner-with-us">
@@ -285,8 +287,8 @@
     <script src="assets/t-datepicker.min.js"></script>
 
     <script src="index.js"></script>
-    <script src="autocomplete.js"></script>
-
+    <!-- <script src="autocomplete1.js"></script> -->
+    <script src="autocomplete2.js"></script>
 
     <script>
         $(function () {
@@ -375,59 +377,7 @@
     </script>
 
 
-    <!-- <script>
-        const { autocomplete } = window["@algolia/autocomplete-js"];
-        const recentSearchesPlugin  = window[ '@algolia/autocomplete-plugin-recent-searches'];
 
-        const autocomplete_id = "#autocomplete-search-box";
-   
-        function CreateAutoComplete(appid, search_api_key, index_name) {
-            console.log("CreateAutoComplete Called");
-            autocomplete({
-                container: autocomplete_id,
-                placeholder: "Type T to get completions",
-                plugins: [recentSearchesPlugin],
-                openOnFocus: true,
-                onSubmit(c) {
-                    console.log("submit", c);
-                },
-                getSources() {
-                    return [
-                        {
-                            sourceId: "links",
-                            getItems({ query }) {
-                                const items = [
-                                    { label: "Twitter", url: "https://twitter.com" },
-                                    { label: "GitHub", url: "https://github.com" }
-                                ];
-
-                                return items.filter(({ label }) =>
-                                    label.toLowerCase().includes(query.toLowerCase())
-                                );
-                            },
-                            getItemUrl({ item }) {
-                                console.log("GetItemURL", item);
-                                console.log("returning", item.url);
-                                return item.url;
-                            },
-                            templates: {
-                                item({ item }) {
-                                    return item.label;
-                                }
-                            }
-                        }
-                    ];
-                }
-            });
-        }
-
-        var delayInMilliseconds = 4000;
-        console.log("Will load Auto Complet in", delayInMilliseconds, "ms");
-        setTimeout(function () {
-            CreateAutoComplete();
-        }, delayInMilliseconds);
-
-    </script> -->
 </body>
 
 </html>
