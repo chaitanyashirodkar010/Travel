@@ -657,44 +657,44 @@ div#totalguests {
   border-bottom: 1px solid #E86831 !important;
 }
 
-.autoComplete1_wrapper {
+.autoComplete_wrapper {
   width: 100%;
 }
-.autoComplete1_wrapper input {
+.autoComplete_wrapper input {
   border-radius: 8px;
   border: none;
   outline: none;
   width: 100%;
 }
-.autoComplete1_wrapper input::-moz-placeholder {
+.autoComplete_wrapper input::-moz-placeholder {
   color: #B0B0B0;
   font-weight: 400;
 }
-.autoComplete1_wrapper input::placeholder {
+.autoComplete_wrapper input::placeholder {
   color: #B0B0B0;
   font-weight: 400;
 }
 
-.autoComplete1_wrapper > input:hover {
+.autoComplete_wrapper > input:hover {
   color: #222 !important;
   transition: all 0.3s ease;
   -webkit-transition: all -webkit-transform 0.3s ease;
 }
 
-.autoComplete1_wrapper > input:hover::-moz-placeholder {
+.autoComplete_wrapper > input:hover::-moz-placeholder {
   color: #222 !important;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-transition: all -webkit-transform 0.3s ease;
 }
 
-.autoComplete1_wrapper > input:hover::placeholder {
+.autoComplete_wrapper > input:hover::placeholder {
   color: #222 !important;
   transition: all 0.3s ease;
   -webkit-transition: all -webkit-transform 0.3s ease;
 }
 
-.autoComplete1_wrapper > input {
+.autoComplete_wrapper > input {
   color: #717171;
   font-size: 15px;
 }
@@ -706,12 +706,12 @@ mark {
   padding: 0 !important;
 }
 
-.autoComplete1_wrapper > ul > li:hover {
+.autoComplete_wrapper > ul > li:hover {
   cursor: pointer;
   background-color: transparent;
 }
 
-.autoComplete1_wrapper > input:focus {
+.autoComplete_wrapper > input:focus {
   color: #222;
   border: 0.06rem solid #222;
 }
