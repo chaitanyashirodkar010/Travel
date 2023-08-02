@@ -11,6 +11,7 @@ $(document).ready(function () {
 
     $(".adults").each(function (index) {
         $('.incdec').on("click", function (event) {
+
             event.stopImmediatePropagation();
             let value = 0;
             value = $(this).siblings(input).next().val();
@@ -18,14 +19,43 @@ $(document).ready(function () {
             ++value;
             $(this).siblings(input).next().val(value);
 
-
-
+            if (event.currentTarget.id.includes("children")) {
+                if(value == 1){
+                    $("#childrenDetails").append(`<div>
+                        <p class="person">AGE</p>
+                    </div>`);
+                }
+                $("#childrenDetails").append(`<div
+                    class="adults counter d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="person">child ${value}</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <select name="age" id="age">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                </div>`);
+            }
 
             var sum = 0;
             $('.inputfield').each(function () {
                 sum += +$(this).val();
             });
             $(".totalguests").val(sum);
+
+
 
 
         });
@@ -39,6 +69,12 @@ $(document).ready(function () {
 
             --value;
             $(this).siblings(input).val(value);
+            if (event.currentTarget.id.includes("children")) {
+                $("#childrenDetails").children("div:last").remove();
+                if(value == 0){
+                    $("#childrenDetails").empty();
+                }
+            }
 
 
             var sum = 0;
@@ -154,6 +190,8 @@ $(function () {
 
 
 });
+
+
 
 
 
