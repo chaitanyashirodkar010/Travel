@@ -301,16 +301,19 @@ minus.click(function () {
 
 
 
-// $('.typeahed').click(function (e) {
-//     e.preventDefault();
-//     $('.other-sections').hide();
-//     $(this).addClass('unstyletypehead');
-// });
 
-// $(document).click(function (event) {
-//     var $target = $(event.target);
-//     if (!$target.closest('.typeahed').length) {
-//         $('.other-sections').show();
-//         $('.typeahed').removeClass('unstyletypehead');
-//     }
-// });
+if ($(window).width() < 606) {
+    $('.typeahed').click(function (e) {
+        e.preventDefault();
+        $('.other-sections').hide();
+        $(this).addClass('unstyletypehead');
+    });
+
+    $(document).click(function (event) {
+        var $target = $(event.target);
+        if (!$target.closest('.typeahed').length) {
+            $('.other-sections').show();
+            $('.typeahed').removeClass('unstyletypehead');
+        }
+    });
+}

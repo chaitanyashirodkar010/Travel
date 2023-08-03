@@ -1,6 +1,7 @@
 .autoComplete_wrapper {
     display: inline-block;
-    position: relative
+    position: relative;
+    border-radius: 52px;
 }
 
 .autoComplete_wrapper>input {
@@ -46,13 +47,7 @@
         padding: 20px;
         border: 1px solid rgba(33, 33, 33, .07);
         box-shadow: 0 3px 6px rgba(149, 157, 165, .15);
-        top: 60px;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-
-    .autoComplete_wrapper ul {
+        top: 85px;
         width: 515px;
     }
 }
@@ -61,7 +56,7 @@
 .autoComplete_wrapper>ul[hidden] {
     display: block;
     opacity: 0;
-    transform: scale(0)
+    transform: scale(0);
 }
 
 .autoComplete_wrapper>ul>li {
@@ -88,65 +83,3 @@
     color: #ff7a7a;
     font-weight: 700
 }
-
-
-
-.autoComplete_wrapper {
-    border-radius: 52px;
-}
-
-.search-filter>div {
-    height: 74px;
-    position: relative;
-    transition: all .2s ease;
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 600px) {
-
-    .search-filter>div {
-        background: #F7F7F7;
-        margin: 10px;
-        border-radius: 8px;
-    }
-}
-
-.search-filter input {
-    height: 74px;
-}
-
-.search-filter input::-webkit-input-placeholder {
-    padding-top: 40px;
-    left: 30px;
-    font-size: 13px;
-}
-
-.search-filter .inputfield {
-    height: max-content;
-}
-
-.label {
-    position: absolute;
-    left: 32px;
-    color: #717171;
-
-    top: 17px;
-    font-size: 14px;
-}
-
-.search-locations input {
-    padding-left: 32px;
-}
-
-@media only screen and (min-width: 600px) {
-
-    .search-filter .autoComplete_wrapper>input:focus {
-        border-radius: 50px !important;
-        border: 1px solid #DDD !important;
-        background: #FFF !important;
-        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
-    }
-
-}
-
-/*# sourceMappingURL=/sm/e81ce8f7addf065a61ccd811ac8dda3ac35badd83cf93c0a06ac1f8ee3879152.map */

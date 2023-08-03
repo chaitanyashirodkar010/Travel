@@ -2,8 +2,6 @@
 .t-check-out,
 .t-datepicker {
     display: inline-block;
-    position: relative;
-    float: left;
 }
 
 .t-datepicker {
@@ -14,13 +12,10 @@
     max-width: 276px
 }
 
-.t-datepicker {
-    position: relative;
-}
-
 
 .t-datepicker>div {
     border: none;
+    flex: 1;
 }
 
 @media only screen and (max-width: 992px) {
@@ -37,6 +32,8 @@
 
 }
 
+.t-datepicker-open {}
+
 @media only screen and (min-width: 992px) {
 
     .typeahed .t-datepicker.t-datepicker-open {
@@ -51,7 +48,6 @@
 .t-check-out {
     border-width: 1px;
     border-style: solid;
-    width: 50%;
     box-sizing: border-box
 }
 
@@ -62,7 +58,6 @@
     left: 33px;
     display: block;
     font-weight: 400;
-    opacity: .5;
     font-size: 13px;
     cursor: pointer
 }
@@ -88,9 +83,7 @@
     border-radius: 0 4px 4px 0;
 }
 
-.t-check-out .t-datepicker-day {
-    left: -100%
-}
+
 
 .t-arrow-top {
     top: 32px;
@@ -116,8 +109,6 @@
 
 
 .t-datepicker-day {
-    border-width: 1px;
-    border-style: solid;
     top: 90px;
     overflow: hidden;
     position: absolute;
@@ -132,55 +123,23 @@
     padding: 0 10px;
     font-size: inherit;
     display: inline-block;
-    vertical-align: top
+    vertical-align: top;
+    flex: 1;
 }
 
-.t-datepicker-days {
-    width: max-content;
-}
 
-.t-datepicker-days .t-table-wrap {
-    padding: 0;
-    width: 47%;
-    margin-left: 2%
-}
 
-@media (max-width:480px) {
-    .t-datepicker-days {
-        width: 300px
-    }
 
-    .t-datepicker-days .t-table-wrap {
-        margin-left: 0;
-        width: 100%;
-        padding: 0 10px
-    }
-}
 
-@media (max-width:320px) {
-    .t-datepicker-days {
-        width: 290px
-    }
-
-    .t-datepicker-days .t-table-wrap {
-        padding: 0 5px
-    }
-}
 
 .t-table-condensed {
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
-    vertical-align: top
+    vertical-align: top;
+    text-align: center;
 }
 
-.t-next,
-.t-prev,
-.t-table-condensed td,
-.t-table-condensed th {
-    text-align: center;
-    padding: 10px
-}
 
 .t-date-title {
     clear: both;
@@ -197,7 +156,6 @@
 .t-range,
 .t-start {
 
-
     width: 40.658px;
     height: 40.658px;
     color: #222;
@@ -211,8 +169,8 @@
     .t-end,
     .t-range,
     .t-start {
-        width: 56.658px;
-        height: 56.658px;
+        width: 47px;
+        height: 47px;
     }
 }
 
@@ -224,11 +182,7 @@
     border: none;
 }
 
-.t-hover-day::after,
-.t-special-day:before {
-    content: '';
-    border-style: solid;
-}
+
 
 .t-arrow,
 .t-dates,
@@ -240,9 +194,6 @@
     cursor: pointer
 }
 
-.t-special-day {
-    position: relative
-}
 
 .t-special-day:before {
     height: 3px;
@@ -257,36 +208,12 @@
     box-sizing: content-box
 }
 
-.t-hover-day {
-    position: relative
-}
 
-.t-hover-day-content {
-    top: -30px;
-    width: 70px;
-    right: calc(50% - 35px);
-    position: absolute;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 3px 5px;
-    border-radius: 4px;
-    z-index: 9999
-}
 
-.t-hover-day::after {
-    position: absolute;
-    top: -8px;
-    right: calc(50% - 7px);
-    border-width: 7px
-}
 
-.t-today .t-hover-day-content {
-    z-index: 9998
-}
 
 .t-check-in .t-end-limit,
 .t-disabled {
-    opacity: .25;
     cursor: auto
 }
 
@@ -308,7 +235,8 @@
 }
 
 .t-month {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 thead>tr:nth-child(2) {
@@ -316,22 +244,16 @@ thead>tr:nth-child(2) {
     color: #B0B0B0;
 }
 
-.t-hover-day-content {
-    display: none;
-}
-
 
 
 .t-dates span {
-    color: #717171;
+    color: #B0B0B0;
     margin-right: 4px;
 }
 
 .t-dates label {
-    color: #717171;
+    color: #B0B0B0;
 }
-
-
 
 .t-table-condensed td,
 .t-table-condensed th {
@@ -339,12 +261,26 @@ thead>tr:nth-child(2) {
     height: 40.658px;
 }
 
+.t-table-condensed td {
+    color: #222;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: transparent;
+}
+
+.t-table-condensed td,
+.t-table-condensed th {
+    position: relative;
+}
+
 @media only screen and (min-width: 992px) {
 
     .t-table-condensed td,
     .t-table-condensed th {
-        width: 56.658px;
-        height: 56.658px;
+        width: 47px;
+        height: 47px;
+        text-align: center;
     }
 }
 
@@ -367,44 +303,19 @@ thead>tr:nth-child(2) {
 }
 
 .t-datepicker-day {
-    border-color: #ededed;
     background: #fff;
 }
 
-.t-day,
-.t-disabled,
-.t-end,
-.t-range,
-.t-start {
-    background: #fff;
-    border-color: #fff;
-}
 
-.t-disabled {
-    background: 0 0
-}
 
 .t-highlighted {
     color: #000000;
 }
 
-.t-highlighted.t-disabled {
-    background: #fafafa;
-}
-
-
 
 .t-range,
 .t-range-limit {
     color: #000000;
-}
-
-.t-range {
-    background: #EDF1F3;
-}
-
-.t-range-limit {
-    background: #EDF1F3;
 }
 
 .t-range-limit.t-end,
@@ -414,39 +325,13 @@ thead>tr:nth-child(2) {
 }
 
 
-.t-hover-day,
-.t-hover-day-content,
-.t-hover-day:hover {
-    color: #fff;
-    background: #000000;
-}
 
-.t-hover-day::after {
-    border-color: #000000 transparent transparent;
-}
-
-.t-today,
-.t-today .t-hover-day-content {
-    background: #aeaeae;
-}
-
-.t-today {
-    color: #222222;
-
-}
 
 .t-today::after {
-    border-top-color: #aeaeae;
+    border-top-color: transparent;
 }
 
-.t-today:hover,
-.t-today:hover .t-hover-day-content {
-    background: #000000;
-}
 
-.t-today:hover::after {
-    border-top-color: #000000;
-}
 
 .t-end.t-today,
 .t-start.t-today {
@@ -456,75 +341,39 @@ thead>tr:nth-child(2) {
 
 
 
-.t-datepicker-days {
-    width: max-content;
-}
-
-
-
-
-
-.t-start,
-.t-end,
-.t-hover-day {
-    width: 40.658px;
-    height: 40.658px;
-    background-color: #dddddd;
-    color: #222222;
-    border-radius: 50%;
-    position: relative;
-}
-
-@media only screen and (min-width: 992px) {
-
-    .t-start,
-    .t-end,
-    .t-hover-day {
-        width: 56.658px;
-        height: 56.658px;
-    }
-
-}
-
-.t-start::after,
-.t-end::after,
-.t-hover-day::after {
+.t-start::before,
+.t-end::before,
+.t-hover-day::before {
     content: '';
-    width: 40.658px;
-    height: 40.658px;
+    width: 47.658px;
+    height: 47.658px;
     position: absolute;
-    background-color: transparent;
-    border: thin solid #B0B0B0;
     border-radius: 50px;
     left: 0;
     top: 0;
+    background-color: #DDD;
+    border: 1px solid #B0B0B0;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
+
 @media only screen and (min-width: 992px) {
-    .t-start::after,
-    .t-end::after,
-    .t-hover-day::after {
-        width: 56.658px;
-        height: 56.658px;
-    } 
+
+    .t-start::before,
+    .t-end::before,
+    .t-hover-day::before {
+        width: 47.658px;
+        height: 47.658px;
+    }
 }
 
-
-td.t-day.t-range-limit.t-hover-day {
-    position: relative;
-}
-
-.t-hover-day,
-.t-hover-day-content,
-.t-hover-day:hover {
-    color: #717171;
-    background: transparent;
-}
-
+/*# sourceMappingURL=style.css.map */
 .t-dates {
     color: transparent;
     padding: 10px 15px;
     box-sizing: border-box;
-    position: relative;
     height: 100%;
     padding-top: 40px;
 
@@ -550,4 +399,13 @@ td.t-day.t-range-limit.t-hover-day {
 .t-check-out .t-date-info-title {
     top: 40px;
     left: 30px;
+}
+
+.t-hover-day-content {
+    display: none;
+}
+
+.t-today::before {
+    color: #222222;
+    background-color: transparent !important;
 }

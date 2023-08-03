@@ -848,7 +848,7 @@ div#totalguests {
       left: 33px;
       width: -moz-max-content !important;
       top: 37px;
-      color: #717171;
+      color: #B0B0B0;
       font-size: 14px;
       height: -moz-max-content;
       height: max-content;
@@ -878,9 +878,6 @@ div#totalguests {
 .autoComplete_wrapper {
   width: 100%;
 
-
-
-
   input {
     border-radius: 8px;
     border: none;
@@ -891,26 +888,31 @@ div#totalguests {
 
     &::placeholder {
       color: #B0B0B0;
-
-
       font-weight: 400;
     }
   }
 }
 
-.autoComplete_wrapper>input:hover {
-  color: #222 !important;
-  transition: all .3s ease;
-  -webkit-transition: all -webkit-transform .3s ease;
-}
-
-.autoComplete_wrapper>input:hover {
+input {
   &::placeholder {
-    color: #222 !important;
-    transition: all .3s ease;
-    -webkit-transition: all -webkit-transform .3s ease;
+    color: #B0B0B0;
+    font-weight: 400;
   }
 }
+
+// .autoComplete_wrapper>input:hover {
+//   color: #222 !important;
+//   transition: all .3s ease;
+//   -webkit-transition: all -webkit-transform .3s ease;
+// }
+
+// .autoComplete_wrapper>input:hover {
+//   &::placeholder {
+//     color: #222 !important;
+//     transition: all .3s ease;
+//     -webkit-transition: all -webkit-transform .3s ease;
+//   }
+// }
 
 .autoComplete_wrapper>input {
   color: #717171;
@@ -945,7 +947,7 @@ mark {
 }
 
 .search-locations {
-  width: 100%;
+
 
   @media only screen and (min-width: 992px) {
     width: 358px;
@@ -1050,6 +1052,10 @@ mark {
     background: transparent !important;
     box-shadow: 0 !important;
   }
+
+  .autoComplete_wrapper ul {
+    top: 60px;
+  }
 }
 
 
@@ -1127,7 +1133,6 @@ mark {
     right: 0;
     color: #717171;
     opacity: 1;
-
   }
 
   button {
@@ -1171,11 +1176,18 @@ mark {
 }
 
 .search-filter {
-
-
   @media only screen and (min-width: 992px) {
     background: #F7F7F7;
     width: 915px;
+    border-radius: 52px;
+  }
+
+  .search-icon .search {
+    background: #E86831;
+
+    i {
+      color: white;
+    }
   }
 }
 
@@ -1240,12 +1252,6 @@ mark {
 
 }
 
-@media only screen and (min-width: 992px) {
-
-  .t-datepicker-days {
-    padding: 30px;
-  }
-}
 
 .search-iconformobile {
   position: absolute;
@@ -1302,22 +1308,15 @@ mark {
 }
 
 
-.t-datepicker-days .t-table-wrap {
-  padding: 0;
-  width: 100%;
-
-  @media only screen and (min-width: 992px) {
-    width: 50%;
-  }
-
-  margin-left: 0;
-}
 
 @media only screen and (max-width: 600px) {
   .t-datepicker-days {
-    width: max-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 
   .t-table-condensed td,
@@ -1349,6 +1348,119 @@ mark {
   .label {
     @media only screen and (min-width: 992px) {
       z-index: 8;
+    }
+  }
+}
+
+.search-filter>div {
+  height: 74px;
+  position: relative;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .search-filter>div {
+    background: #F7F7F7;
+    margin: 10px auto;
+    border-radius: 8px;
+  }
+}
+
+.search-filter input {
+  height: 74px;
+}
+
+.search-filter input::-webkit-input-placeholder {
+  padding-top: 40px;
+  left: 30px;
+  font-size: 13px;
+}
+
+.search-filter .inputfield {
+  height: max-content;
+}
+
+.label {
+  position: absolute;
+  left: 32px;
+  color: #717171;
+
+  top: 17px;
+  font-size: 14px;
+}
+
+.search-locations input {
+  @media only screen and (min-width: 992px) {
+    padding-left: 32px;
+  }
+}
+
+.t-datepicker-days {
+  @media only screen and (min-width: 992px) {
+    display: flex;
+
+    .t-table-wrap {
+      margin-right: 60px;
+    }
+
+    .t-table-wrap:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .search-filter {
+    .t-dates {
+      padding-left: 15px;
+    }
+
+    .t-datepicker-days {
+      width: 947px;
+      left: -374px;
+      right: 0;
+      margin: auto;
+      padding: 30px 60px;
+      border: 0;
+
+    }
+
+    .room-info {
+      width: 515px;
+    }
+
+    .dropdown-menu {
+      right: -110px;
+      top: 90px;
+    }
+
+    padding-right: 12px;
+  }
+
+  .search-filter .autoComplete_wrapper>input:focus {
+    border-radius: 50px !important;
+    border: 1px solid #DDD !important;
+    background: #FFF !important;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
+  }
+
+}
+
+/*# sourceMappingURL=/sm/e81ce8f7addf065a61ccd811ac8dda3ac35badd83cf93c0a06ac1f8ee3879152.map */
+.t-datepicker {
+  display: flex;
+}
+
+
+.remove-highlight {
+  background: #ffffff;
+
+  .search-icon .search {
+    background: rgba(221, 221, 221, 0.6);
+
+    i {
+      color: #717171;
     }
   }
 }
