@@ -747,7 +747,7 @@ div#totalguests {
   left: 33px;
   width: -moz-max-content !important;
   top: 37px;
-  color: #717171;
+  color: #B0B0B0;
   font-size: 14px;
   height: -moz-max-content;
   height: max-content;
@@ -786,23 +786,14 @@ div#totalguests {
   font-weight: 400;
 }
 
-.autoComplete_wrapper > input:hover {
-  color: #222 !important;
-  transition: all 0.3s ease;
-  -webkit-transition: all -webkit-transform 0.3s ease;
+input::-moz-placeholder {
+  color: #B0B0B0;
+  font-weight: 400;
 }
 
-.autoComplete_wrapper > input:hover::-moz-placeholder {
-  color: #222 !important;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-transition: all -webkit-transform 0.3s ease;
-}
-
-.autoComplete_wrapper > input:hover::placeholder {
-  color: #222 !important;
-  transition: all 0.3s ease;
-  -webkit-transition: all -webkit-transform 0.3s ease;
+input::placeholder {
+  color: #B0B0B0;
+  font-weight: 400;
 }
 
 .autoComplete_wrapper > input {
@@ -836,9 +827,6 @@ mark {
   }
 }
 
-.search-locations {
-  width: 100%;
-}
 @media only screen and (min-width: 992px) {
   .search-locations {
     width: 358px;
@@ -933,6 +921,9 @@ mark {
   border: 0 !important;
   background: transparent !important;
   box-shadow: 0 !important;
+}
+.explore-search .autoComplete_wrapper ul {
+  top: 60px;
 }
 
 .check-in-checkout {
@@ -1037,7 +1028,14 @@ mark {
   .search-filter {
     background: #F7F7F7;
     width: 915px;
+    border-radius: 52px;
   }
+}
+.search-filter .search-icon .search {
+  background: #E86831;
+}
+.search-filter .search-icon .search i {
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1079,11 +1077,6 @@ mark {
     color: #717171;
     top: 17px;
     font-size: 14px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .t-datepicker-days {
-    padding: 30px;
   }
 }
 .search-iconformobile {
@@ -1131,23 +1124,14 @@ mark {
   height: 24px;
 }
 
-.t-datepicker-days .t-table-wrap {
-  padding: 0;
-  width: 100%;
-  margin-left: 0;
-}
-@media only screen and (min-width: 992px) {
-  .t-datepicker-days .t-table-wrap {
-    width: 50%;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .t-datepicker-days {
-    width: -moz-max-content;
-    width: max-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
   .t-table-condensed td,
   .t-table-condensed th {
@@ -1175,4 +1159,103 @@ mark {
   .search-locations .label {
     z-index: 8;
   }
+}
+
+.search-filter > div {
+  height: 74px;
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .search-filter > div {
+    background: #F7F7F7;
+    margin: 10px auto;
+    border-radius: 8px;
+  }
+}
+.search-filter input {
+  height: 74px;
+}
+
+.search-filter input::-webkit-input-placeholder {
+  padding-top: 40px;
+  left: 30px;
+  font-size: 13px;
+}
+
+.search-filter .inputfield {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.label {
+  position: absolute;
+  left: 32px;
+  color: #717171;
+  top: 17px;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 992px) {
+  .search-locations input {
+    padding-left: 32px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .t-datepicker-days {
+    display: flex;
+  }
+  .t-datepicker-days .t-table-wrap {
+    margin-right: 60px;
+  }
+  .t-datepicker-days .t-table-wrap:last-child {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .search-filter {
+    padding-right: 12px;
+  }
+  .search-filter .t-dates {
+    padding-left: 15px;
+  }
+  .search-filter .t-datepicker-days {
+    width: 947px;
+    left: -374px;
+    right: 0;
+    margin: auto;
+    padding: 30px 60px;
+    border: 0;
+  }
+  .search-filter .room-info {
+    width: 515px;
+  }
+  .search-filter .dropdown-menu {
+    right: -110px;
+    top: 90px;
+  }
+  .search-filter .autoComplete_wrapper > input:focus {
+    border-radius: 50px !important;
+    border: 1px solid #DDD !important;
+    background: #FFF !important;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
+  }
+}
+
+.t-datepicker {
+  display: flex;
+}
+
+.remove-highlight {
+  background: #ffffff;
+}
+.remove-highlight .search-icon .search {
+  background: rgba(221, 221, 221, 0.6);
+}
+.remove-highlight .search-icon .search i {
+  color: #717171;
 }/*# sourceMappingURL=style.css.map */
