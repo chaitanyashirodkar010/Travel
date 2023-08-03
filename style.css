@@ -498,8 +498,13 @@ select {
 
 .room-info {
   filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.12));
-  width: 356px;
+  width: 100%;
   border-radius: 10px;
+}
+@media only screen and (min-width: 992px) {
+  .room-info {
+    width: 356px;
+  }
 }
 .room-info .incdec,
 .room-info .dec,
@@ -541,6 +546,13 @@ div#totalguests {
 .banner-container {
   position: relative;
 }
+@media only screen and (max-width: 600px) {
+  .banner-container img {
+    height: 60vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .banner-container .banner-text {
   position: absolute;
   color: #FFF;
@@ -551,18 +563,28 @@ div#totalguests {
   margin: auto;
   max-width: 437px;
   font-size: 56px;
-  top: 116px;
+}
+@media only screen and (min-width: 992px) {
+  .banner-container .banner-text {
+    top: 130px;
+  }
 }
 @media only screen and (max-width: 600px) {
   .banner-container .banner-text {
     top: unset;
-    font-size: 25px;
-    bottom: 22px;
+    font-size: 40px;
+    bottom: 32px;
+    padding: 4px;
   }
 }
 
 .partner-with-us {
-  margin-top: 60px;
+  margin-top: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .partner-with-us {
+    margin-top: 60px;
+  }
 }
 .partner-with-us h6 {
   color: #707070;
@@ -582,8 +604,13 @@ div#totalguests {
 }
 
 .popular-cities {
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .popular-cities {
+    margin-top: 100px;
+  }
 }
 .popular-cities h5 {
   color: #222;
@@ -667,6 +694,7 @@ div#totalguests {
   border: 1px solid #DDD;
   background: #FFF;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+  position: relative;
   padding: 10px;
   margin-top: -50px;
   position: relative;
@@ -681,12 +709,12 @@ div#totalguests {
 }
 @media only screen and (max-width: 600px) {
   .typeahed {
-    position: fixed;
     top: 0;
     margin-top: 0;
     left: 0;
     right: 0;
     width: 100%;
+    margin: 17px;
   }
 }
 .typeahed .dropdown-menu {
@@ -701,11 +729,13 @@ div#totalguests {
     max-width: 185px;
   }
 }
-.typeahed .dropdown-custom.active {
-  border-radius: 50px !important;
-  border: 1px solid #DDD !important;
-  background: #FFF !important;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
+@media only screen and (min-width: 992px) {
+  .typeahed .dropdown-custom.active {
+    border-radius: 50px !important;
+    border: 1px solid #DDD !important;
+    background: #FFF !important;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
+  }
 }
 .typeahed .dropdown-custom-toggle {
   width: 100%;
@@ -802,7 +832,7 @@ mark {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 41px;
+    margin-bottom: 41px;
   }
 }
 
@@ -848,20 +878,13 @@ mark {
   color: #FFFFFF;
 }
 
-.search-filter {
-  background: #F7F7F7;
-}
-@media only screen and (min-width: 992px) {
-  .search-filter {
-    width: 915px;
-  }
-}
-
 .remove-highlight {
   background: #ffffff;
-  border: 1px solid #DDD;
 }
 @media only screen and (min-width: 992px) {
+  .remove-highlight {
+    border: 1px solid #DDD;
+  }
   .remove-highlight .t-datepicker::after {
     content: "";
     position: absolute;
@@ -939,7 +962,6 @@ mark {
 }
 .check-in-checkout .t-dates {
   position: relative;
-  padding-left: 38px;
 }
 .check-in-checkout .t-dates::before {
   content: "";
@@ -1011,6 +1033,13 @@ mark {
   text-decoration: none;
 }
 
+@media only screen and (min-width: 992px) {
+  .search-filter {
+    background: #F7F7F7;
+    width: 915px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .search-filter .t-datepicker {
     float: unset;
@@ -1019,9 +1048,131 @@ mark {
     max-width: unset;
     background-color: white;
   }
+  .explore-search input {
+    width: 100%;
+    padding-left: 48px;
+  }
+  .search-locations input {
+    padding-left: 45px;
+  }
+  .search-filter .t-date-check-in::after,
+  .search-filter .t-date-check-out::after {
+    content: "Check-in";
+    position: absolute;
+    left: 48px;
+    color: #717171;
+    top: 17px;
+  }
+  .search-filter .t-check-in .t-date-info-title,
+  .search-filter .t-check-out .t-date-info-title {
+    left: 48px;
+  }
+  .search-filter .dropdown-custom .label {
+    left: 52px;
+  }
+  .typeahed .dropdown-custom-toggle .totalguests {
+    left: 50px;
+  }
+  .search-locations .label {
+    position: absolute;
+    left: 45px;
+    color: #717171;
+    top: 17px;
+    font-size: 14px;
+  }
 }
 @media only screen and (min-width: 992px) {
   .t-datepicker-days {
     padding: 30px;
+  }
+}
+.search-iconformobile {
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 12px;
+}
+
+.t-dates {
+  position: relative;
+  padding-left: 26px;
+}
+@media only screen and (max-width: 992px) {
+  .t-dates::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    left: 14px;
+    height: 70%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url(/images/calender.svg);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .t-dates {
+    padding-left: 38px;
+  }
+}
+
+.user-guests {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 18px;
+  height: 24px;
+}
+
+.t-datepicker-days .t-table-wrap {
+  padding: 0;
+  width: 100%;
+  margin-left: 0;
+}
+@media only screen and (min-width: 992px) {
+  .t-datepicker-days .t-table-wrap {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .t-datepicker-days {
+    width: -moz-max-content;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .t-table-condensed td,
+  .t-table-condensed th {
+    width: 40.658px;
+    height: 40.658px;
+    font-size: 10px;
+    vertical-align: middle;
+  }
+  .t-start::after,
+  .t-end::after,
+  .t-hover-day::after {
+    content: "";
+    width: 40.658px;
+    height: 40.658px;
+  }
+}
+.unstyletypehead {
+  height: 100vh;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .search-locations .label {
+    z-index: 8;
   }
 }/*# sourceMappingURL=style.css.map */

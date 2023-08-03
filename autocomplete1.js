@@ -25,7 +25,7 @@ const autoCompleteJS = new autoComplete({
             // Modify Results Item Style
             item.style = "display: flex;text-transform: capitalize;align-items: center;";
             // Modify Results Item Content
-            item.innerHTML = `    <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            item.innerHTML = `<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect y="0.5" width="32" height="32" rx="16" fill="#F7F7F7"/>
 <g clip-path="url(#clip0_1137_4833)">
 <path d="M16.0973 9.22852C19.0061 9.22852 21.43 11.6525 21.43 14.5612C21.43 16.7912 18.2304 21.1543 16.776 22.9965C16.5821 23.1904 16.3882 23.3844 16.0973 23.3844C15.8065 23.3844 15.6125 23.2874 15.4186 22.9965C13.9643 21.1543 10.7646 16.7912 10.7646 14.5612C10.7646 11.6525 13.1886 9.22852 16.0973 9.22852Z" stroke="#717171" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -50,7 +50,18 @@ ${data.key}
             selection: (event) => {
                 const selection = event.detail.selection.value;
                 autoCompleteJS.input.value = selection;
+            
+
+                var testObject = autoCompleteJS.input.value;
+                
+                localStorage.setItem('testObject', JSON.stringify(testObject));
+                var retrievedObject = localStorage.getItem('testObject');
+
+                console.log(JSON.parse(retrievedObject));
             }
         }
     }
+
 });
+
+

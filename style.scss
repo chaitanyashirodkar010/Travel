@@ -575,7 +575,12 @@ select {
 .room-info {
   filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.12));
   // width: 515px;
-  width: 356px;
+  width: 100%;
+
+  @media only screen and (min-width: 992px) {
+    width: 356px;
+  }
+
   border-radius: 10px;
 
   .incdec,
@@ -622,6 +627,13 @@ div#totalguests {
 .banner-container {
   position: relative;
 
+  img {
+    @media only screen and (max-width: 600px) {
+      height: 60vh;
+      object-fit: cover;
+    }
+  }
+
   .banner-text {
     position: absolute;
     color: #FFF;
@@ -633,18 +645,26 @@ div#totalguests {
     max-width: 437px;
 
     font-size: 56px;
-    top: 116px;
+
+    @media only screen and (min-width: 992px) {
+      top: 130px;
+    }
 
     @media only screen and (max-width: 600px) {
       top: unset;
-      font-size: 25px;
-      bottom: 22px;
+      font-size: 40px;
+      bottom: 32px;
+      padding: 4px;
     }
   }
 }
 
 .partner-with-us {
-  margin-top: 60px;
+  margin-top: 30px;
+
+  @media only screen and (min-width: 992px) {
+    margin-top: 60px;
+  }
 
   h6 {
     color: #707070;
@@ -667,7 +687,12 @@ div#totalguests {
 }
 
 .popular-cities {
-  margin-top: 100px;
+  margin-top: 50px;
+
+  @media only screen and (min-width: 992px) {
+    margin-top: 100px;
+  }
+
   text-align: center;
 
   h5 {
@@ -757,6 +782,19 @@ div#totalguests {
   background: #FFF;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
 
+  position: relative;
+
+  // &::after {
+  //   position: absolute;
+  //   content: '';
+  //   width: 100%;
+  //   left: 0;
+  //   top: 0;
+  //   height: 100vh;
+  //   background: #FFF;
+
+  // }
+
   @media only screen and (min-width: 992px) {
     min-width: 515px;
   }
@@ -768,12 +806,13 @@ div#totalguests {
   width: max-content;
 
   @media only screen and (max-width: 600px) {
-    position: fixed;
+
     top: 0;
     margin-top: 0;
     left: 0;
     right: 0;
     width: 100%;
+    margin: 17px;
   }
 
 
@@ -784,15 +823,18 @@ div#totalguests {
 
   .dropdown-custom {
     width: 100%;
-   @media only screen and (min-width: 992px) {
-    max-width: 185px;
-   }
 
-    &.active {
-      border-radius: 50px !important;
-      border: 1px solid #DDD !important;
-      background: #FFF !important;
-      box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
+    @media only screen and (min-width: 992px) {
+      max-width: 185px;
+    }
+
+    @media only screen and (min-width: 992px) {
+      &.active {
+        border-radius: 50px !important;
+        border: 1px solid #DDD !important;
+        background: #FFF !important;
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
+      }
     }
   }
 
@@ -898,15 +940,16 @@ mark {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 41px;
+    margin-bottom: 41px;
   }
 }
 
 .search-locations {
- width: 100%;
- @media only screen and (min-width: 992px) {
-  width: 358px;
- }
+  width: 100%;
+
+  @media only screen and (min-width: 992px) {
+    width: 358px;
+  }
 }
 
 .person {
@@ -945,46 +988,40 @@ mark {
   }
 }
 
-.search-filter {
-  background: #F7F7F7;
 
-  @media only screen and (min-width: 992px) {
-    width: 915px;
-
-  }
-}
 
 .remove-highlight {
   background: #ffffff;
 
-  border: 1px solid #DDD;
 
-@media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 992px) {
 
-  .t-datepicker::after {
-    content: '';
-    position: absolute;
-    width: 1px;
-    left: 0;
-    height: 70%;
-    background: #DDD;
-    margin: auto;
-    top: 0;
-    bottom: 0;
+    border: 1px solid #DDD;
+
+    .t-datepicker::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      left: 0;
+      height: 70%;
+      background: #DDD;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+    }
+
+    .t-datepicker::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      right: 0;
+      height: 70%;
+      background: #DDD;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+    }
   }
-
-  .t-datepicker::before {
-    content: '';
-    position: absolute;
-    width: 1px;
-    right: 0;
-    height: 70%;
-    background: #DDD;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-  }
-}
 }
 
 .explore-search {
@@ -1062,7 +1099,6 @@ mark {
       background-image: url(/images/calender.svg);
     }
 
-    padding-left: 38px;
 
   }
 
@@ -1134,6 +1170,15 @@ mark {
   text-decoration: none;
 }
 
+.search-filter {
+
+
+  @media only screen and (min-width: 992px) {
+    background: #F7F7F7;
+    width: 915px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .search-filter .t-datepicker {
     float: unset;
@@ -1142,10 +1187,168 @@ mark {
     max-width: unset;
     background-color: white;
   }
+
+  .explore-search input {
+    width: 100%;
+    padding-left: 48px;
+  }
+
+  .search-locations input {
+    padding-left: 45px;
+  }
+
+  .search-filter {
+
+    .t-date-check-in::after,
+    .t-date-check-out::after {
+      content: 'Check-in';
+      position: absolute;
+      left: 48px;
+      color: #717171;
+      top: 17px;
+    }
+
+    .t-check-in .t-date-info-title,
+    .t-check-out .t-date-info-title {
+
+      left: 48px;
+    }
+
+    .dropdown-custom {
+      .label {
+        left: 52px;
+      }
+    }
+
+
+
+  }
+
+  .typeahed .dropdown-custom-toggle .totalguests {
+    left: 50px;
+  }
+
+  .search-locations {
+    .label {
+      position: absolute;
+      left: 45px;
+      color: #717171;
+      top: 17px;
+      font-size: 14px;
+    }
+  }
+
 }
+
 @media only screen and (min-width: 992px) {
-  
-.t-datepicker-days{
-  padding: 30px;
+
+  .t-datepicker-days {
+    padding: 30px;
+  }
 }
+
+.search-iconformobile {
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 12px;
+}
+
+
+.t-check-in::after,
+.t-check-out::after {}
+
+.t-dates {
+  position: relative;
+
+  @media only screen and (max-width: 992px) {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      left: 14px;
+      height: 70%;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url(/images/calender.svg);
+    }
+  }
+
+  padding-left: 26px;
+
+  @media only screen and (min-width: 992px) {
+    padding-left: 38px;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px) {}
+
+.user-guests {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 18px;
+  height: 24px;
+}
+
+
+.t-datepicker-days .t-table-wrap {
+  padding: 0;
+  width: 100%;
+
+  @media only screen and (min-width: 992px) {
+    width: 50%;
+  }
+
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .t-datepicker-days {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .t-table-condensed td,
+  .t-table-condensed th {
+    width: 40.658px;
+    height: 40.658px;
+    font-size: 10px;
+    vertical-align: middle;
+  }
+
+  .t-start::after,
+  .t-end::after,
+  .t-hover-day::after {
+    content: '';
+    width: 40.658px;
+    height: 40.658px;
+  }
+}
+
+
+.unstyletypehead {
+  height: 100vh;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.search-locations {
+  .label {
+    @media only screen and (min-width: 992px) {
+      z-index: 8;
+    }
+  }
 }

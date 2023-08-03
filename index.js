@@ -20,7 +20,7 @@ $(document).ready(function () {
             $(this).siblings(input).next().val(value);
 
             if (event.currentTarget.id.includes("children")) {
-                if(value == 1){
+                if (value == 1) {
                     $("#childrenDetails").append(`<div class="mb-25" style="border-top:1px solid #707070;">
                         <p class="person px-24" style="margin-top:20px;">AGE</p>
                     </div>`);
@@ -53,7 +53,7 @@ $(document).ready(function () {
             $('.inputfield').each(function () {
                 sum += +$(this).val();
             });
-   
+
             $(".totalguests").val(sum);
 
             $(".guest").text(sum);
@@ -73,7 +73,7 @@ $(document).ready(function () {
             $(this).siblings(input).val(value);
             if (event.currentTarget.id.includes("children")) {
                 $("#childrenDetails").children("div:last").remove();
-                if(value == 0){
+                if (value == 0) {
                     $("#childrenDetails").empty();
                 }
             }
@@ -106,7 +106,10 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).removeClass('remove-highlight');
     });
-
+    $('.dropdown-custom').click(function (e) {
+        e.preventDefault();
+        $('.search-filter').removeClass('remove-highlight');
+    });
 
     $(window).click(function () {
         $('.dropdown-menu').removeClass('show');
@@ -224,22 +227,22 @@ roomincrement.click(function () {
     var value = $(this).siblings(input).val();
     value++;
     console.log(value);
-    
+
     $(this).siblings(input).val(value);
     $('.roomcount').text(value)
 })
 
 // input.text(0);
 
- minus.click(function () {
+minus.click(function () {
 
-     var value = $(this).siblings(input).val();
-     if (value > 1) {
-         value--;
-     }
-     $(this).siblings(input).val(value);
-     $('.roomcount').text(value)
- });
+    var value = $(this).siblings(input).val();
+    if (value > 1) {
+        value--;
+    }
+    $(this).siblings(input).val(value);
+    $('.roomcount').text(value)
+});
 
 
 // adultincrement.click(function () {
@@ -298,3 +301,16 @@ roomincrement.click(function () {
 
 
 
+// $('.typeahed').click(function (e) {
+//     e.preventDefault();
+//     $('.other-sections').hide();
+//     $(this).addClass('unstyletypehead');
+// });
+
+// $(document).click(function (event) {
+//     var $target = $(event.target);
+//     if (!$target.closest('.typeahed').length) {
+//         $('.other-sections').show();
+//         $('.typeahed').removeClass('unstyletypehead');
+//     }
+// });

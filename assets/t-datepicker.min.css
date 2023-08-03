@@ -29,9 +29,21 @@
         background: #F7F7F7;
         margin-right: 8px;
     }
+
     .t-datepicker>div:last-child {
 
         margin-right: 0;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .typeahed .t-datepicker.t-datepicker-open {
+        border-radius: 50px !important;
+        border: 1px solid #DDD !important;
+        background: #FFF !important;
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
     }
 }
 
@@ -184,10 +196,24 @@
 .t-end,
 .t-range,
 .t-start {
-    width: 56.658px;
-    height: 56.658px;
+
+
+    width: 40.658px;
+    height: 40.658px;
     color: #222;
 
+}
+
+@media only screen and (min-width: 992px) {
+
+    .t-day,
+    .t-disabled,
+    .t-end,
+    .t-range,
+    .t-start {
+        width: 56.658px;
+        height: 56.658px;
+    }
 }
 
 .t-range {
@@ -305,20 +331,22 @@ thead>tr:nth-child(2) {
     color: #717171;
 }
 
-.typeahed .t-datepicker.t-datepicker-open {
-    border-radius: 50px !important;
-    border: 1px solid #DDD !important;
-    background: #FFF !important;
-    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
-}
 
 
 .t-table-condensed td,
 .t-table-condensed th {
-    width: 56.658px;
-    height: 56.658px;
+    width: 40.658px;
+    height: 40.658px;
 }
 
+@media only screen and (min-width: 992px) {
+
+    .t-table-condensed td,
+    .t-table-condensed th {
+        width: 56.658px;
+        height: 56.658px;
+    }
+}
 
 
 .t-check-in,
@@ -439,20 +467,31 @@ thead>tr:nth-child(2) {
 .t-start,
 .t-end,
 .t-hover-day {
-    width: 56.658px;
-    height: 56.658px;
+    width: 40.658px;
+    height: 40.658px;
     background-color: #dddddd;
     color: #222222;
     border-radius: 50%;
     position: relative;
 }
 
+@media only screen and (min-width: 992px) {
+
+    .t-start,
+    .t-end,
+    .t-hover-day {
+        width: 56.658px;
+        height: 56.658px;
+    }
+
+}
+
 .t-start::after,
 .t-end::after,
 .t-hover-day::after {
     content: '';
-    width: 56.658px;
-    height: 56.658px;
+    width: 40.658px;
+    height: 40.658px;
     position: absolute;
     background-color: transparent;
     border: thin solid #B0B0B0;
@@ -460,12 +499,15 @@ thead>tr:nth-child(2) {
     left: 0;
     top: 0;
 }
-
-.t-datepicker-days .t-table-wrap {
-    padding: 0;
-    width: 50%;
-    margin-left: 0;
+@media only screen and (min-width: 992px) {
+    .t-start::after,
+    .t-end::after,
+    .t-hover-day::after {
+        width: 56.658px;
+        height: 56.658px;
+    } 
 }
+
 
 td.t-day.t-range-limit.t-hover-day {
     position: relative;
