@@ -236,6 +236,7 @@
 
 .t-month {
     font-weight: 600;
+    color: #2E2E2E;
     font-size: 16px;
 }
 
@@ -247,7 +248,7 @@ thead>tr:nth-child(2) {
 
 
 .t-dates span {
-    color: #B0B0B0;
+    color: #717171;
     margin-right: 4px;
 }
 
@@ -345,15 +346,14 @@ thead>tr:nth-child(2) {
 .t-end::before,
 .t-hover-day::before {
     content: '';
-    width: 47.658px;
-    height: 47.658px;
+    width: 40.658px;
+    height: 40.658px;
     position: absolute;
     border-radius: 50px;
-    left: 0;
-    top: 0;
-    background-color: #DDD;
+    left: -1px;
+    top: -1px;
+    background-color: transparent;
     border: 1px solid #B0B0B0;
-    z-index: -1;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -406,6 +406,18 @@ thead>tr:nth-child(2) {
 }
 
 .t-today::before {
+    color: #222222;
+    background-color: transparent !important;
+}
+
+.t-start,
+.t-end,
+.t-hover-day{
+    background-color: #DDD !important;
+    border-radius: 50px;
+
+}
+.t-today {
     color: #222222;
     background-color: transparent !important;
 }

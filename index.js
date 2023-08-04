@@ -93,7 +93,7 @@ $(document).ready(function () {
 
     $('.dropdown-custom-toggle').click(function (e) {
         e.preventDefault();
-        $('.dropdown-menu').addClass('show');
+        $('.custom-dropdown-menu').toggleClass('show');
         $('.dropdown-custom').addClass('active');
         $('.t-datepicker-day').remove()
         $('.t-datepicker').removeClass('t-datepicker-open');
@@ -112,7 +112,7 @@ $(document).ready(function () {
     });
 
     $(window).click(function () {
-        $('.dropdown-menu').removeClass('show');
+        $('.custom-dropdown-menu').removeClass('show');
         $('.dropdown-custom').removeClass('active');
     });
 
@@ -171,7 +171,7 @@ $('.bloglistingcarousel').each(function () {
 
 $(function () {
     $('input[name="datefilter"]').daterangepicker({
-        autoUpdateInput: false,
+        autoUpdateInput: true,
         "opens": "center",
         "autoApply": true,
         locale: {
@@ -317,3 +317,16 @@ if ($(window).width() < 606) {
         }
     });
 }
+
+
+jQuery(document).ready(function () {
+
+    jQuery('.more').readmore({
+        speed: 300,
+        collapsedHeight: 140,
+        moreLink: '<a href="#" class="text-decoration-none d-inline-block mt-44"><b class="fw-500 fs12">View more <img src="images/arrow-down.svg" class="ml-10" alt=""></b></a>',
+        lessLink: '<a href="#" class="text-decoration-none d-inline-block mt-44"><b class="fw-500 fs12">View less <img src="images/uparrow.png" class="ml-10" alt=""></b></a>',
+        heightMargin: 16
+    });
+
+});

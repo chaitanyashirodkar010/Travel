@@ -41,6 +41,10 @@ a {
   color: #717171;
 }
 
+.fw-500 {
+  font-weight: 500;
+}
+
 .btn-outline-secondary {
   color: #222;
   border-color: #222;
@@ -50,6 +54,12 @@ a {
 
 .fw-500 {
   font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  .nowrap-small {
+    white-space: nowrap;
+  }
 }
 
 .my-16 {
@@ -90,6 +100,10 @@ a {
   margin-left: 70px;
 }
 
+.mb-85 {
+  margin-bottom: 85px;
+}
+
 .mr-8 {
   margin-right: 8px;
 }
@@ -116,6 +130,17 @@ a {
 
 .mt-44 {
   margin-top: 44px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+.fw-700 b {
+  font-weight: 700;
 }
 
 .mb-74 {
@@ -213,6 +238,17 @@ hr {
   margin-top: 34px;
   margin-bottom: 34px;
 }
+@media only screen and (min-width: 992px) {
+  hr {
+    margin-top: 44px;
+    margin-bottom: 44px;
+  }
+}
+
+.propertyimage {
+  height: 177px;
+  width: 177px;
+}
 
 .object-fit-cover {
   -o-object-fit: cover;
@@ -234,12 +270,21 @@ hr {
 @media only screen and (min-width: 992px) {
   .btn-dark-outline {
     font-size: 18px;
-    padding: 16px 24px;
+    padding: 14px 24px;
   }
 }
 
 .mx-690px {
   max-width: 683px;
+}
+
+@media only screen and (max-width: 600px) {
+  .fssm14 {
+    font-size: 14px !important;
+  }
+}
+.fs15 {
+  font-size: 15px;
 }
 
 .fs-32 {
@@ -256,7 +301,12 @@ hr {
 }
 
 .fs24 {
-  font-size: 24px;
+  font-size: 18px;
+}
+@media only screen and (min-width: 992px) {
+  .fs24 {
+    font-size: 24px;
+  }
 }
 
 .fs18 {
@@ -351,9 +401,10 @@ hr {
 .key-facts {
   padding: 8px 12px;
   border-radius: 8px;
-  background: #F7F7F7;
+  background: #EDF1F3;
   margin-right: 12px;
   margin-bottom: 12px;
+  font-size: 14px;
 }
 
 .popular-ammenities img {
@@ -362,6 +413,10 @@ hr {
 }
 .popular-ammenities .ammenity {
   margin-bottom: 28px;
+}
+
+.ammenity {
+  font-size: 18px;
 }
 
 .map {
@@ -428,6 +483,11 @@ hr {
 .property-amenity-image {
   width: 36px;
 }
+@media only screen and (min-width: 992px) {
+  .property-amenity-image {
+    margin-top: -8px;
+  }
+}
 
 .qandans img {
   margin-right: 23px;
@@ -454,6 +514,10 @@ hr {
 
 .mr-10 {
   margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
 }
 
 .mr-15 {
@@ -522,6 +586,12 @@ select {
   width: 65px;
   border-radius: 4px;
   border: 1px dashed #707070;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    margin-bottom: 20px;
+  }
 }
 
 .inputfield,
@@ -740,6 +810,7 @@ div#totalguests {
 .typeahed .dropdown-custom-toggle {
   width: 100%;
   height: 100% !important;
+  cursor: pointer;
 }
 .typeahed .dropdown-custom-toggle .totalguests {
   cursor: pointer;
@@ -945,14 +1016,24 @@ mark {
 }
 .check-in-checkout .t-datepicker {
   border-radius: 8px;
-  background: #EDF1F3;
+  background: #f7f7f7;
   display: flex;
   float: unset;
   max-width: unset;
   clear: unset;
-}
-.check-in-checkout .t-dates {
   position: relative;
+}
+@media only screen and (min-width: 992px) {
+  .check-in-checkout .t-datepicker {
+    background: #EDF1F3;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .check-in-checkout .t-dates {
+    position: relative;
+    padding-left: 37px;
+    white-space: nowrap;
+  }
 }
 .check-in-checkout .t-dates::before {
   content: "";
@@ -988,6 +1069,12 @@ mark {
   right: 0;
   color: #717171;
   opacity: 1;
+}
+@media only screen and (min-width: 992px) {
+  .check-in-checkout .t-datepicker-day {
+    width: 825px;
+    padding: 30px;
+  }
 }
 .check-in-checkout button {
   margin-top: 22px;
@@ -1079,6 +1166,10 @@ mark {
     font-size: 14px;
   }
 }
+.dropdown-custom-toggle {
+  cursor: pointer;
+}
+
 .search-iconformobile {
   position: absolute;
   z-index: 9;
@@ -1245,6 +1336,13 @@ mark {
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08) !important;
   }
 }
+.custom-dropdown-menu {
+  display: none;
+}
+.custom-dropdown-menu.show {
+  display: block;
+}
+
 
 .t-datepicker {
   display: flex;
@@ -1258,4 +1356,113 @@ mark {
 }
 .remove-highlight .search-icon .search i {
   color: #717171;
+}
+
+.autoCompletewrapper {
+  display: block;
+  position: absolute;
+  background: white;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+}
+.autoCompletewrapper li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #DDD;
+  text-transform: capitalize;
+  color: #4A4A4A;
+  font-size: 14px;
+  font-weight: 400;
+}
+.autoCompletewrapper li:last-child {
+  border-bottom: 0;
+}
+.autoCompletewrapper li svg {
+  margin-right: 16px;
+  width: 33px;
+  height: 33px;
+}
+
+.more {
+  overflow: hidden;
+}
+
+.resultafterpage-load {
+  margin-top: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 3px solid #EAEAEA;
+  border-bottom: 3px solid #EAEAEA;
+  padding: 9px 0;
+}
+.resultafterpage-load button {
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #EA6C32 5.06%, #D84B2D 37.58%);
+  display: flex;
+  width: 85px;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  margin-top: 0;
+}
+
+.modal-content {
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.15);
+  padding: 20px 30px 30px;
+}
+.modal-content > div {
+  border: 0;
+}
+.modal-content .modal-title {
+  color: #222;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration-line: underline;
+  display: block;
+  width: 100%;
+}
+.modal-content h6 {
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.modal-content .your-question {
+  width: 394px;
+  margin: auto;
+}
+.modal-content textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #707070;
+  height: 236px;
+  margin: auto;
+  display: flex;
+}
+.modal-content .modal-footer button {
+  margin-top: 22px;
+  background: linear-gradient(93deg, #EA6C32 0%, #D84B2D 99.76%);
+  width: 100%;
+  height: 58.118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 10px;
+  outline: 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+.modal-content .modal-footer button:hover {
+  background: linear-gradient(93deg, #D86F3E 0%, #C74024 99.76%);
 }/*# sourceMappingURL=style.css.map */
