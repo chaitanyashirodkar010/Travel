@@ -1046,7 +1046,7 @@ mark {
   bottom: 0;
   width: 24px;
   height: 24px;
-  background-image: url(/images/calender.svg);
+  background-image: url(images/calender.svg);
 }
 .check-in-checkout .t-check-in .t-date-info-title,
 .check-in-checkout .t-check-out .t-date-info-title {
@@ -1196,7 +1196,7 @@ mark {
     bottom: 0;
     width: 24px;
     height: 24px;
-    background-image: url(/images/calender.svg);
+    background-image: url(images/calender.svg);
   }
 }
 @media only screen and (min-width: 992px) {
