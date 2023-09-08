@@ -324,8 +324,8 @@ jQuery(document).ready(function () {
     jQuery('.more').readmore({
         speed: 300,
         collapsedHeight: 140,
-        moreLink: '<a href="#" class="text-decoration-none d-inline-block mt-44"><b class="fw-500 fs12">View more <img src="images/arrow-down.svg" class="ml-10" alt=""></b></a>',
-        lessLink: '<a href="#" class="text-decoration-none d-inline-block mt-44"><b class="fw-500 fs12">View less <img src="images/uparrow.png" class="ml-10" alt=""></b></a>',
+        moreLink: '<a href="#" class="text-decoration-none d-inline-block mt-34"><b class="fw-500 fs12">View more <img src="images/arrow-down.svg" class="ml-10" alt=""></b></a>',
+        lessLink: '<a href="#" class="text-decoration-none d-inline-block mt-34"><b class="fw-500 fs12">View less <img src="images/uparrow.png" class="ml-10" alt=""></b></a>',
         heightMargin: 16
     });
 
