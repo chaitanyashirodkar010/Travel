@@ -136,9 +136,11 @@ a {
 .mb-12 {
   margin-bottom: 12px;
 }
+
 .mt-18 {
   margin-top: 18px;
 }
+
 .mb-17 {
   margin-bottom: 17px;
 }
@@ -1966,8 +1968,20 @@ input[type="file"] {
 
   .modal-content .modal-footer button {
     max-width: 197px;
+    height: 47px;
+    font-size: 14px;
   }
-  .modal-footer{
+
+  .modal-footer {
     justify-content: center;
+  }
+
+  .page-link:hover,.page-link:focus {
+    z-index: 2;
+    background: #DA4E2E;
+    border-color: #717171;
+    color: white;
+    outline: 0;
+    box-shadow: none;
   }
 }
