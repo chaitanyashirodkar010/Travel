@@ -26,11 +26,90 @@
 <body>
 
 
+    <!-- Modal -->
+    <div class="review-popup">
 
 
+
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Write a review</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-10"><b>Would you recommend visiting 35 Brewhouse - JW Marriot ?</b></p>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Write a review"
+                            class="reviewfield mb-20"></textarea>
+
+                        <div class="review-category">
+                            <div>
+                                Great Location
+                            </div>
+                            <div class="active">
+                                Amazing Hotel
+                            </div>
+                            <div>
+                                First Class
+                            </div>
+                        </div>
+                        <div class="fs14 mb-15 fw-500">
+                            Add Photos
+                        </div>
+
+                        <section class="mb-24">
+                            <form action="" method="POST" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <div class="dropzone-wrapper">
+                                        <div class="dropzone-desc">
+                                            <img src="images/Group.png" width="32.727px" height=" 30px;" alt="">
+
+                                            <p><span class="text-decoration-underline">Upload a Photo</span> or drag and
+                                                drop</p>
+                                        </div>
+
+                                        <div class="field" align="left">
+                                            <input type="file" id="files" name="files[]" class="dropzone" multiple />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                        <div class="fs14 mb-20 mt-18 fw-500 text-center">
+                            How likely do you recommend us to your friend?
+                        </div>
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Submit Here</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
     <div class="container pt-5">
+
 
 
 
@@ -44,14 +123,16 @@
         <div class="row justify-content-center flex-md-row">
             <div class="col-md-7 pe-30">
                 <div class="topper-column">
-                    
+
                     <div class=" ">
-                       
+
                         <div class="d-md-flex justify-content-between align-items-end locationandothers mb-15">
                             <div>
-                             
-                                <p class=" mb-2 mt-2 mt-md-0"><b class="color707070 mb-0 fs18">JW Marriot, Sector 35 B, Chandigarh</b></p>
-                                <p class=" mb-0"><b> <span>Open Now </span> <span class="mx-15 d-inline-flex">-</span> <span> 1pm - 11:30pm (Today)</span></b></p>
+
+                                <p class=" mb-2 mt-2 mt-md-0"><b class="color707070 mb-0 fs18">JW Marriot, Sector 35 B,
+                                        Chandigarh</b></p>
+                                <p class=" mb-0"><b> <span>Open Now </span> <span class="mx-15 d-inline-flex">-</span>
+                                        <span> 1pm - 11:30pm (Today)</span></b></p>
                             </div>
 
                             <ul class="d-flex  mb-0 mt-2">
@@ -249,7 +330,7 @@
                 </li>
                 <h5 class="fs24 mb-20"><b>Reviews (83)</b></h5>
                 <div class="d-flex mb-24">
-                    <button type="button" class="btn btn-outline-dark mr-10 reviews-button">Write a Review</button>
+                    <button type="button" class="btn btn-outline-dark mr-10 reviews-button" data-bs-toggle="modal" data-bs-target="#exampleModal">Write a Review</button>
                     <button type="button" class="btn btn-outline-dark reviews-button">Sort By <svg
                             xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
                             <path d="M1 1L5.5 6L10 1" stroke="black" stroke-width="1.5" stroke-linecap="round"
@@ -385,28 +466,99 @@
 
         });
 
-        // $(function () {
-        //     $('input[name="datefilter"]').daterangepicker({
-        //         autoUpdateInput: false,
-        //         "opens": "center",
-        //         "autoApply": true,
-        //         locale: {
-        //             cancelLabel: 'Clear'
-        //         }
-        //     });
+        //   drag drop  script
 
-        //     $('.checkin input').on('apply.daterangepicker', function (ev, picker) {
-        //         $(this).val(picker.startDate.format('MM/DD/YYYY'));
-        //         $('#checkout').val(picker.endDate.format('MM/DD/YYYY'));
-        //         $('.checkout').removeClass('active-border');
-        //         $('.checkin').removeClass('active-border');
+        // function readFile(input) {
+        //     if (input.files && input.files[0]) {
+        //         var reader = new FileReader();
 
-        //     });
+        //         reader.onload = function (e) {
+        //             var htmlPreview =
+        //                 '<img width="200" src="' + e.target.result + '" />' +
+        //                 '<p>' + input.files[0].name + '</p>';
+        //             var wrapperZone = $(input).parent();
+        //             var previewZone = $(input).parent().parent().find('.preview-zone');
+        //             var boxZone = $(input).parent().parent().find('.preview-zone').find('.box').find('.box-body');
 
-        //     $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
-        //         $(this).val('');
-        //     });
+        //             wrapperZone.removeClass('dragover');
+        //             previewZone.removeClass('hidden');
+        //             boxZone.empty();
+        //             boxZone.append(htmlPreview);
+        //         };
+
+        //         reader.readAsDataURL(input.files[0]);
+        //     }
+        // }
+
+        // function reset(e) {
+        //     e.wrap('<form>').closest('form').get(0).reset();
+        //     e.unwrap();
+        // }
+
+        // $(".dropzone").change(function () {
+        //     readFile(this);
         // });
+
+        // $('.dropzone-wrapper').on('dragover', function (e) {
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        //     $(this).addClass('dragover');
+        // });
+
+        // $('.dropzone-wrapper').on('dragleave', function (e) {
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        //     $(this).removeClass('dragover');
+        // });
+
+        // $('.remove-preview').on('click', function () {
+        //     var boxZone = $(this).parents('.preview-zone').find('.box-body');
+        //     var previewZone = $(this).parents('.preview-zone');
+        //     var dropzone = $(this).parents('.form-group').find('.dropzone');
+        //     boxZone.empty();
+        //     previewZone.addClass('hidden');
+        //     reset(dropzone);
+        // });
+
+        $(document).ready(function () {
+            $('.review-category>div').click(function () {
+                $('.review-category>div').removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+
+
+
+
+        $(document).ready(function () {
+            if (window.File && window.FileList && window.FileReader) {
+                $("#files").on("change", function (e) {
+                    var files = e.target.files,
+                        filesLength = files.length;
+                    for (var i = 0; i < filesLength; i++) {
+                        var f = files[i]
+                        var fileReader = new FileReader();
+                        fileReader.onload = (function (e) {
+                            var file = e.target;
+                            $("<span class=\"pip\">" +
+                                "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+                                "<br/><span class=\"remove remove-image\"></span>" +
+                                "</span>").insertAfter("#files");
+                            $(".remove").click(function () {
+                                $(this).parent(".pip").remove();
+                            });
+
+                        });
+                        fileReader.readAsDataURL(f);
+                    }
+                    console.log(files);
+                });
+            } else {
+                alert("Your browser doesn't support to File API")
+            }
+        });
+
+
 
 
 
