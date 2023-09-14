@@ -1795,6 +1795,10 @@ img.pinned {
   right: 0;
 }
 
+.mapsticky iframe {
+  height: 90vh;
+  width: 100%;
+}
 @media only screen and (min-width: 992px) {
   .mapsticky {
     position: sticky;
