@@ -241,10 +241,13 @@
             </div>
 
             <div class="col-md-7">
-                
-               <div class="mapsticky">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9934.300418156918!2d-0.0982474677680533!3d51.502664255973336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876034824cbc437%3A0xcb55e6ff166d412c!2sThe%20Tower%20Hotel%2C%20London!5e0!3m2!1sen!2sin!4v1694720071705!5m2!1sen!2sin"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-               </div>
+
+                <div class="mapsticky">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9934.300418156918!2d-0.0982474677680533!3d51.502664255973336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876034824cbc437%3A0xcb55e6ff166d412c!2sThe%20Tower%20Hotel%2C%20London!5e0!3m2!1sen!2sin!4v1694720071705!5m2!1sen!2sin"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
 
 
@@ -386,7 +389,14 @@
         });
 
 
-
+        var a = document.querySelectorAll(".quick-search");
+        for (var i = 0, length = a.length; i < length; i++) {
+            a[i].onclick = function () {
+                var b = document.querySelector(".quick-search.active");
+                if (b) b.classList.remove("active");
+                this.classList.add('active');
+            };
+        }
 
 
     </script>

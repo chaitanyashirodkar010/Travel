@@ -1756,7 +1756,10 @@ input[type=file] {
   font-weight: 400;
   margin-right: 16px;
   white-space: nowrap;
-  cursor: grab;
+  cursor: pointer;
+}
+.quick-searches .quick-search:hover, .quick-searches .quick-search.active {
+  background-color: rgba(221, 221, 221, 0.87);
 }
 
 .attraction {
