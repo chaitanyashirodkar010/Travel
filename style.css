@@ -117,6 +117,10 @@ a {
   margin-bottom: 85px;
 }
 
+.mb-51 {
+  margin-bottom: 51px;
+}
+
 .mr-8 {
   margin-right: 8px;
 }
@@ -189,6 +193,10 @@ a {
   margin-bottom: 50px;
 }
 
+.mb-26 {
+  margin-bottom: 26px;
+}
+
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -235,6 +243,10 @@ a {
 
 .line-height-32 {
   line-height: 32px;
+}
+
+.line-height-35 {
+  line-height: 35px;
 }
 
 .line-height-26 {
@@ -1822,4 +1834,53 @@ img.pinned {
   bottom: 0;
   margin: auto;
   right: 4px;
+}
+
+.experiencepagedatepicker {
+  color: #717171;
+  font-weight: 500;
+}
+.experiencepagedatepicker .t-date-check-in::after,
+.experiencepagedatepicker .t-date-check-out::after {
+  display: none;
+}
+.experiencepagedatepicker .t-date-info-title,
+.experiencepagedatepicker .t-date-info-title {
+  top: 26px;
+}
+.experiencepagedatepicker label {
+  font-weight: 500 !important;
+}
+.experiencepagedatepicker .t-dates {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.experiencepagedatepicker .ticme-picker {
+  color: #717171;
+  align-items: center;
+}
+.experiencepagedatepicker .ticme-picker svg {
+  margin-right: 12px;
+}
+
+.options-available .card {
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.options-available .card input {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 26px;
+  height: 25px;
+}
+
+.mb-4px {
+  margin-bottom: 4px !important;
+}
+
+.mb-18 {
+  margin-bottom: 18px;
 }/*# sourceMappingURL=style.css.map */

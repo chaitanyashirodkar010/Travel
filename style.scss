@@ -121,6 +121,10 @@ a {
   margin-bottom: 85px;
 }
 
+.mb-51 {
+  margin-bottom: 51px;
+}
+
 .mr-8 {
   margin-right: 8px;
 }
@@ -193,6 +197,10 @@ a {
   margin-bottom: 50px;
 }
 
+.mb-26 {
+  margin-bottom: 26px;
+}
+
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -240,6 +248,10 @@ a {
 
 .line-height-32 {
   line-height: 32px;
+}
+
+.line-height-35 {
+  line-height: 35px;
 }
 
 .line-height-26 {
@@ -2014,8 +2026,9 @@ input[type="file"] {
     white-space: nowrap;
     cursor: pointer;
 
-    &:hover,&.active {
-      background-color: rgba(221, 221, 221,  0.87);
+    &:hover,
+    &.active {
+      background-color: rgba(221, 221, 221, 0.87);
     }
   }
 }
@@ -2083,4 +2096,63 @@ img.pinned {
     margin: auto;
     right: 4px;
   }
+}
+
+
+.experiencepagedatepicker {
+  color: #717171;
+  font-weight: 500;
+
+  .t-date-check-in::after,
+  .t-date-check-out::after {
+    display: none;
+  }
+
+  .t-date-info-title,
+  .t-date-info-title {
+    top: 26px;
+  }
+
+  label {
+    font-weight: 500 !important;
+  }
+
+  .t-dates {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .ticme-picker {
+    color: #717171;
+    align-items: center;
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+}
+
+.options-available {
+  .card {
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    input {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      width: 26px;
+      height: 25px;
+    }
+  }
+}
+
+.mb-4px {
+  margin-bottom: 4px !important;
+}
+
+.mb-18 {
+  margin-bottom: 18px;
 }
