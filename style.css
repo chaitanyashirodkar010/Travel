@@ -368,6 +368,10 @@ hr {
   font-size: 18px;
 }
 
+.fs20 {
+  font-size: 20px;
+}
+
 .fs22 {
   font-size: 22px;
 }
@@ -1883,4 +1887,174 @@ img.pinned {
 
 .mb-18 {
   margin-bottom: 18px;
+}
+
+.abouttitle {
+  color: #222;
+  font-size: 38px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 992px) {
+  .abouttitle {
+    font-size: 48px;
+  }
+}
+
+.subtext {
+  color: #CB4C14;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 18px 0;
+}
+@media only screen and (min-width: 992px) {
+  .subtext {
+    font-size: 32px;
+    margin: 32px 0;
+  }
+}
+
+.aboutustext {
+  padding: 32px;
+  border-radius: 16px;
+  background: #FFF;
+  max-width: 1006px;
+  margin: auto;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+.aboutustext p {
+  color: #717171;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .aboutustext {
+    margin-top: -30px;
+  }
+}
+
+.secttitle {
+  color: #222;
+  font-size: 32px;
+  font-weight: 600;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 60px;
+}
+.secttitle::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #E86831;
+  left: 0;
+  bottom: -5px;
+  right: 0;
+  margin: auto;
+}
+
+.secttitle2 {
+  margin: 0 auto 60px 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .howwework {
+    display: flex;
+  }
+}
+.howwework .card {
+  border-radius: 16px;
+  border: 1px solid #F4F4F4;
+  padding: 20px;
+}
+.howwework p {
+  color: #717171;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  max-width: 952px;
+  margin: auto;
+}
+@media only screen and (min-width: 992px) {
+  .howwework .centercard {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+}
+
+.listresult {
+  padding: 34px 0;
+}
+@media only screen and (min-width: 992px) {
+  .listresult {
+    padding: 64px 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .my-md-64px {
+    margin-top: 34px;
+    margin-bottom: 34px;
+  }
+  .mt-md-64px {
+    margin-top: 34px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .my-md-64px {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+  .mt-md-64px {
+    margin-top: 64px;
+  }
+}
+.howwegetprices {
+  max-width: 874px;
+  margin: auto;
+}
+.howwegetprices .card {
+  border-radius: 16px;
+  border: 1px solid #F4F4F4;
+  padding: 20px;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.getreviews {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.getreviews .getreview {
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+  color: #717171;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  display: flex;
+  padding: 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 16px 32px;
+}
+@media only screen and (max-width: 600px) {
+  .getreviews .getreview {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .getreviews .getreview {
+    min-width: 181px;
+    max-width: 513px;
+  }
 }/*# sourceMappingURL=style.css.map */
