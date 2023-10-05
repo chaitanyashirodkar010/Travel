@@ -25,27 +25,126 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-sm align-items-start container d-none d-md-block mb-15">
+    <nav class="navbar navbar-expand-sm container align-items-start">
+        <a class="navbar-brand" href="#"><img src="images/logo.svg" alt=""></a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse " id="collapsibleNavId">
-            <ul class="nav nav-tabs border-0 w-100 justify-content-center w-50" id="myTab" role="tablist">
-                <li class="nav-item border-0 border-to-right  w-50" role="presentation">
-                    <button class="nav-link tab-switch active" id="home-tab" data-bs-toggle="tab"
-                        data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                        aria-selected="true"><span class="tab-switch active">
-                            Explore
-                        </span></button>
-                </li>
-                <li class="nav-item border-0 w-50" role="presentation">
-                    <button class="nav-link tab-switch" id="profile-tab" data-bs-toggle="tab"
-                        data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
-                        aria-selected="false" tabindex="-1">Hotels</button>
-                </li>
-            </ul>
-            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse align-items-start" id="collapsibleNavId">
+            <div class="mx-auto">
+                <ul class="nav nav-tabs border-0 w-100 justify-content-center w-50" id="myTab" role="tablist">
+                  
+                    <li class="nav-item border-0 border-to-right exploreheadertab" role="presentation">
+                        <div class="tab-pane initiallyhide fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                            <div class="explore-search">
+                                <input type="text" id="autocompleteFive" placeholder="Select a color">
+                                <ul id="results" class="autoCompletewrapper"></ul>
+                                <!-- <input id="autoCompletetwo" type="text" tabindex="1" placeholder="&#xF002; Search"> -->
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item border-0 border-to-right clickingexplore" role="presentation">
+                        <button class="nav-link tab-switch " id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                            aria-selected="true"><span class="tab-switch ">
+                                Explore
+                            </span></button>
+                    </li>
+                    <li class="nav-item border-0" role="presentation">
+                        <button class="nav-link tab-switch" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="false" tabindex="-1">Hotels</button>
+                    </li>
+                </ul>
+                <div class="tab-content typeahed" id="myTabContent">
+                   
+
+
+
+                    <div class="tab-pane fade " id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div class="search-filter remove-highlight d-md-flex">
+
+                            <div class="search-locations">
+                                <img src="images/search.svg" class="search-iconformobile d-md-none" alt="">
+                                <label for="checkout" class="label">Where</label>
+                                <div class="autoComplete_wrapper">
+                                    <div class="autoComplete_wrapper" role="combobox" aria-owns="autoComplete_list_1" aria-haspopup="true" aria-expanded="false"><input id="autoCompletethree" type="text" tabindex="1" placeholder="Search for Food..." aria-controls="autoComplete_list_1" aria-autocomplete="both"><ul id="autoComplete_list_1" role="listbox" hidden=""></ul></div>
+                                </div>
+                            </div>
+
+                            <div class="t-datepicker">
+                                <div class="t-check-in"><div class="t-dates t-date-check-in">➜<label class="t-date-info-title">Add Dates</label></div><input type="hidden" class="t-input-check-in" value="null" name="t-start"></div>
+                                <div class="t-check-out"><div class="t-dates t-date-check-out">➜<label class="t-date-info-title">Add Dates</label></div><input type="hidden" class="t-input-check-out" value="null" name="t-end"></div>
+                            </div>
+
+                            <div class="dropdown-custom">
+
+                                <div class="dropdown-custom-toggle ">
+                                    <img src="images/usergrey.png" class="user-guests d-md-none" alt="">
+                                    <label for="checkout" class="label">Who</label>
+                                    <input type="number" id="totalguests" class="border-0 totalguests" placeholder="Add no. of guests" readonly="">
+                                </div>
+                                <ul class="dropdown-menu p-0 border-0">
+                                    <div class="rooms-num room-info b-20 border bg-white">
+                                        <div class="p-24">
+                                            <div class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p class="person">Adult</p>
+                                                    <p class="age"> Ages 13 or above</p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span role="button" class="decrement dec">-</span>
+                                                    <input type="number" class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield" placeholder="0" readonly="">
+                                                    <span role="button" class="adultincrement incdec">+</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p class="person">Children</p>
+                                                    <p class="age"> Ages 2-12</p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span role="button" id="childrenSubtract" class="decrement dec">-</span>
+                                                    <input type="number" class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield" placeholder="0" readonly="">
+                                                    <span role="button" id="childrenAdd" class="adultincrement incdec">+</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="adults counter d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <p class="person">Infants</p>
+                                                    <p class="age"> Under 2</p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span role="button" class="decrement dec">-</span>
+                                                    <input type="number" class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield" placeholder="0" readonly="">
+                                                    <span role="button" class="adultincrement incdec">+</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="childrenDetails">
+
+                                        </div>
+
+                                    </div>
+                                </ul>
+                            </div>
+
+                            <div class="search-icon d-none d-md-flex">
+                                <div class="search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="navbar-nav mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"> <img src="images/Frame 61.svg" alt="" class=""></a>
+                    <a class="nav-link p-0" href="#"> <img src="images/Frame 61.svg" alt="" class=""></a>
                 </li>
             </ul>
         </div>
@@ -280,83 +379,8 @@
             $('input').val('')
         });
 
-        $('.bloglistingcarousel').each(function () {
-            var slider = $(this);
-            slider.slick({
-                dots: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                mobileFirst: true,
-                arrows: false,
-                responsive: [{
-                    breakpoint: 480,
-                    settings: "unslick"
-                }]
-            });
-
-        });
-
-        //   drag drop  script
-
-        // function readFile(input) {
-        //     if (input.files && input.files[0]) {
-        //         var reader = new FileReader();
-
-        //         reader.onload = function (e) {
-        //             var htmlPreview =
-        //                 '<img width="200" src="' + e.target.result + '" />' +
-        //                 '<p>' + input.files[0].name + '</p>';
-        //             var wrapperZone = $(input).parent();
-        //             var previewZone = $(input).parent().parent().find('.preview-zone');
-        //             var boxZone = $(input).parent().parent().find('.preview-zone').find('.box').find('.box-body');
-
-        //             wrapperZone.removeClass('dragover');
-        //             previewZone.removeClass('hidden');
-        //             boxZone.empty();
-        //             boxZone.append(htmlPreview);
-        //         };
-
-        //         reader.readAsDataURL(input.files[0]);
-        //     }
-        // }
-
-        // function reset(e) {
-        //     e.wrap('<form>').closest('form').get(0).reset();
-        //     e.unwrap();
-        // }
-
-        // $(".dropzone").change(function () {
-        //     readFile(this);
-        // });
-
-        // $('.dropzone-wrapper').on('dragover', function (e) {
-        //     e.preventDefault();
-        //     e.stopPropagation();
-        //     $(this).addClass('dragover');
-        // });
-
-        // $('.dropzone-wrapper').on('dragleave', function (e) {
-        //     e.preventDefault();
-        //     e.stopPropagation();
-        //     $(this).removeClass('dragover');
-        // });
-
-        // $('.remove-preview').on('click', function () {
-        //     var boxZone = $(this).parents('.preview-zone').find('.box-body');
-        //     var previewZone = $(this).parents('.preview-zone');
-        //     var dropzone = $(this).parents('.form-group').find('.dropzone');
-        //     boxZone.empty();
-        //     previewZone.addClass('hidden');
-        //     reset(dropzone);
-        // });
-
-        $(document).ready(function () {
-            $('.review-category>div').click(function () {
-                $('.review-category>div').removeClass("active");
-                $(this).addClass("active");
-            });
-        });
-
+  
+     
 
 
 
@@ -403,10 +427,7 @@
 
     <script>
         /* 
-  this is an implementation of Wes Bos click & drag scroll algorythm. In his video, he shows how to do the horizontal scroll. I have implemented the vertical scroll for those wondering how to make it as well.
-  
-  Wes Bos video:
-    https://www.youtube.com/watch?v=C9EWifQ5xqA
+  this is an implementation of drag scroll algorythm.
 */
         const container = document.querySelector('#items-container');
 
@@ -450,6 +471,14 @@
             }
         }
     </script>
+
+
+<script>
+    $('.clickingexplore').click(function (e) { 
+        e.preventDefault();
+      $('.navbar .nav-tabs').addClass('nav-tabsactive');
+    });
+</script>
 </body>
 
 </html>

@@ -1000,7 +1000,19 @@ div#totalguests {
 
     &.active {
       color: #E86831 !important;
-      border-bottom: 1px solid #E86831 !important;
+      position: relative;
+
+      &::after {
+        content: "";
+        border-bottom: 1px solid #E86831 !important;
+        height: 100%;
+        width: 56%;
+        bottom: 0px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
     }
   }
 }
@@ -2055,22 +2067,38 @@ img.pinned {
   left: 15px;
   top: 15px;
 }
-
+.initiallyhide{
+  display: none;
+  &.show{
+    display: block;
+  }
+}
 .navbar {
   @media only screen and (min-width: 992px) {
     position: sticky;
     top: 0;
+    padding-top: 20px;
   }
 
   z-index: 9;
   background-color: white;
 
   .nav-tabs {
-    width: 184px !important;
+    width: 575px !important;
     margin: auto;
-    position: absolute;
     left: 0;
     right: 0;
+  }
+
+  .tab-content {
+    margin-top: 30px;
+  }
+
+  .typeahed {
+    all: unset;
+    margin-top: 30px;
+    display: block;
+    margin-bottom: 20px;
   }
 }
 
@@ -2345,4 +2373,27 @@ img.pinned {
     margin: 16px 32px;
 
   }
+}
+
+
+.tnctext a {
+  color: #4A4A4A;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 25px;
+}
+
+.tnc-left a {
+  color: #717171;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 13px;
+  display: block;
+  text-decoration: none;
 }
