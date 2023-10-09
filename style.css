@@ -1834,8 +1834,10 @@ img.pinned {
   .navbar {
     position: sticky;
     top: 0;
-    padding-top: 20px;
   }
+}
+.navbar.border-bottom-1 {
+  border-bottom: 1px solid #DDD;
 }
 .navbar .nav-tabs .explore-search {
   background-color: white !important;

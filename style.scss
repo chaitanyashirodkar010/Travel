@@ -2094,11 +2094,14 @@ img.pinned {
   @media only screen and (min-width: 992px) {
     position: sticky;
     top: 0;
-    padding-top: 20px;
   }
-
   z-index: 9;
-  background-color: white;
+  background-color: white ;
+
+  &.border-bottom-1 {
+
+    border-bottom: 1px solid #DDD;
+  }
 
   .nav-tabs {
 
@@ -2462,7 +2465,8 @@ img.pinned {
 .hotelstabs {
   display: flex;
   align-items: center;
-color: #717171;
+  color: #717171;
+
   .separator {
     background: #DDD;
     width: 1px;

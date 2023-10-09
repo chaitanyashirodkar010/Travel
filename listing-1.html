@@ -41,7 +41,7 @@
                             <div class="mx-auto">
                                 <ul class="nav nav-tabs border-0 w-100 justify-content-center w-50 align-items-center"
                                     id="myTab" role="tablist">
-                                    <li class="nav-item border-0 border-to-right " role="presentation">
+                                    <li class="nav-item border-0 border-to-right " id="explore-tabser" role="presentation">
                                         <button class="nav-link tab-switch active" id="explore-tab" data-bs-toggle="tab"
                                             data-bs-target="#explore-tab-pane" type="button" role="tab"
                                             aria-controls="explore-tab-pane" aria-selected="true"><span
@@ -56,7 +56,7 @@
                                             tabindex="-1">Hotels</button>
                                     </li>
                                 </ul>
-                                <div class="tab-content typeahed" id="myTabContent">
+                                <div class="tab-content typeahed mb-0" id="myTabContent">
                                     <div class="tab-pane active " id="explore-tab-pane" role="tabpanel"
                                         aria-labelledby="explore-tab" tabindex="0">
                                         <div class="explore-search">
@@ -193,61 +193,68 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-sm container align-items-start">
-        <a class="navbar-brand" href="#"><img src="images/logo.svg" alt=""></a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse align-items-start" id="collapsibleNavId">
-            <div class="mx-auto">
-                <ul class="nav nav-tabs nav-tabser w-100 justify-content-center w-50 align-items-center" id="myTab"
-                    role="tablist">
+    <nav class="navbar border-bottom-1 navbar-expand-sm align-items-start">
+        <div class="container my-3">
+            <a class="navbar-brand" href="#"><img src="images/logo.svg" alt=""></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse align-items-start" id="collapsibleNavId">
+                <div class="mx-auto">
+                    <ul class="nav nav-tabs nav-tabser w-100 justify-content-center w-50 align-items-center" id="myTab"
+                        role="tablist">
 
-                    <li class="nav-item border-0 border-to-right" role="presentation">
-                        <div class="tab-content my-0">
-                            <div class="tab-pane active" id="explorer-tab-pane" role="tabpanel" aria-labelledby="explorer-tab"
-                                tabindex="0">
-                                <div class="defaultsearchvalue d-flex align-items-center" id="explore-tab" type="button"
-                                    class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <img src="images/location.svg" alt="">
-                                    <div class="text4A4A4A fw-500">London</div>
+                        <li class="nav-item border-0 border-to-right" role="presentation">
+                            <div class="tab-content my-0">
+                                <div class="tab-pane active" id="explorer-tab-pane" role="tabpanel"
+                                    aria-labelledby="explorer-tab" tabindex="0">
+                                    <div class="defaultsearchvalue defaultsearch d-flex align-items-center" id="explore-tab"
+                                        type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        <img src="images/location.svg" alt="">
+                                        <div class="text4A4A4A fw-500">London</div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="hotels-tab-pane" role="tabpanel" aria-labelledby="hotels-tab"
+                                    tabindex="0">
+                                    <div class="defaultsearchvalue defaultsearchvalue2 d-flex align-items-center"
+                                        id="explore-tab" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        <img src="images/plave.svg" alt="">
+                                        <div class="hotelstabs"><span>London</span> <span class="separator"></span>
+                                            <span>27Jun-02Jul</span>
+                                            <span class="separator"></span> <span>1 guest</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="hotels-tab-pane" role="tabpanel" aria-labelledby="hotels-tab"
-                                tabindex="0">
-                                <div class="defaultsearchvalue defaultsearchvalue2 d-flex align-items-center" id="explore-tab" type="button"
-                                    class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <img src="images/plave.svg" alt="">
-                                    <div class="hotelstabs"><span>London</span> <span class="separator"></span> <span>27Jun-02Jul</span>
-                                        <span class="separator"></span> <span>1 guest</span></div>
-                                </div>
-                            </div>
-                        </div>
 
 
-                    </li>
-                    <li class="nav-item border-0 border-to-right " role="presentation">
-                        <button class="nav-link tab-switch active " id="explorer-tab" data-bs-toggle="tab"
-                            data-bs-target="#explorer-tab-pane" type="button" role="tab"
-                            aria-controls="explorer-tab-pane" aria-selected="true"><span class="tab-switch ">
-                                Explore
-                            </span></button>
-                    </li>
-                    <li class="nav-item border-0" role="presentation">
-                        <button class="nav-link tab-switch" id="hotels-tab" data-bs-toggle="tab"
-                            data-bs-target="#hotels-tab-pane" type="button" role="tab" aria-controls="hotels-tab-pane"
-                            aria-selected="false" tabindex="-1">Hotels</button>
+                        </li>
+                        <li class="nav-item border-0 border-to-right " role="presentation">
+                            <button class="nav-link tab-switch active " id="explorer-tab" data-bs-toggle="tab"
+                                data-bs-target="#explorer-tab-pane" type="button" role="tab"
+                                aria-controls="explorer-tab-pane" aria-selected="true"><span class="tab-switch ">
+                                    Explore
+                                </span></button>
+                        </li>
+                        <li class="nav-item border-0" role="presentation">
+                            <button class="nav-link tab-switch" id="hotels-tab" data-bs-toggle="tab"
+                                data-bs-target="#hotels-tab-pane" type="button" role="tab"
+                                aria-controls="hotels-tab-pane" aria-selected="false" tabindex="-1">Hotels</button>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link p-0" href="#"> <img src="images/Frame 61.svg" alt="" class=""></a>
                     </li>
                 </ul>
-
             </div>
-
-            <ul class="navbar-nav mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link p-0" href="#"> <img src="images/Frame 61.svg" alt="" class=""></a>
-                </li>
-            </ul>
         </div>
     </nav>
 
@@ -574,9 +581,33 @@
 
 
     <script>
-        $('.clickingexplore').click(function (e) {
+        $('.defaultsearchvalue2').click(function (e) {
             e.preventDefault();
-            $('.navbar .nav-tabs').removeClass('nav-tabser');
+          
+            $('#explore-tab').removeClass('active');
+            $('#explore-tab-pane').removeClass('active show');
+
+
+            
+            $('#profile-tab').addClass('active');
+            $('#profile-tab-pane').addClass('active show');
+
+            
+        });
+
+
+        $('.defaultsearch').click(function (e) {
+            e.preventDefault();
+          
+            $('#profile-tab').removeClass('active');
+            $('#profile-tab-pane').removeClass('active show');
+            $('#explore-tab').addClass('active');
+            $('#explore-tab-pane').addClass('active show');
+
+
+            
+
+            
         });
     </script>
 </body>
