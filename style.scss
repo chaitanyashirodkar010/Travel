@@ -40,12 +40,12 @@ a {
   color: #222222;
 }
 
-.text-neutral-2 {
-  color: #717171;
+.text4A4A4A {
+  color: 4A4A4A;
 }
 
-.fw-500 {
-  font-weight: 500;
+.text-neutral-2 {
+  color: #717171;
 }
 
 .btn-outline-secondary {
@@ -1007,13 +1007,27 @@ div#totalguests {
         border-bottom: 1px solid #E86831 !important;
         height: 100%;
         width: 56%;
-        bottom: 0px;
+        bottom: 4px;
         position: absolute;
         left: 0;
         right: 0;
         margin: auto;
       }
     }
+  }
+
+  .fade:not(.show) {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.modal-dialog-fullwidth {
+  max-width: unset;
+  margin: auto;
+
+  .modal-content {
+    border-radius: 0;
   }
 }
 
@@ -2067,12 +2081,15 @@ img.pinned {
   left: 15px;
   top: 15px;
 }
-.initiallyhide{
+
+.initiallyhide {
   display: none;
-  &.show{
+
+  &.show {
     display: block;
   }
 }
+
 .navbar {
   @media only screen and (min-width: 992px) {
     position: sticky;
@@ -2084,10 +2101,21 @@ img.pinned {
   background-color: white;
 
   .nav-tabs {
-    width: 575px !important;
+
+    .explore-search {
+      background-color: white !important;
+    }
+  }
+
+  .nav-tabser {
+    border-radius: 32px;
+    border: 1px solid #DDD !important;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
     margin: auto;
     left: 0;
     right: 0;
+    padding: 8px 16px;
   }
 
   .tab-content {
@@ -2099,6 +2127,26 @@ img.pinned {
     margin-top: 30px;
     display: block;
     margin-bottom: 20px;
+  }
+}
+
+#explore-tab-pane .explore-search {
+  width: 500px;
+  border-radius: 8px;
+  background: #F7F7F7;
+  padding-left: 17px;
+  position: relative;
+
+  input {
+    margin-left: 10px;
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
 }
 
@@ -2121,7 +2169,7 @@ img.pinned {
     content: '';
     position: absolute;
     width: 1px;
-    height: 90%;
+    height: 24px;
     background-color: #dddddd;
     top: 0;
     bottom: 0;
@@ -2396,4 +2444,29 @@ img.pinned {
   margin-bottom: 13px;
   display: block;
   text-decoration: none;
+}
+
+.defaultsearchvalue {
+  padding-right: 245px;
+
+  img {
+    margin-right: 8px;
+  }
+}
+
+.defaultsearchvalue2 {
+  padding-right: 55px;
+}
+
+
+.hotelstabs {
+  display: flex;
+  align-items: center;
+color: #717171;
+  .separator {
+    background: #DDD;
+    width: 1px;
+    height: 20px;
+    margin: 0 8px;
+  }
 }
