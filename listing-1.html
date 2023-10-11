@@ -25,166 +25,168 @@
 
 <body>
 
-    <!-- Modal -->
+    <!-- Navbar inside popup -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-fullwidth w-100">
             <div class="modal-content p-0">
                 <div class="modal-body">
-                    <nav class="navbar navbar-expand-sm container align-items-start">
-                        <a class="navbar-brand" href="#"><img src="images/logo.svg" alt=""></a>
-                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
-                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse align-items-start" id="collapsibleNavId">
-                            <div class="mx-auto">
-                                <ul class="nav nav-tabs border-0 w-100 justify-content-center w-50 align-items-center"
-                                    id="myTab" role="tablist">
-                                    <li class="nav-item border-0 border-to-right " id="explore-tabser" role="presentation">
-                                        <button class="nav-link tab-switch active" id="explore-tab" data-bs-toggle="tab"
-                                            data-bs-target="#explore-tab-pane" type="button" role="tab"
-                                            aria-controls="explore-tab-pane" aria-selected="true"><span
-                                                class="tab-switch ">
-                                                Explore
-                                            </span></button>
-                                    </li>
-                                    <li class="nav-item border-0" role="presentation">
-                                        <button class="nav-link tab-switch" id="profile-tab" data-bs-toggle="tab"
-                                            data-bs-target="#profile-tab-pane" type="button" role="tab"
-                                            aria-controls="profile-tab-pane" aria-selected="false"
-                                            tabindex="-1">Hotels</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content typeahed mb-0" id="myTabContent">
-                                    <div class="tab-pane active " id="explore-tab-pane" role="tabpanel"
-                                        aria-labelledby="explore-tab" tabindex="0">
-                                        <div class="explore-search">
-                                            <img src="images/search.svg" alt="">
-                                            <input type="text" id="autocompleteFive" value="London"
-                                                placeholder="Select a color">
-                                            <ul id="results" class="autoCompletewrapper"></ul>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
+                    <nav class="navbar border-bottom-1 navbar-expand-sm align-items-start">
+                        <div class="container my-3 d-flex position-relative align-items-start">
+                            <a class="navbar-brand m-0" href="#"><img src="images/logo.svg" alt="" class="navlogo"></a>
+                            <div class=" navbar-collapse d-flex align-items-start" id="collapsibleNavId">
+                                <div class="mx-auto smalldevfullwidth">
+                                    <ul class="nav nav-tabs border-0 w-100 justify-content-center w-50 align-items-center"
+                                        id="myTab" role="tablist">
+                                        <li class="nav-item border-0 border-to-right " id="explore-tabser"
+                                            role="presentation">
+                                            <button class="nav-link tab-switch active" id="explore-tab"
+                                                data-bs-toggle="tab" data-bs-target="#explore-tab-pane" type="button"
+                                                role="tab" aria-controls="explore-tab-pane" aria-selected="true"><span
+                                                    class="tab-switch ">
+                                                    Explore
+                                                </span></button>
+                                        </li>
+                                        <li class="nav-item border-0" role="presentation">
+                                            <button class="nav-link tab-switch" id="profile-tab" data-bs-toggle="tab"
+                                                data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                                aria-controls="profile-tab-pane" aria-selected="false"
+                                                tabindex="-1">Hotels</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content typeahed mb-0" id="myTabContent">
+                                        <div class="tab-pane active " id="explore-tab-pane" role="tabpanel"
+                                            aria-labelledby="explore-tab" tabindex="0">
+                                            <div class="explore-search d-flex">
+                                                <img src="images/search.svg" alt="">
+                                                <input type="text" id="autocompleteFive" value="London"
+                                                    placeholder="Select a color">
+                                                <ul id="results" class="autoCompletewrapper"></ul>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="tab-pane fade " id="profile-tab-pane" role="tabpanel"
-                                        aria-labelledby="profile-tab" tabindex="0">
-                                        <div class="search-filter remove-highlight d-md-flex">
+                                        <div class="tab-pane fade " id="profile-tab-pane" role="tabpanel"
+                                            aria-labelledby="profile-tab" tabindex="0">
+                                            <div class="search-filter remove-highlight d-md-flex">
 
-                                            <div class="search-locations">
-                                                <img src="images/search.svg" class="search-iconformobile d-md-none"
-                                                    alt="">
-                                                <label for="checkout" class="label">Where</label>
-                                                <div class="autoComplete_wrapper">
-                                                    <div class="autoComplete_wrapper" role="combobox"
-                                                        aria-owns="autoComplete_list_1" aria-haspopup="true"
-                                                        aria-expanded="false"><input id="autoCompletethree" type="text"
-                                                            tabindex="1" placeholder="Search for Food..."
-                                                            aria-controls="autoComplete_list_1"
-                                                            aria-autocomplete="both">
-                                                        <ul id="autoComplete_list_1" role="listbox" hidden=""></ul>
+                                                <div class="search-locations">
+                                                    <img src="images/search.svg" class="search-iconformobile d-md-none"
+                                                        alt="">
+                                                    <label for="checkout" class="label">Where</label>
+                                                    <div class="autoComplete_wrapper">
+                                                        <div class="autoComplete_wrapper" role="combobox"
+                                                            aria-owns="autoComplete_list_1" aria-haspopup="true"
+                                                            aria-expanded="false"><input id="autoCompletethree"
+                                                                type="text" tabindex="1"
+                                                                placeholder="Search for Food..."
+                                                                aria-controls="autoComplete_list_1"
+                                                                aria-autocomplete="both">
+                                                            <ul id="autoComplete_list_1" role="listbox" hidden=""></ul>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="t-datepicker">
-                                                <div class="t-check-in">
-                                                    <div class="t-dates t-date-check-in">➜<label
-                                                            class="t-date-info-title">Add
-                                                            Dates</label></div><input type="hidden"
-                                                        class="t-input-check-in" value="null" name="t-start">
-                                                </div>
-                                                <div class="t-check-out">
-                                                    <div class="t-dates t-date-check-out">➜<label
-                                                            class="t-date-info-title">Add
-                                                            Dates</label></div><input type="hidden"
-                                                        class="t-input-check-out" value="null" name="t-end">
-                                                </div>
-                                            </div>
-
-                                            <div class="dropdown-custom">
-
-                                                <div class="dropdown-custom-toggle ">
-                                                    <img src="images/usergrey.png" class="user-guests d-md-none" alt="">
-                                                    <label for="checkout" class="label">Who</label>
-                                                    <input type="number" id="totalguests" class="border-0 totalguests"
-                                                        placeholder="Add no. of guests" readonly="">
-                                                </div>
-                                                <ul class="dropdown-menu p-0 border-0">
-                                                    <div class="rooms-num room-info b-20 border bg-white">
-                                                        <div class="p-24">
-                                                            <div
-                                                                class="adults counter mb-30 d-flex justify-content-between align-items-center">
-                                                                <div>
-                                                                    <p class="person">Adult</p>
-                                                                    <p class="age"> Ages 13 or above</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span role="button" class="decrement dec">-</span>
-                                                                    <input type="number"
-                                                                        class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                                                        placeholder="0" readonly="">
-                                                                    <span role="button"
-                                                                        class="adultincrement incdec">+</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div
-                                                                class="adults counter mb-30 d-flex justify-content-between align-items-center">
-                                                                <div>
-                                                                    <p class="person">Children</p>
-                                                                    <p class="age"> Ages 2-12</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span role="button" id="childrenSubtract"
-                                                                        class="decrement dec">-</span>
-                                                                    <input type="number"
-                                                                        class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                                                        placeholder="0" readonly="">
-                                                                    <span role="button" id="childrenAdd"
-                                                                        class="adultincrement incdec">+</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div
-                                                                class="adults counter d-flex justify-content-between align-items-center">
-                                                                <div>
-                                                                    <p class="person">Infants</p>
-                                                                    <p class="age"> Under 2</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span role="button" class="decrement dec">-</span>
-                                                                    <input type="number"
-                                                                        class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                                                        placeholder="0" readonly="">
-                                                                    <span role="button"
-                                                                        class="adultincrement incdec">+</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div id="childrenDetails">
-
-                                                        </div>
-
+                                                <div class="t-datepicker">
+                                                    <div class="t-check-in">
+                                                        <div class="t-dates t-date-check-in">➜<label
+                                                                class="t-date-info-title">Add
+                                                                Dates</label></div><input type="hidden"
+                                                            class="t-input-check-in" value="null" name="t-start">
                                                     </div>
-                                                </ul>
-                                            </div>
+                                                    <div class="t-check-out">
+                                                        <div class="t-dates t-date-check-out">➜<label
+                                                                class="t-date-info-title">Add
+                                                                Dates</label></div><input type="hidden"
+                                                            class="t-input-check-out" value="null" name="t-end">
+                                                    </div>
+                                                </div>
 
-                                            <div class="search-icon d-none d-md-flex">
-                                                <div class="search">
-                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                <div class="dropdown-custom">
+
+                                                    <div class="dropdown-custom-toggle ">
+                                                        <img src="images/usergrey.png" class="user-guests d-md-none"
+                                                            alt="">
+                                                        <label for="checkout" class="label">Who</label>
+                                                        <input type="number" id="totalguests"
+                                                            class="border-0 totalguests" placeholder="Add no. of guests"
+                                                            readonly="">
+                                                    </div>
+                                                    <ul class="dropdown-menu p-0 border-0">
+                                                        <div class="rooms-num room-info b-20 border bg-white">
+                                                            <div class="p-24">
+                                                                <div
+                                                                    class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                                                    <div>
+                                                                        <p class="person">Adult</p>
+                                                                        <p class="age"> Ages 13 or above</p>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span role="button"
+                                                                            class="decrement dec">-</span>
+                                                                        <input type="number"
+                                                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                                            placeholder="0" readonly="">
+                                                                        <span role="button"
+                                                                            class="adultincrement incdec">+</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div
+                                                                    class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                                                    <div>
+                                                                        <p class="person">Children</p>
+                                                                        <p class="age"> Ages 2-12</p>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span role="button" id="childrenSubtract"
+                                                                            class="decrement dec">-</span>
+                                                                        <input type="number"
+                                                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                                            placeholder="0" readonly="">
+                                                                        <span role="button" id="childrenAdd"
+                                                                            class="adultincrement incdec">+</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div
+                                                                    class="adults counter d-flex justify-content-between align-items-center">
+                                                                    <div>
+                                                                        <p class="person">Infants</p>
+                                                                        <p class="age"> Under 2</p>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span role="button"
+                                                                            class="decrement dec">-</span>
+                                                                        <input type="number"
+                                                                            class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                                            placeholder="0" readonly="">
+                                                                        <span role="button"
+                                                                            class="adultincrement incdec">+</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="childrenDetails">
+
+                                                            </div>
+
+                                                        </div>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="search-icon d-none d-md-flex">
+                                                    <div class="search">
+                                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <ul class="navbar-nav mt-2 mt-lg-0">
+                            <ul class="navbar-nav mt-2 mt-lg-0 usersmallicon">
                                 <li class="nav-item active">
                                     <a class="nav-link p-0" href="#"> <img src="images/Frame 61.svg" alt=""
-                                            class=""></a>
+                                            class="usericon"></a>
                                 </li>
                             </ul>
                         </div>
@@ -193,25 +195,23 @@
             </div>
         </div>
     </div>
-    <nav class="navbar border-bottom-1 navbar-expand-sm align-items-start">
-        <div class="container my-3">
-            <a class="navbar-brand" href="#"><img src="images/logo.svg" alt=""></a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
-                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse align-items-start" id="collapsibleNavId">
+
+
+
+    <nav class="navbar border-bottom-1 navbar-expand-sm static-navbar align-items-start">
+        <div class="container my-3 d-flex">
+            <a class="navbar-brand m-0" href="#"><img src="images/logo.svg" alt="" class="navlogo"></a>
+            <div class="navbar-collapse d-flex align-items-start" id="collapsibleNavId">
                 <div class="mx-auto">
                     <ul class="nav nav-tabs nav-tabser w-100 justify-content-center w-50 align-items-center" id="myTab"
                         role="tablist">
 
-                        <li class="nav-item border-0 border-to-right" role="presentation">
+                        <li class="nav-item border-0 border-to-right smalldevloctaetrigger" role="presentation">
                             <div class="tab-content my-0">
-                                <div class="tab-pane active" id="explorer-tab-pane" role="tabpanel"
+                                <div class="tab-pane active show" id="explorer-tab-pane" role="tabpanel"
                                     aria-labelledby="explorer-tab" tabindex="0">
-                                    <div class="defaultsearchvalue defaultsearch d-flex align-items-center" id="explore-tab"
-                                        type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    <div class="defaultsearchvalue defaultsearch d-flex align-items-center"
+                                        id="explore-tab" type="button" class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal">
                                         <img src="images/location.svg" alt="">
                                         <div class="text4A4A4A fw-500">London</div>
@@ -223,18 +223,18 @@
                                         id="explore-tab" type="button" class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal">
                                         <img src="images/plave.svg" alt="">
-                                        <div class="hotelstabs"><span>London</span> <span class="separator"></span>
-                                            <span>27Jun-02Jul</span>
-                                            <span class="separator"></span> <span>1 guest</span>
+                                        <div id="itemscontainer">
+                                            <div class="hotelstabs"><span>London</span> <span class="separator"></span>
+                                                <span>27Jun-02Jul</span>
+                                                <span class="separator"></span> <span>1 guest</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
                         </li>
-                        <li class="nav-item border-0 border-to-right " role="presentation">
-                            <button class="nav-link tab-switch active " id="explorer-tab" data-bs-toggle="tab"
+                        <li class="nav-item border-0 border-to-right" role="presentation">
+                            <button class="nav-link tab-switch active" id="explorer-tab" data-bs-toggle="tab"
                                 data-bs-target="#explorer-tab-pane" type="button" role="tab"
                                 aria-controls="explorer-tab-pane" aria-selected="true"><span class="tab-switch ">
                                     Explore
@@ -249,27 +249,21 @@
 
                 </div>
 
-                <ul class="navbar-nav mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link p-0" href="#"> <img src="images/Frame 61.svg" alt="" class=""></a>
-                    </li>
-                </ul>
+
             </div>
+            <ul class="navbar-nav  mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link p-0" href="#"> <img src="images/Frame 61.svg" alt="" class="usericon"></a>
+                </li>
+            </ul>
         </div>
+
     </nav>
 
     <div class="container">
         <div class="row justify-content-center flex-md-row">
             <div class="col-md-5">
-                <div class="body mx-auto" align="center">
-                    <div class="explore-search" style="z-index: 2;">
-                        <div class="search-box-icon">
-                            <img src="images/search.svg" class="search-icon" alt="">
-                        </div>
-                        <input type="text" id="autocompleteFive" placeholder="Select a color"></input>
-                        <ul id="results" class="autoCompletewrapper"></ul>
-                    </div>
-                </div>
+
 
                 <div class="quick-searches mb-24" id="items-container">
                     <div class="quick-search">
@@ -348,7 +342,8 @@
                     <div class="">
                         <!-- Title -->
                         <div class="d-flex align-items-center justify-content-between">
-                            <a href="hotel-detail.html" class="stretched-link text-decoration-none fs18 "><b>Tower of
+                            <a href="hotel-detail.html" class="stretched-link text-decoration-none fs18 "><b>Tower
+                                    of
                                     London</b></a>
                             <li class="d-flex align-items-center"><i class="fa  fa-heart" aria-hidden="true"></i>
                                 <span>89%</span>
@@ -429,7 +424,8 @@
                     <div class="">
                         <!-- Title -->
                         <div class="d-flex align-items-center justify-content-between">
-                            <a href="hotel-detail.html" class="stretched-link text-decoration-none fs18 "><b>Tower of
+                            <a href="hotel-detail.html" class="stretched-link text-decoration-none fs18 "><b>Tower
+                                    of
                                     London</b></a>
                             <li class="d-flex align-items-center"><i class="fa  fa-heart" aria-hidden="true"></i>
                                 <span>89%</span>
@@ -438,7 +434,8 @@
 
                         <a href="" class=" d-block text-decoration-none text-neutral-2">7 Hours</a>
 
-                        <a href="" class="mb-12 d-block text-decoration-none text-neutral-2"> From $ 189 per person</a>
+                        <a href="" class="mb-12 d-block text-decoration-none text-neutral-2"> From $ 189 per
+                            person</a>
 
 
                     </div>
@@ -583,32 +580,34 @@
     <script>
         $('.defaultsearchvalue2').click(function (e) {
             e.preventDefault();
-          
+
             $('#explore-tab').removeClass('active');
             $('#explore-tab-pane').removeClass('active show');
 
 
-            
+
             $('#profile-tab').addClass('active');
             $('#profile-tab-pane').addClass('active show');
 
-            
+
         });
 
 
         $('.defaultsearch').click(function (e) {
             e.preventDefault();
-          
+
             $('#profile-tab').removeClass('active');
             $('#profile-tab-pane').removeClass('active show');
             $('#explore-tab').addClass('active');
             $('#explore-tab-pane').addClass('active show');
-
-
-            
-
-            
         });
+
+
+
+        $('#itemscontainer').click(function () {
+          
+            $(".t-check-in").click();
+        })
     </script>
 </body>
 

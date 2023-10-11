@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--  fontawesome -->
+
+    <script src="https://kit.fontawesome.com/b73881b7c2.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="assets/autoComplete.js"></script>
+    <link rel="stylesheet" href="assets/autoComplete.min.css">
+    <link href="assets/t-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <div class="contatform">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-left-column">
+                        <p>Couldn’t find what you were looking for?</p>
+                        <div>We’re here for you!</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-6"><input type="text" placeholder="Enter Your Name*"></div>
+                                <div class="col-6"><input type="text" placeholder="Enter your Phone number*"></div>
+                                <div class="col-6"><input type="text" placeholder="Enter your mail ID*"></div>
+                                <div class="col-6"><input type="text" placeholder="Select your location*"></div>
+                                <div class="col-12">
+                                    <textarea name="" id=""
+                                        placeholder="How can we help you get your good out there?"></textarea>
+                                </div>
+                            </div>
+                            <button>Submit <img src="images/arrow-right.svg" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.min.js"></script>
+    <script src="assets/t-datepicker.min.js"></script>
+
+    <script src="index.js"></script>
+
+    <script src="autocomplete1.js"></script>
+    <script src="autocomplete2.js"></script>
+    <script src="datepicker-homepage.js"></script>
+    <script src="datepicker-hotelpage.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('input').val('')
+        });
+
+
+
+
+
+
+        $(document).ready(function () {
+            if (window.File && window.FileList && window.FileReader) {
+                $("#files").on("change", function (e) {
+                    var files = e.target.files,
+                        filesLength = files.length;
+                    for (var i = 0; i < filesLength; i++) {
+                        var f = files[i]
+                        var fileReader = new FileReader();
+                        fileReader.onload = (function (e) {
+                            var file = e.target;
+                            $("<span class=\"pip\">" +
+                                "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+                                "<br/><span class=\"remove remove-image\"></span>" +
+                                "</span>").insertAfter("#files");
+                            $(".remove").click(function () {
+                                $(this).parent(".pip").remove();
+                            });
+
+                        });
+                        fileReader.readAsDataURL(f);
+                    }
+                    console.log(files);
+                });
+            } else {
+                alert("Your browser doesn't support to File API")
+            }
+        });
+
+
+        var a = document.querySelectorAll(".quick-search");
+        for (var i = 0, length = a.length; i < length; i++) {
+            a[i].onclick = function () {
+                var b = document.querySelector(".quick-search.active");
+                if (b) b.classList.remove("active");
+                this.classList.add('active');
+            };
+        }
+
+
+    </script>
+
+    <script>
+        /* 
+  this is an implementation of drag scroll algorythm.
+*/
+        const container = document.querySelector('#items-container');
+
+        let startY;
+        let startX;
+        let scrollLeft;
+        let scrollTop;
+        let isDown;
+
+        container.addEventListener('mousedown', e => mouseIsDown(e));
+        container.addEventListener('mouseup', e => mouseUp(e))
+        container.addEventListener('mouseleave', e => mouseLeave(e));
+        container.addEventListener('mousemove', e => mouseMove(e));
+
+        function mouseIsDown(e) {
+            isDown = true;
+            startY = e.pageY - container.offsetTop;
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+            scrollTop = container.scrollTop;
+        }
+        function mouseUp(e) {
+            isDown = false;
+        }
+        function mouseLeave(e) {
+            isDown = false;
+        }
+        function mouseMove(e) {
+            if (isDown) {
+                e.preventDefault();
+                //Move vertcally
+                const y = e.pageY - container.offsetTop;
+                const walkY = y - startY;
+                container.scrollTop = scrollTop - walkY;
+
+                //Move Horizontally
+                const x = e.pageX - container.offsetLeft;
+                const walkX = x - startX;
+                container.scrollLeft = scrollLeft - walkX;
+
+            }
+        }
+    </script>
+
+
+    <script>
+        $('.defaultsearchvalue2').click(function (e) {
+            e.preventDefault();
+
+            $('#explore-tab').removeClass('active');
+            $('#explore-tab-pane').removeClass('active show');
+
+
+
+            $('#profile-tab').addClass('active');
+            $('#profile-tab-pane').addClass('active show');
+
+
+        });
+
+
+        $('.defaultsearch').click(function (e) {
+            e.preventDefault();
+
+            $('#profile-tab').removeClass('active');
+            $('#profile-tab-pane').removeClass('active show');
+            $('#explore-tab').addClass('active');
+            $('#explore-tab-pane').addClass('active show');
+        });
+
+
+
+        $('#itemscontainer').click(function () {
+
+            $(".t-check-in").click();
+        })
+    </script>
+</body>
+
+</html>

@@ -23,167 +23,143 @@
 </head>
 
 <body>
+    <div class="banner-container other-sections">
+        <div class="container">
+            <img src="images/homepagebanner.png" class="img-fluid d-none d-md-block w-100" alt="">
+            <img src="images/bannermobile.png" class="img-fluid d-md-none w-100" alt="">
+
+            <div class="banner-text">
+                Discover New <br> Destinations
+            </div>
+        </div>
+    </div>
+    <div class="body typeahed mx-auto" align="center">
+        <div class="d-flex justify-content-center mb-20">
 
 
-
-
-
-    <nav class="navbar navbar-expand-sm align-items-start container d-none d-md-block">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse " id="collapsibleNavId">
-            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"> <img src="images/Frame 61.svg" alt="" class="mb-58"></a>
+            <ul class="nav nav-tabs border-0 w-100 justify-content-center w-50" id="myTab" role="tablist">
+                <li class="nav-item border-0 w-50" role="presentation">
+                    <button class="nav-link active tab-switch" id="home-tab" data-bs-toggle="tab"
+                        data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                        aria-selected="true"><span class="tab-switch active">
+                            Explore
+                        </span></button>
+                </li>
+                <li class="nav-item border-0 w-50" role="presentation">
+                    <button class="nav-link tab-switch" id="profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                        aria-selected="false">Hotels</button>
                 </li>
             </ul>
+
+
+
         </div>
-    </nav>
-    <div class="container">
-
-
-        <div class="d-flex flex-column-reverse flex-md-column">
-            <div class="banner-container other-sections">
-                <img src="images/homepagebanner.png" class="img-fluid d-block w-100" alt="">
-                <div class="banner-text">
-                    Discover New Destinations
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="explore-search">
+                    <div class="search-box-icon">
+                        <img src="images/search.svg" class="search-icon" alt="">
+                    </div>
+                    <input type="text" id="autocompleteFive" placeholder="Select a color"></input>
+                    <ul id="results" class="autoCompletewrapper"></ul>
+                    <!-- <input id="autoCompletetwo" type="text" tabindex="1" placeholder="&#xF002; Search"> -->
                 </div>
             </div>
-            <div class="body typeahed mx-auto" align="center">
-                <div class="d-flex justify-content-center mb-20">
-
-
-                    <ul class="nav nav-tabs border-0 w-100 justify-content-center w-50" id="myTab" role="tablist">
-                        <li class="nav-item border-0 w-50" role="presentation">
-                            <button class="nav-link active tab-switch" id="home-tab" data-bs-toggle="tab"
-                                data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                                aria-selected="true"><span class="tab-switch active">
-                                    Explore
-                                </span></button>
-                        </li>
-                        <li class="nav-item border-0 w-50" role="presentation">
-                            <button class="nav-link tab-switch" id="profile-tab" data-bs-toggle="tab"
-                                data-bs-target="#profile-tab-pane" type="button" role="tab"
-                                aria-controls="profile-tab-pane" aria-selected="false">Hotels</button>
-                        </li>
-                    </ul>
 
 
 
-                </div>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-                        tabindex="0">
-                        <div class="explore-search">
-                            <div class="search-box-icon">
-                                <img src="images/search.svg" class="search-icon" alt="">
-                            </div>
-                            <input type="text" id="autocompleteFive" placeholder="Select a color"></input>
-                            <ul id="results" class="autoCompletewrapper"></ul>
-                            <!-- <input id="autoCompletetwo" type="text" tabindex="1" placeholder="&#xF002; Search"> -->
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="search-filter remove-highlight d-md-flex">
+
+                    <div class="search-locations">
+                        <img src="images/search.svg" class="search-iconformobile d-md-none" alt="">
+                        <label for="checkout" class="label">Where</label>
+                        <div class="autoComplete_wrapper">
+                            <input id="autoCompletethree" type="text" tabindex="1" placeholder="&#xF002; Search">
                         </div>
                     </div>
 
+                    <div class="t-datepicker">
+                        <div class="t-check-in"></div>
+                        <div class="t-check-out"></div>
+                    </div>
 
+                    <div class="dropdown-custom">
 
-                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-                        tabindex="0">
-                        <div class="search-filter remove-highlight d-md-flex">
-
-                            <div class="search-locations">
-                                <img src="images/search.svg" class="search-iconformobile d-md-none" alt="">
-                                <label for="checkout" class="label">Where</label>
-                                <div class="autoComplete_wrapper">
-                                    <input id="autoCompletethree" type="text" tabindex="1"
-                                        placeholder="&#xF002; Search">
-                                </div>
-                            </div>
-
-                            <div class="t-datepicker">
-                                <div class="t-check-in"></div>
-                                <div class="t-check-out"></div>
-                            </div>
-
-                            <div class="dropdown-custom">
-
-                                <div class="dropdown-custom-toggle ">
-                                    <img src="images/usergrey.png" class="user-guests d-md-none" alt="">
-                                    <label for="checkout" class="label">Who</label>
-                                    <input type="number" id="totalguests" class="border-0 totalguests"
-                                        placeholder="Add no. of guests" readonly>
-                                </div>
-                                <ul class="dropdown-menu p-0 border-0">
-                                    <div class="rooms-num room-info b-20 border bg-white">
-                                        <div class="p-24">
-                                            <div
-                                                class="adults counter mb-30 d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <p class="person">Adult</p>
-                                                    <p class="age"> Ages 13 or above</p>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span role="button" class="decrement dec">-</span>
-                                                    <input type="number"
-                                                        class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                                        placeholder="0" readonly>
-                                                    <span role="button" class="adultincrement incdec">+</span>
-                                                </div>
-                                            </div>
-
-                                            <div
-                                                class="adults counter mb-30 d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <p class="person">Children</p>
-                                                    <p class="age"> Ages 2-12</p>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span role="button" id="childrenSubtract"
-                                                        class="decrement dec">-</span>
-                                                    <input type="number"
-                                                        class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                                        placeholder="0" readonly>
-                                                    <span role="button" id="childrenAdd"
-                                                        class="adultincrement incdec">+</span>
-                                                </div>
-                                            </div>
-
-                                            <div
-                                                class="adults counter d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <p class="person">Infants</p>
-                                                    <p class="age"> Under 2</p>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span role="button" class="decrement dec">-</span>
-                                                    <input type="number"
-                                                        class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
-                                                        placeholder="0" readonly>
-                                                    <span role="button" class="adultincrement incdec">+</span>
-                                                </div>
-                                            </div>
+                        <div class="dropdown-custom-toggle ">
+                            <img src="images/usergrey.png" class="user-guests d-md-none" alt="">
+                            <label for="checkout" class="label">Who</label>
+                            <input type="number" id="totalguests" class="border-0 totalguests"
+                                placeholder="Add no. of guests" readonly>
+                        </div>
+                        <ul class="dropdown-menu p-0 border-0">
+                            <div class="rooms-num room-info b-20 border bg-white">
+                                <div class="p-24">
+                                    <div class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="person">Adult</p>
+                                            <p class="age"> Ages 13 or above</p>
                                         </div>
-                                        <div id="childrenDetails">
-
+                                        <div class="d-flex align-items-center">
+                                            <span role="button" class="decrement dec">-</span>
+                                            <input type="number"
+                                                class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                placeholder="0" readonly>
+                                            <span role="button" class="adultincrement incdec">+</span>
                                         </div>
-
                                     </div>
-                                </ul>
-                            </div>
 
-                            <div class="search-icon d-none d-md-flex">
-                                <div class="search">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <div class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="person">Children</p>
+                                            <p class="age"> Ages 2-12</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span role="button" id="childrenSubtract" class="decrement dec">-</span>
+                                            <input type="number"
+                                                class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                placeholder="0" readonly>
+                                            <span role="button" id="childrenAdd" class="adultincrement incdec">+</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="adults counter d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="person">Infants</p>
+                                            <p class="age"> Under 2</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span role="button" class="decrement dec">-</span>
+                                            <input type="number"
+                                                class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                placeholder="0" readonly>
+                                            <span role="button" class="adultincrement incdec">+</span>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div id="childrenDetails">
+
+                                </div>
+
                             </div>
+                        </ul>
+                    </div>
+
+                    <div class="search-icon d-none d-md-flex">
+                        <div class="search">
+                            <i class="fa fa-search" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
-                <div class="selection d-none"></div>
-                <div class="selection2 d-none"></div>
-
             </div>
         </div>
+        <div class="selection d-none"></div>
+        <div class="selection2 d-none"></div>
+
+    </div>
+    <div class="container">
         <div class="partner-with-us other-sections">
             <h6>Partners with</h6>
 
@@ -312,3 +288,13 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+

@@ -676,10 +676,8 @@ div#totalguests {
   position: relative;
 }
 @media only screen and (max-width: 600px) {
-  .banner-container img {
-    height: 60vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .banner-container .container {
+    padding: 0;
   }
 }
 .banner-container .banner-text {
@@ -700,9 +698,8 @@ div#totalguests {
 }
 @media only screen and (max-width: 600px) {
   .banner-container .banner-text {
-    top: unset;
-    font-size: 40px;
-    bottom: 32px;
+    top: 53px;
+    font-size: 24px;
     padding: 4px;
   }
 }
@@ -828,22 +825,17 @@ div#totalguests {
   margin-top: -50px;
   position: relative;
   z-index: 2;
-  width: -moz-max-content;
-  width: max-content;
 }
 @media only screen and (min-width: 992px) {
   .typeahed {
     min-width: 515px;
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
 }
 @media only screen and (max-width: 600px) {
   .typeahed {
-    top: 0;
-    margin-top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 17px;
+    width: 95%;
   }
 }
 .typeahed .dropdown-menu {
@@ -1443,6 +1435,8 @@ mark {
   width: 100%;
   border-radius: 16px;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05), 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+  left: 0;
+  top: 11px;
 }
 .autoCompletewrapper li {
   list-style-type: none;
@@ -1843,14 +1837,26 @@ img.pinned {
   background-color: white !important;
 }
 .navbar .nav-tabser {
-  border-radius: 32px;
-  border: 1px solid #DDD !important;
+  border: 0;
   background: #FFF;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
   margin: auto;
   left: 0;
   right: 0;
   padding: 8px 16px;
+}
+@media only screen and (min-width: 992px) {
+  .navbar .nav-tabser {
+    border-radius: 32px;
+    border: 1px solid #DDD !important;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navbar .usericon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
 }
 .navbar .tab-content {
   margin-top: 30px;
@@ -1860,6 +1866,13 @@ img.pinned {
   margin-top: 30px;
   display: block;
   margin-bottom: 20px;
+}
+.navbar .navlogo {
+  max-width: 60px;
+}
+.navbar .container {
+  flex-wrap: unset;
+  justify-content: space-between;
 }
 
 #explore-tab-pane .explore-search {
@@ -1878,6 +1891,76 @@ img.pinned {
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .static-navbar {
+    min-height: 165px;
+  }
+  .static-navbar .smalldevloctaetrigger {
+    height: 60px;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 95%;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    background: #FAFAFA;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .static-navbar .border-to-right::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #exampleModal .modal-body {
+    padding: 0;
+  }
+  #exampleModal .navbar-brand {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+  }
+  #exampleModal .explore-search {
+    width: 100%;
+  }
+  #exampleModal .explore-search input {
+    padding-left: 0;
+  }
+  #exampleModal ul#myTab {
+    margin-left: 5%;
+  }
+  #exampleModal .usersmallicon {
+    position: absolute;
+    right: 1rem;
+  }
+  #exampleModal .smalldevfullwidth {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) and (max-width: 600px) {
+  #exampleModal .smalldevfullwidth .autoCompletewrapper {
+    display: block;
+    position: absolute;
+    background: white;
+    width: 108%;
+    left: -4%;
+    top: 72px;
+    border-radius: 0;
+    height: 100vh;
+    box-shadow: none;
+  }
+  #exampleModal .smalldevfullwidth .autoCompletewrapper li {
+    background-color: white;
+    border: 0;
+  }
 }
 
 .mapsticky iframe {
@@ -2168,4 +2251,121 @@ img.pinned {
   width: 1px;
   height: 20px;
   margin: 0 8px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.contact-form-left .p {
+  color: #222;
+  font-size: 20px;
+  font-weight: 300;
+}
+.contact-form-left div {
+  color: #222;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.contact-left-column p {
+  color: #222;
+  font-size: 20px;
+  font-weight: 300;
+  max-width: 215px;
+}
+
+.contact-left-column div {
+  color: #222;
+  font-weight: 600;
+  max-width: 280px;
+  font-size: 35px;
+}
+
+@media screen and (max-width: 992px) {
+  .contact-left-column div {
+    line-height: 45px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contact-left-column div {
+    font-size: 50px;
+  }
+}
+.contatform {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .contatform {
+    padding-top: 128px;
+    padding-bottom: 200px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .contact-form {
+    margin-top: 50px;
+  }
+  .contact-form .row > * {
+    padding: 0 4px;
+  }
+}
+.contact-form input,
+.contact-form textarea {
+  border-radius: 4px;
+  border: 1px solid #B0B0B0;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 33px;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form input,
+  .contact-form textarea {
+    border-radius: 8px;
+  }
+}
+
+.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+  color: #B0B0B0;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #B0B0B0;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+    font-size: 16px;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: 16px;
+  }
+}
+.contact-form textarea {
+  height: 110px;
+}
+
+.contact-form button {
+  border-radius: 8px;
+  background: #E86831;
+  display: flex;
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  outline: 0;
+  border: 0;
+  color: #FAFAFA;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */
