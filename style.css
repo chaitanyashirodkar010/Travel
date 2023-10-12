@@ -1406,6 +1406,9 @@ mark {
   }
 }
 
+.t-datepicker-days {
+  font-family: "Acme", sans-serif;
+}
 @media only screen and (min-width: 992px) {
   .t-datepicker-days {
     display: flex;

@@ -312,7 +312,10 @@ thead>tr:nth-child(2) {
 .t-highlighted {
     color: #000000;
 }
-
+.t-start.t-highlighted {
+    background: #222 !important;
+    color: #EDF1F3 !important;
+}
 
 .t-range,
 .t-range-limit {
