@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,700&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
-
   color: #222222;
   font-weight: 400;
+}
+
+.acme {
+  font-family: 'Acme', sans-serif;
 }
 
 b {
@@ -15,6 +18,10 @@ b {
   @media only screen and (min-width: 992px) {
     width: 1280px;
   }
+}
+
+.linheight32 {
+  line-height: 32px;
 }
 
 ul {
@@ -159,6 +166,10 @@ a {
 
 .mt-44 {
   margin-top: 44px;
+}
+
+.mt-8 {
+  margin-top: 8px;
 }
 
 .mb-24 {
@@ -317,7 +328,7 @@ hr {
   align-items: center;
   gap: 10px;
   text-align: center;
-
+  font-family: 'Acme', sans-serif;
   padding: 12px 24px;
 
   @media only screen and (min-width: 992px) {
@@ -325,8 +336,39 @@ hr {
     padding: 14px 24px;
   }
 
-  font-weight: 600;
   color: #222;
+}
+
+.sortby {
+  width:140px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 10px;
+  height: 38px;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right;
+  -webkit-appearance: none;
+  font-weight: 400;
+  background-position-x: 110px;
+}
+
+.qnainput {
+  border-radius: 10px;
+  border: 1px solid #707070;
+  height: 47px;
+  color: #BFBFBF;
+  font-family: 'Acme', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  padding-left: 22px;
+  margin-top: 35px;
+  width: 100%;
+}
+
+.btn-outline-dark {
+  font-family: 'Acme', sans-serif;
 }
 
 .check-success {
@@ -497,13 +539,14 @@ hr {
 .overview {
   p {
     margin-bottom: 32px;
+    line-height: 32px;
   }
 }
 
 .key-facts {
   padding: 8px 12px;
   border-radius: 8px;
-  background: #EDF1F3;
+  background: #F7F7F7;
   margin-right: 12px;
   margin-bottom: 12px;
   font-size: 14px;
@@ -511,7 +554,7 @@ hr {
 
 .popular-ammenities {
   img {
-    width: 24px;
+    width: 36px;
     margin-right: 10px;
   }
 
@@ -520,9 +563,7 @@ hr {
   }
 }
 
-.ammenity {
-  font-size: 18px;
-}
+.ammenity {}
 
 .map {
   height: 400px;
@@ -2477,6 +2518,10 @@ img.pinned {
   .mt-md-64px {
     margin-top: 64px;
   }
+
+  .mt-md-80px {
+    margin-top: 80px;
+  }
 }
 
 .howwegetprices {
@@ -2635,7 +2680,8 @@ img.pinned {
   .contact-form {
     margin-top: 50px;
   }
-  .contact-form .row > * {
+
+  .contact-form .row>* {
     padding: 0 4px;
   }
 }
@@ -2650,6 +2696,7 @@ img.pinned {
 }
 
 @media screen and (min-width: 992px) {
+
   .contact-form input,
   .contact-form textarea {
     border-radius: 8px;
@@ -2689,18 +2736,22 @@ img.pinned {
 }
 
 @media screen and (min-width: 992px) {
+
   .contact-form input::-webkit-input-placeholder,
   .contact-form textarea::-webkit-input-placeholder {
     font-size: 16px;
   }
+
   .contact-form input:-ms-input-placeholder,
   .contact-form textarea:-ms-input-placeholder {
     font-size: 16px;
   }
+
   .contact-form input::-ms-input-placeholder,
   .contact-form textarea::-ms-input-placeholder {
     font-size: 16px;
   }
+
   .contact-form input::placeholder,
   .contact-form textarea::placeholder {
     font-size: 16px;
@@ -2721,17 +2772,18 @@ img.pinned {
   height: 48px;
   padding: 12px 16px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 8px;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   outline: 0;
   border: 0;
   color: #FAFAFA;
   font-weight: 500;
 }
+
 /*# sourceMappingURL=style.css.map */
