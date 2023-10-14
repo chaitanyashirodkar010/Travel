@@ -348,7 +348,6 @@ hr {
   color: #BFBFBF;
   font-family: "Acme", sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 25px;
   padding-left: 22px;
@@ -382,8 +381,16 @@ hr {
   font-size: 15px;
 }
 
+.fs28 {
+  font-size: 28px;
+}
+
 .fs14 {
   font-size: 14px;
+}
+
+.fs13 {
+  font-size: 13px;
 }
 
 .fs-32 {
@@ -647,17 +654,16 @@ select {
     flex-direction: column;
   }
 }
-.slick-slide {
+.bloglistingcarousel .slick-slide {
   padding: 20px;
+}
+.bloglistingcarousel .slick-list {
+  padding: 0 20% 0 0 !important;
 }
 
 .px-24 {
   padding-left: 24px;
   padding-right: 24px;
-}
-
-.slick-list {
-  padding: 0 20% 0 0 !important;
 }
 
 .room-info {
@@ -2257,9 +2263,7 @@ img.pinned {
 
 .tnctext a {
   color: #4A4A4A;
-  font-family: Poppins;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   line-height: 22px;
   margin: 0 25px;
@@ -2267,11 +2271,8 @@ img.pinned {
 
 .tnc-left a {
   color: #717171;
-  font-family: Poppins;
   font-size: 24px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   margin-bottom: 13px;
   display: block;
   text-decoration: none;
@@ -2415,4 +2416,174 @@ img.pinned {
   font-weight: 500;
 }
 
-/*# sourceMappingURL=style.css.map */
+
+.card-slider {
+  position: relative;
+}
+.card-slider .hotel-listing-slider img {
+  max-height: 242px;
+  width: 374px;
+}
+.card-slider .hotel-listing-slider .slick-arrow.slick-next {
+  background-image: url(images/arrow-right.svg);
+  right: 20px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.card-slider .hotel-listing-slider .slick-arrow.slick-prev {
+  background-image: url(images/arrow-right.svg);
+  left: 20px;
+  z-index: 1;
+  top: -25px !important;
+  bottom: 0 !important;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  transform: rotate(-180deg);
+}
+.card-slider .hotel-listing-slider .slick-prev:before,
+.card-slider .hotel-listing-slider .slick-next:before {
+  content: "";
+}
+.card-slider .hotel-listing-slider .slider__counter {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 4px;
+  background: #222;
+  width: unset !important;
+}
+.card-slider .heart {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+}
+
+.hotel-rating {
+  border-radius: 4px 4px 4px 0px;
+  border: 1px solid var(--neutral-500, #707070);
+  height: 29px;
+  width: 29px;
+  color: var(--neutral-900, #222);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topamenities {
+  margin-top: 8px;
+  margin-bottom: 18px;
+  display: flex;
+  color: var(--n600, #717171);
+  font-size: 11px;
+}
+.topamenities img {
+  width: 14.56px;
+  height: 14.56px;
+  margin-right: 8px;
+}
+.topamenities .amens {
+  margin-right: 12px;
+}
+
+.stars {
+  margin-right: 4px;
+}
+
+.selectdates {
+  display: flex;
+  width: 199px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background: var(--neutral-100, #F7F7F7);
+  color: var(--neutral-800, #262626);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.border-toend {
+  position: relative;
+}
+.border-toend::after {
+  content: "";
+  position: absolute;
+  height: 90%;
+  width: 1px;
+  background: rgba(234, 234, 234, 0.87);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.fs34 {
+  font-size: 34px;
+}
+
+.pagination2 a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.pagination2 .current-page {
+  border-radius: 4px;
+  background: var(--neutral-600, #525252);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  display: block;
+}
+.pagination2 .current-page a {
+  color: #FFF;
+}
+
+.notification {
+  margin-top: 72px;
+  display: flex;
+  border-radius: 8px;
+  background: var(--neutral-50, #FAFAFA);
+  padding: 8px;
+  color: var(--neutral-500, #707070);
+  font-size: 14px;
+}
+.notification svg {
+  margin-right: 8px;
+}
+
+.custom-table td {
+  border: 1px solid var(--neutral-200, #E5E5E5);
+  background: var(--neutral-50, #FAFAFA);
+  color: var(--neutral-500, #707070);
+  font-size: 14px;
+  padding-left: 24px;
+}
+
+.hotels-in-otherplcaes li {
+  list-style-type: none;
+}
+.hotels-in-otherplcaes a {
+  color: var(--neutral-500, #707070);
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=style.css.map */
