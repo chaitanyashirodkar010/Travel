@@ -2561,7 +2561,7 @@ img.pinned {
   font-size: 16px;
   font-weight: 500;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .selectdates {
     width: 199px;
   }
