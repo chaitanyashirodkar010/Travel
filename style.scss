@@ -2831,9 +2831,8 @@ img.pinned {
   position: relative;
 
   .hotel-listing-slider {
-    img {
-      max-height: 242px;
-      width: 374px;
+    .slick-slide {
+      margin: 0 5px;
     }
 
     .slick-arrow {
@@ -3478,6 +3477,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 .price {
   display: flex;
   align-items: center;
+
   .old {
     color: var(--neutral-500, #707070);
     font-size: 20px;

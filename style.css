@@ -2447,9 +2447,8 @@ img.pinned {
 .card-slider {
   position: relative;
 }
-.card-slider .hotel-listing-slider img {
-  max-height: 242px;
-  width: 374px;
+.card-slider .hotel-listing-slider .slick-slide {
+  margin: 0 5px;
 }
 .card-slider .hotel-listing-slider .slick-arrow.slick-next {
   background-image: url(images/arrow-right.svg);
