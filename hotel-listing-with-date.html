@@ -44,27 +44,83 @@
 
     <div class="hotel-listing-page">
         <div class="container">
-            <div class="filters mb-5">
+            <div class="filters  mb-5">
                 <div class="row">
                     <div class="col">
                         <label for="">Price : Per night</label>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" aria-expanded="false">
                                 ₹100 -₹45,000
                             </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <ul class="dropdown-menu pricepernight">
+                                <div class="filter-drop-down">
+                                    <div class="filtertitle">
+                                        Set price range
+                                    </div>
+
+                                    <div class="perstay d-flex justify-content-between mb-3 align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <input type="radio" name="flexRadioDefault" class="btn-check"
+                                                id="btn-check">
+                                            <label class="btn " for="btn-check">
+                                                Per night
+                                            </label>
+
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <input type="radio" name="flexRadioDefault" class="btn-check"
+                                                id="btn-check1">
+                                            <label class="btn " for="btn-check1">
+                                                Total stay
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="filtertitle">
+                                        Price range
+                                    </div>
+                                    <div class="row minmaxprice">
+
+                                        <div class="minmaxpriceslot">
+                                            <label for="">Minimum price</label>
+                                            <div class="d-flex">
+                                                <div class="ruppee">₹</div><input type="number" name="" id="">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="minmaxpriceslot">
+                                            <label for="">Minimum price</label>
+                                            <div class="d-flex">
+                                                <div class="ruppee">₹</div><input type="number" name="" id="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <hr>
+
+                                    <div class="row d-flex justify-content-between align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="text-decoration-underline">
+                                                reset
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="orangebutton">
+                                                Apply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                     </div>
                     <div class="col">
                         <label for="">Filters</label>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" aria-expanded="false">
                                 Select
                             </button>
                             <ul class="dropdown-menu">
@@ -73,43 +129,42 @@
                                         Hotel Class
                                     </div>
 
-                                    <div
-                                        class="reviews-toggle d-flex justify-content-between mb-3 align-items-center">
+                                    <div class="reviews-toggle d-flex justify-content-between mb-3 align-items-center">
                                         <div class="d-flex align-items-center">
-                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check"
-                                                >
+                                            <input type="radio" name="flexRadioDefault" class="btn-check"
+                                                id="btn-check">
                                             <label class="btn " for="btn-check">
                                                 0-1 <img src="images/start.svg" width="15" alt="" class="ms-1">
                                             </label>
 
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check1"
-                                                >
+                                            <input type="radio" name="flexRadioDefault" class="btn-check"
+                                                id="btn-check1">
                                             <label class="btn " for="btn-check1">
                                                 2 <img src="images/start.svg" width="15" alt="" class="ms-1">
                                             </label>
 
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check2"
-                                                >
+                                            <input type="radio" name="flexRadioDefault" class="btn-check"
+                                                id="btn-check2">
                                             <label class="btn " for="btn-check2">
                                                 3 <img src="images/start.svg" width="15" alt="" class="ms-1">
                                             </label>
 
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check3"
-                                                >
+                                            <input type="radio" name="flexRadioDefault" class="btn-check"
+                                                id="btn-check3">
                                             <label class="btn " for="btn-check3">
                                                 4 <img src="images/start.svg" width="15" alt="" class="ms-1">
                                             </label>
 
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check4"
-                                                >
+                                            <input type="radio" name="flexRadioDefault" class="btn-check"
+                                                id="btn-check4">
                                             <label class="btn " for="btn-check4">
                                                 5 <img src="images/start.svg" width="15" alt="" class="ms-1">
                                             </label>
@@ -158,8 +213,7 @@
 
                                                 <input class="form-check-input" type="checkbox" value=""
                                                     id="flexCheckDefault">
-                                                <label class="form-check-label"
-                                                    for="flexCheckDefault">Parking</label>
+                                                <label class="form-check-label" for="flexCheckDefault">Parking</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -234,8 +288,8 @@
                     <div class="col">
                         <label for="">Guest rating</label>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" aria-expanded="false">
                                 All
                             </button>
                             <ul class="dropdown-menu">
@@ -246,16 +300,14 @@
                                     </div>
                                     <div class="reviews-toggle mb-3">
                                         <div class="d-flex align-items-center mb-3">
-                                            <input type="checkbox" class="btn-check" id="btn-check"
-                                                autocomplete="off">
+                                            <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
                                             <label class="btn " for="btn-check">
                                                 8.5 <img src="images/start.svg" width="15" alt="" class="ms-1">
                                             </label>
                                             <label for="" class="fw-500">Excellent</label>
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <input type="checkbox" class="btn-check" id="btn-check1"
-                                                autocomplete="off">
+                                            <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off">
                                             <label class="btn " for="btn-check1">
                                                 8.0 <img src="images/start.svg" width="15" alt="" class="ms-1">
                                             </label>
@@ -287,8 +339,8 @@
                     <div class="col">
                         <label for="">Property type</label>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" aria-expanded="false">
                                 All
                             </button>
                             <ul class="dropdown-menu">
@@ -348,8 +400,8 @@
                     <div class="col">
                         <label for="">Location</label>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" aria-expanded="false">
                                 All
                             </button>
                             <ul class="dropdown-menu">
@@ -364,8 +416,7 @@
 
                                     <div class="dropdown filterdropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            data-bs-toggle="dropdown" 
-                                            aria-expanded="false">
+                                            data-bs-toggle="dropdown" aria-expanded="false">
                                             City centre
                                         </button>
                                         <ul class="dropdown-menu">
@@ -379,8 +430,7 @@
                                     </div>
                                     <div class="dropdown filterdropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            data-bs-toggle="dropdown" 
-                                            aria-expanded="false">
+                                            data-bs-toggle="dropdown" aria-expanded="false">
                                             Enter street address/zip code
                                         </button>
                                         <ul class="dropdown-menu">
@@ -488,7 +538,7 @@
                                             d="M10 1.75C6.55391 1.75 3.75 4.43164 3.75 7.72656C3.75 9.2957 4.46523 11.3824 5.87578 13.9289C7.00859 15.9734 8.31914 17.8223 9.00078 18.7422C9.11596 18.8994 9.26656 19.0272 9.44037 19.1153C9.61418 19.2034 9.8063 19.2493 10.0012 19.2493C10.196 19.2493 10.3882 19.2034 10.562 19.1153C10.7358 19.0272 10.8864 18.8994 11.0016 18.7422C11.682 17.8223 12.9938 15.9734 14.1266 13.9289C15.5348 11.3832 16.25 9.29648 16.25 7.72656C16.25 4.43164 13.4461 1.75 10 1.75ZM10 10.5C9.50555 10.5 9.0222 10.3534 8.61107 10.0787C8.19995 9.80397 7.87952 9.41352 7.6903 8.95671C7.50108 8.49989 7.45157 7.99723 7.54804 7.51227C7.6445 7.02732 7.8826 6.58186 8.23223 6.23223C8.58186 5.8826 9.02732 5.6445 9.51227 5.54804C9.99723 5.45157 10.4999 5.50108 10.9567 5.6903C11.4135 5.87952 11.804 6.19995 12.0787 6.61107C12.3534 7.0222 12.5 7.50555 12.5 8C12.4993 8.66282 12.2357 9.29828 11.767 9.76697C11.2983 10.2357 10.6628 10.4993 10 10.5Z"
                                             fill="#707070" />
                                     </svg>
-                                    <div>
+                                    <div class="ms-1">
                                         3.7 km to City centre
                                     </div>
                                 </div>
@@ -499,7 +549,9 @@
                                     9.3
                                 </div>
                             </div>
-
+                            <div class="color707070 fs14 mb-12">
+                                Deluxe Double Room (2Adults + 1Child)
+                            </div>
                             <div class="fs13 fw-500 mb-2">
                                 Top Amenities
                             </div>
@@ -508,20 +560,24 @@
                                 <div class="amens d-flex "> <img src="images/coffee.svg" alt="">Coffee Shop</div>
                                 <div class="amens d-flex "> <img src="images/beer.svg" alt="">Bar/lounge</div>
                             </div>
-                            <div class="color707070 fs13">
-                                #1 Best Value of 6,274 places to stay in Delhi
-                            </div>
+
                         </div>
                     </div>
+
+                 
                     <div class="col-md-3 d-flex align-items-end py-3 selectdatesblock">
                         <div>
-                            <div class="mb-20 selectdatespara">
-                                Select dates to see prices and availability
+                            <div class="price">
+                                <div class="old"> ₹700 </div>
+                                <div class="new">₹652 </div>
+                            </div>
+                            <div class="mb-20 fs12 color707070">
+                                Includes taxes and Charges
                             </div>
 
                             <div class="selectdates">
                                 <div>
-                                    Select dates
+                                    Get Price
                                 </div> <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
                                     viewBox="0 0 17 16" fill="none">
                                     <path
