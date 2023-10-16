@@ -314,7 +314,8 @@ hr {
   display: block;
   margin-top: 34px;
   margin-bottom: 34px;
-  background: #EAEAEA;
+  background: #DDD;
+
 
   @media only screen and (min-width: 992px) {
     margin-top: 44px;
@@ -3421,6 +3422,14 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 .minmaxprice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  svg {
+    margin: 0 15px;
+  }
+
   .minmaxpriceslot {
     flex: 1;
     display: flex;
@@ -3490,5 +3499,88 @@ input[type="range"]::-webkit-slider-runnable-track {
     color: var(--n900, #222);
     font-size: 24px;
     font-weight: 600;
+  }
+}
+
+.sortfilters {
+  .dropdown-toggle {
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    color: var(--n500, #B0B0B0);
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: space-between;
+  }
+
+  .dropdown-toggle::after {
+    border: none;
+    background-image: url(images/arrow-down.svg);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+  }
+
+  .dropdown-menu.show {
+    width: 100%;
+  }
+}
+
+.dropdownwithi {
+  width: 300px;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  color: var(--500, #707070);
+  font-size: 14px;
+  font-weight: 400;
+
+  .svg {
+    border-left: 1px solid rgba(0, 0, 0, 0.20);
+    padding: 0 15px;
+  }
+
+  .dropdown-toggle {
+    border: 0;
+
+    &:active {
+      background-color: transparent;
+      border: 0;
+      color: #181818;
+    }
+  }
+}
+
+.view-map {
+  background: url(images/view-map.png) center no-repeat;
+  background-size: contain;
+  width: 293px;
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    border-radius: 8px;
+    border: 1px solid var(--900, #222);
+    background: var(--pure-white, #FFF);
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+
+    svg {
+      margin-right: 15px;
+    }
   }
 }
