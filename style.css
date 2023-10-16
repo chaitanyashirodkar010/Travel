@@ -2680,4 +2680,253 @@ img.pinned {
   .hotels-in-otherplcaes a {
     font-size: 16px;
   }
+}
+
+.filters {
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.09);
+  padding: 26px 37px;
+}
+.filters .dropdown-toggle {
+  border-radius: 31px;
+  border: 1px solid #EAEAEA;
+  color: var(--neutral-700, #404040);
+  font-size: 14px;
+  font-weight: 400;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  margin-top: 8px;
+}
+.filters .dropdown-toggle.show {
+  border: 1px solid var(--neutral-700, #404040);
+}
+.filters .dropdown-menu {
+  padding: 0 !important;
+  border-radius: 31px;
+  border: 0;
+}
+.filters label {
+  color: var(--neutral-800, #262626);
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 16px;
+}
+
+.filtertitle {
+  color: #222;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.filter-drop-down {
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  min-width: 358px;
+}
+.filter-drop-down .hote-class {
+  display: flex;
+  justify-content: space-between;
+}
+.filter-drop-down .hote-class > div {
+  border-radius: 24px;
+  border: 1px solid #E2E2E2;
+  background: var(--neutral-100, #F7F7F7);
+  display: flex;
+  width: 84px;
+  height: 37px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: var(--neutral-500, #707070);
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+.filter-drop-down .hote-class > div:last-child {
+  margin-right: 0;
+}
+.filter-drop-down .form-check {
+  margin-bottom: 25px;
+}
+.filter-drop-down .form-check-input {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #B0B0B0;
+  margin-right: 16px;
+}
+.filter-drop-down .form-check-label {
+  color: var(--n600, #717171);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.orangebutton {
+  background: linear-gradient(93deg, #EA6C32 0%, #D84B2D 99.76%);
+  width: 100%;
+  height: 58.118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 10px;
+  outline: 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.reviews-toggle {
+  color: #707070;
+  font-size: 14px;
+}
+
+input[type=radio] + .btn {
+  border-radius: 24px;
+  border: 1px solid #E2E2E2;
+  background: var(--neutral-100, #F7F7F7);
+  display: flex;
+  width: 84px;
+  height: 37px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-right: 16px;
+}
+
+.btn-check + .btn:hover {
+  border: 1px solid #aeaeae;
+  background: var(--neutral-100, #e6e6e6);
+}
+
+input[type=radio]:checked + .btn {
+  border: 1px solid #aeaeae;
+  background: var(--neutral-100, #cecece);
+}
+
+.filterdropdown {
+  margin-bottom: 20px;
+}
+.filterdropdown .dropdown-toggle {
+  border-radius: 8px;
+  border: 1px solid #EAEAEA;
+  display: flex;
+  padding: 8px 16px;
+  align-items: center;
+  background: transparent;
+  width: 100%;
+  color: var(--n500, #B0B0B0);
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: space-between;
+}
+.filterdropdown .dropdown-toggle::after {
+  border: none;
+  background-image: url(images/arrow-down.svg);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+}
+.filterdropdown .dropdown-menu.show {
+  width: 100%;
+}
+
+.maximumdistance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 21px;
+  gap: 16px;
+  text-align: center;
+}
+.maximumdistance span {
+  background: white;
+  position: relative;
+  z-index: 1;
+  padding: 0 16px;
+  color: #181818;
+  font-size: 14px;
+  font-weight: 500;
+}
+.maximumdistance + hr {
+  margin: 0;
+  margin-top: -11px;
+}
+
+/* === range theme and appearance === */
+input[type=range] {
+  font-size: 1.5rem;
+  width: 12.5em;
+}
+
+input[type=range] {
+  color: #7C7C7C;
+  --thumb-height: 1.125em;
+  --track-height: 0.125em;
+  --track-color: rgba(0, 0, 0, 0.2);
+  --brightness-hover: 180%;
+  --brightness-down: 80%;
+  --clip-edges: 0.125em;
+  position: relative;
+  background: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.sliderlabels span {
+  color: var(--n600, #717171);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* === WebKit specific styles === */
+input[type=range],
+input[type=range]::-webkit-slider-runnable-track,
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-transition: all ease 100ms;
+  transition: all ease 100ms;
+  height: var(--thumb-height);
+  width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  --thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
+  --clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
+  --clip-bottom: calc(var(--thumb-height) - var(--clip-top));
+  --clip-further: calc(100% + 1px);
+  --box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0 100vmax currentColor;
+  width: var(--thumb-width, var(--thumb-height));
+  background: linear-gradient(currentColor 0 0) scroll no-repeat left center/50% calc(var(--track-height) + 1px);
+  background-color: currentColor;
+  box-shadow: var(--box-fill);
+  border-radius: var(--thumb-width, var(--thumb-height));
+  filter: brightness(100%);
+  -webkit-clip-path: polygon(100% -1px, var(--clip-edges) -1px, 0 var(--clip-top), -100vmax var(--clip-top), -100vmax var(--clip-bottom), 0 var(--clip-bottom), var(--clip-edges) 100%, var(--clip-further) var(--clip-further));
+          clip-path: polygon(100% -1px, var(--clip-edges) -1px, 0 var(--clip-top), -100vmax var(--clip-top), -100vmax var(--clip-bottom), 0 var(--clip-bottom), var(--clip-edges) 100%, var(--clip-further) var(--clip-further));
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center/100% calc(var(--track-height) + 1px);
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--neutral-500, #707070);
+  font-size: 14px;
+  font-weight: 400;
+}
+.breadcrumb .active a {
+  color: var(--neutral-700, #404040);
 }/*# sourceMappingURL=style.css.map */

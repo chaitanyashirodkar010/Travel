@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--  fontawesome -->
+
+    <script src="https://kit.fontawesome.com/b73881b7c2.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="assets/autoComplete.js"></script>
+    <link rel="stylesheet" href="assets/autoComplete.min.css">
+    <link href="assets/t-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="hotel-listing-page">
+        <div class="container">
+            <div class="filters mb-5">
+                <div class="row">
+                    <div class="col">
+                        <label for="">Price : Per night</label>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                ₹100 -₹45,000
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="">Filters</label>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                Select
+                            </button>
+                            <ul class="dropdown-menu">
+                                <div class="filter-drop-down">
+                                    <div class="filtertitle">
+                                        Hotel Class
+                                    </div>
+
+                                    <div
+                                        class="reviews-toggle d-flex justify-content-between mb-3 align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check"
+                                                >
+                                            <label class="btn " for="btn-check">
+                                                0-1 <img src="images/start.svg" width="15" alt="" class="ms-1">
+                                            </label>
+
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check1"
+                                                >
+                                            <label class="btn " for="btn-check1">
+                                                2 <img src="images/start.svg" width="15" alt="" class="ms-1">
+                                            </label>
+
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check2"
+                                                >
+                                            <label class="btn " for="btn-check2">
+                                                3 <img src="images/start.svg" width="15" alt="" class="ms-1">
+                                            </label>
+
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check3"
+                                                >
+                                            <label class="btn " for="btn-check3">
+                                                4 <img src="images/start.svg" width="15" alt="" class="ms-1">
+                                            </label>
+
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <input type="radio" name="flexRadioDefault" class="btn-check" id="btn-check4"
+                                                >
+                                            <label class="btn " for="btn-check4">
+                                                5 <img src="images/start.svg" width="15" alt="" class="ms-1">
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="filtertitle">
+                                        Popular filters
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Default checkbox
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Free
+                                                    Cancellation</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Breakfast
+                                                    included</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Pool</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">WiFi</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label"
+                                                    for="flexCheckDefault">Parking</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Air
+                                                    conditioning</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label"
+                                                    for="flexCheckDefault">Restaurant</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Per
+                                                    friendly</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Family
+                                                    friendly</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Spa</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Hot
+                                                    tub</label>
+                                            </div>
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">Wheelchair
+                                                    accessible</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="row d-flex justify-content-between align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="text-decoration-underline">
+                                                reset
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="orangebutton">
+                                                Apply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="">Guest rating</label>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                All
+                            </button>
+                            <ul class="dropdown-menu">
+
+                                <div class="filter-drop-down">
+                                    <div class="filtertitle">
+                                        Guest Rating
+                                    </div>
+                                    <div class="reviews-toggle mb-3">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <input type="checkbox" class="btn-check" id="btn-check"
+                                                autocomplete="off">
+                                            <label class="btn " for="btn-check">
+                                                8.5 <img src="images/start.svg" width="15" alt="" class="ms-1">
+                                            </label>
+                                            <label for="" class="fw-500">Excellent</label>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <input type="checkbox" class="btn-check" id="btn-check1"
+                                                autocomplete="off">
+                                            <label class="btn " for="btn-check1">
+                                                8.0 <img src="images/start.svg" width="15" alt="" class="ms-1">
+                                            </label>
+                                            <label for="" class="fw-500">Very good</label>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <hr>
+
+                                    <div class="row d-flex justify-content-between align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="text-decoration-underline">
+                                                reset
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="orangebutton">
+                                                Apply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="">Property type</label>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                All
+                            </button>
+                            <ul class="dropdown-menu">
+
+
+
+
+                                <div class="filter-drop-down">
+                                    <div class="filtertitle">
+                                        Property type
+                                    </div>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            All
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Hotel
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            House/Apartment
+                                        </label>
+                                    </div>
+
+
+
+                                    <hr>
+
+                                    <div class="row d-flex justify-content-between align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="text-decoration-underline">
+                                                reset
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="orangebutton">
+                                                Apply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="">Location</label>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                All
+                            </button>
+                            <ul class="dropdown-menu">
+
+                                <div class="filter-drop-down">
+                                    <div class="filtertitle">
+                                        Find me stay close to...
+                                    </div>
+                                    <div class="mb-2">
+                                        this popular city:
+                                    </div>
+
+                                    <div class="dropdown filterdropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" 
+                                            aria-expanded="false">
+                                            City centre
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mb-2">
+                                        or this address:
+                                    </div>
+                                    <div class="dropdown filterdropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" 
+                                            aria-expanded="false">
+                                            Enter street address/zip code
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="maximumdistance">
+                                        <span>Maximum distance</span>
+                                    </div>
+                                    <hr>
+
+                                    <div class="sliderlabels mt-md-5">
+                                        <div class="d-flex  justify-content-between">
+                                            <span>0.5</span>
+                                            <span>20+</span>
+                                        </div>
+                                        <input type="range" />
+                                        <div class="d-flex justify-content-end">
+                                            <span>20km</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row d-flex justify-content-between align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="text-decoration-underline">
+                                                reset
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="orangebutton">
+                                                Apply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="color707070 fs-sm-10 fs14 d-flex align-items-center mb-3"> <svg class="me-1"
+                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M10.625 13.75V8.75H8.125V10H9.375V13.75H7.5V15H12.5V13.75H10.625ZM10 5C9.81458 5 9.63332 5.05498 9.47915 5.158C9.32498 5.26101 9.20482 5.40743 9.13386 5.57873C9.06291 5.75004 9.04434 5.93854 9.08051 6.1204C9.11669 6.30225 9.20598 6.4693 9.33709 6.60041C9.4682 6.73152 9.63525 6.82081 9.8171 6.85699C9.99896 6.89316 10.1875 6.87459 10.3588 6.80364C10.5301 6.73268 10.6765 6.61252 10.7795 6.45835C10.8825 6.30418 10.9375 6.12292 10.9375 5.9375C10.9375 5.68886 10.8387 5.4504 10.6629 5.27459C10.4871 5.09877 10.2486 5 10 5Z"
+                        fill="#707070" />
+                    <path
+                        d="M10 18.75C8.26942 18.75 6.57769 18.2368 5.13876 17.2754C3.69983 16.3139 2.57832 14.9473 1.91606 13.3485C1.25379 11.7496 1.08051 9.9903 1.41813 8.29296C1.75575 6.59563 2.58911 5.03653 3.81282 3.81282C5.03653 2.58911 6.59563 1.75575 8.29296 1.41813C9.9903 1.08051 11.7496 1.25379 13.3485 1.91606C14.9473 2.57832 16.3139 3.69983 17.2754 5.13876C18.2368 6.57769 18.75 8.26942 18.75 10C18.75 12.3206 17.8281 14.5462 16.1872 16.1872C14.5462 17.8281 12.3206 18.75 10 18.75ZM10 2.5C8.51664 2.5 7.0666 2.93987 5.83323 3.76398C4.59986 4.58809 3.63856 5.75943 3.07091 7.12988C2.50325 8.50032 2.35473 10.0083 2.64411 11.4632C2.9335 12.918 3.64781 14.2544 4.6967 15.3033C5.7456 16.3522 7.08197 17.0665 8.53683 17.3559C9.99168 17.6453 11.4997 17.4968 12.8701 16.9291C14.2406 16.3614 15.4119 15.4001 16.236 14.1668C17.0601 12.9334 17.5 11.4834 17.5 10C17.5 8.01088 16.7098 6.10323 15.3033 4.6967C13.8968 3.29018 11.9891 2.5 10 2.5Z"
+                        fill="#707070" />
+                </svg>How payments to us affect ranking</div>
+            <div class="pagetitle">
+                <b>Hotels in Mumbai (Maharashtra, India)</b>
+            </div>
+            <div class="hotel-listing-card">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-slider">
+
+                            <img src="images/heart.svg" alt="" class="heart" />
+
+                            <div class="hotel-listing-slider">
+                                <img src="images/unsplash_7T1KOFfE1aM.png" alt="" class="w-100 d-block" />
+                                <img src="images/unsplash_7T1KOFfE1aM.png" alt="" class="w-100 d-block" />
+                                <img src="images/unsplash_7T1KOFfE1aM.png" alt="" class="w-100 d-block" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="py-3 px-2 border-toend">
+                            <div class="d-flex text-neutral-2 align-items-center mb-2">
+                                <img src="images/star.svg" alt="" class="stars">
+                                <img src="images/star.svg" alt="" class="stars">
+                                <img src="images/star.svg" alt="" class="stars">
+                                <img src="images/star.svg" alt="" class="stars">
+                                <img src="images/star.svg" alt="" class="stars">
+                            </div>
+                            <div class="fs20 fs-sm-14 fw-500  mb-2">The Taj Mahal Palace, Mumbai</div>
+                            <div class="d-flex justify-content-between align-items-start locationandothers ">
+                                <ul class="mb-2 mb-md-4 d-flex flex-wrap fs-sm-10 fs14">
+                                    <li class=" d-flex align-items-center"><i class="fa  fa-heart"
+                                            aria-hidden="true"></i>
+                                        <span>89%</span>
+                                    </li>
+                                    <li class=" d-flex align-items-center"><i class="fa  fa-circle"
+                                            aria-hidden="true"></i>
+
+                                        <span><a href="">83 reviews</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex color707070 align-items-center fs-sm-10 fs14  mb-2">
+                                <div class="d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                        fill="none">
+                                        <path
+                                            d="M10 9.25C10.6904 9.25 11.25 8.69036 11.25 8C11.25 7.30964 10.6904 6.75 10 6.75C9.30964 6.75 8.75 7.30964 8.75 8C8.75 8.69036 9.30964 9.25 10 9.25Z"
+                                            fill="#E86E2C" />
+                                        <path
+                                            d="M10 1.75C6.55391 1.75 3.75 4.43164 3.75 7.72656C3.75 9.2957 4.46523 11.3824 5.87578 13.9289C7.00859 15.9734 8.31914 17.8223 9.00078 18.7422C9.11596 18.8994 9.26656 19.0272 9.44037 19.1153C9.61418 19.2034 9.8063 19.2493 10.0012 19.2493C10.196 19.2493 10.3882 19.2034 10.562 19.1153C10.7358 19.0272 10.8864 18.8994 11.0016 18.7422C11.682 17.8223 12.9938 15.9734 14.1266 13.9289C15.5348 11.3832 16.25 9.29648 16.25 7.72656C16.25 4.43164 13.4461 1.75 10 1.75ZM10 10.5C9.50555 10.5 9.0222 10.3534 8.61107 10.0787C8.19995 9.80397 7.87952 9.41352 7.6903 8.95671C7.50108 8.49989 7.45157 7.99723 7.54804 7.51227C7.6445 7.02732 7.8826 6.58186 8.23223 6.23223C8.58186 5.8826 9.02732 5.6445 9.51227 5.54804C9.99723 5.45157 10.4999 5.50108 10.9567 5.6903C11.4135 5.87952 11.804 6.19995 12.0787 6.61107C12.3534 7.0222 12.5 7.50555 12.5 8C12.4993 8.66282 12.2357 9.29828 11.767 9.76697C11.2983 10.2357 10.6628 10.4993 10 10.5Z"
+                                            fill="#707070" />
+                                    </svg>
+                                    <div>
+                                        3.7 km to City centre
+                                    </div>
+                                </div>
+                                <div class="mx-4">
+                                    Excellent location!
+                                </div>
+                                <div class="hotel-rating">
+                                    9.3
+                                </div>
+                            </div>
+
+                            <div class="fs13 fw-500 mb-2">
+                                Top Amenities
+                            </div>
+                            <div class="topamenities">
+                                <div class="amens d-flex "> <img src="images/wifi.svg" alt="">Free Wifi</div>
+                                <div class="amens d-flex "> <img src="images/coffee.svg" alt="">Coffee Shop</div>
+                                <div class="amens d-flex "> <img src="images/beer.svg" alt="">Bar/lounge</div>
+                            </div>
+                            <div class="color707070 fs13">
+                                #1 Best Value of 6,274 places to stay in Delhi
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-end py-3 selectdatesblock">
+                        <div>
+                            <div class="mb-20 selectdatespara">
+                                Select dates to see prices and availability
+                            </div>
+
+                            <div class="selectdates">
+                                <div>
+                                    Select dates
+                                </div> <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
+                                    viewBox="0 0 17 16" fill="none">
+                                    <path
+                                        d="M6.25586 11.6094L10.2029 8.11691C10.2195 8.10218 10.2329 8.08408 10.242 8.06382C10.2511 8.04355 10.2559 8.02157 10.2559 7.99934C10.2559 7.97711 10.2511 7.95514 10.242 7.93487C10.2329 7.9146 10.2195 7.89651 10.2029 7.88178L6.25586 4.389"
+                                        stroke="#262626" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="d-block">
+            <div class="pagination pagination2 text-center d-flex justify-content-center align-items-center">
+
+                <div class="d-flex ">
+                    <a href=""><img src="images/chevron_back.svg" alt="" class="chevron_back"></a>
+                    <span class="mx-2 firstspan current-page"><a href="">1</a></span>
+                    <span class="mx-2"><a href="">2</a></span>
+                    <span class="mx-2"><a href="">3</a></span>
+                    <span class="mx-2">...</span>
+                    <span class="mx-2">10</span>
+                    <a href=""> <img src="images/chevron_forward.svg" alt="" class=""></a>
+
+                </div>
+            </div>
+            <div class="notification">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12.0003 1C15.6813 1 19.0003 3.565 19.0003 7V11.539C19.0003 12.181 19.1893 12.808 19.5453 13.342L21.7453 16.64C21.898 16.8685 21.9858 17.1343 21.9992 17.4088C22.0127 17.6834 21.9513 17.9564 21.8216 18.1988C21.6919 18.4412 21.4987 18.6437 21.2628 18.7848C21.027 18.926 20.7571 19.0003 20.4823 19H15.5003C15.5003 19.4596 15.4097 19.9148 15.2338 20.3394C15.0579 20.764 14.8001 21.1499 14.4751 21.4749C14.1501 21.7999 13.7643 22.0577 13.3397 22.2336C12.915 22.4095 12.4599 22.5 12.0003 22.5C11.5406 22.5 11.0855 22.4095 10.6609 22.2336C10.2362 22.0577 9.85039 21.7999 9.52539 21.4749C9.20038 21.1499 8.94257 20.764 8.76668 20.3394C8.59079 19.9148 8.50026 19.4596 8.50026 19H3.51926C3.2445 19.0002 2.97483 18.9259 2.73901 18.7849C2.50319 18.6439 2.31006 18.4415 2.18021 18.1994C2.05036 17.9572 1.98867 17.6844 2.00171 17.41C2.01475 17.1355 2.10204 16.8697 2.25426 16.641L4.45426 13.342C4.81027 12.8081 5.00025 12.1807 5.00026 11.539V7C5.00026 3.565 8.31826 1 12.0003 1ZM6.50026 7V11.539C6.50052 12.4767 6.2232 13.3936 5.70326 14.174L3.50326 17.472L3.50026 17.482L3.50126 17.489L3.50526 17.495L3.51126 17.499L3.51826 17.5H20.4823L20.4893 17.499L20.4953 17.495L20.4993 17.489L20.5003 17.483C20.5003 17.4794 20.4993 17.4759 20.4973 17.473L18.2983 14.174C17.7781 13.3936 17.5005 12.4768 17.5003 11.539V7C17.5003 4.636 15.1173 2.5 12.0003 2.5C8.88326 2.5 6.50026 4.636 6.50026 7ZM14.0003 19H10.0003C10.0003 19.5304 10.211 20.0391 10.586 20.4142C10.9611 20.7893 11.4698 21 12.0003 21C12.5307 21 13.0394 20.7893 13.4145 20.4142C13.7895 20.0391 14.0003 19.5304 14.0003 19Z"
+                        fill="#707070" />
+                </svg>
+                <div>
+                    The prices and availability we receive from booking sites change constantly. This means you may not
+                    always find the exact same offer you saw on Yaan when you land on the booking site.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+    <script src="assets/t-datepicker.min.js"></script>
+
+    <script>
+
+
+        var $slider = $('.hotel-listing-slider');
+
+        if ($slider.length) {
+            var currentSlide;
+            var slidesCount;
+            var sliderCounter = document.createElement('div');
+            sliderCounter.classList.add('slider__counter');
+
+            var updateSliderCounter = function (slick, currentIndex) {
+                currentSlide = slick.slickCurrentSlide() + 1;
+                slidesCount = slick.slideCount;
+                $(sliderCounter).text(currentSlide + '/' + slidesCount)
+            };
+
+            $slider.on('init', function (event, slick) {
+                $slider.append(sliderCounter);
+                updateSliderCounter(slick);
+            });
+
+            $slider.on('afterChange', function (event, slick, currentSlide) {
+                updateSliderCounter(slick, currentSlide);
+            });
+
+            $slider.slick();
+        }
+
+
+
+
+
+        if ($('.firstspan').hasClass('current-page')) {
+            $('.chevron_back').hide();
+        }
+        else {
+            $('.chevron_back').show();
+        }
+    </script>
+</body>
+
+</html>
