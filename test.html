@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet"
+        href="https://htmlstream.com/preview/front-v2.1/assets/vendor/ion-rangeslider/css/ion.rangeSlider.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Front Template -->
+    <!-- <link rel="stylesheet" href="https://htmlstream.com/preview/front-v2.1/assets/css/theme.css"> -->
+
+    <link rel="stylesheet" href="stylesss.css">
+
+</head>
+
+<body>
+    <div class="position-relative overflow-hidden" style="height: 100px;">
+        <div class="js-bar-chart position-absolute w-100" data-series='[
+    [2,3,5,7,8,5,3,2,3,6,5,4,7,5,4,3,2]
+ ]' data-is-show-axis-x="false" data-is-show-axis-y="false" data-is-full-width="true" data-is-stack-bars="true"
+            data-height="100px" data-high="8" data-low="0" data-distance="0" data-stroke-width="50"
+            data-stroke-color="#e7eaf3"></div>
+
+        <div id="foregroundBarChartDoubleResult" class="position-absolute h-100 overflow-hidden">
+            <div class="js-bar-chart position-absolute" data-series='[
+    [2,3,5,7,8,5,3,2,3,6,5,4,7,5,4,3,2]
+   ]' data-is-show-axis-x="false" data-is-show-axis-y="false" data-is-full-width="true" data-is-stack-bars="true"
+                data-height="100px" data-high="8" data-low="0" data-distance="0" data-stroke-width="50"
+                data-stroke-color="#377dff"></div>
+        </div>
+    </div>
+    <!-- End Bar Charts -->
+
+    <!-- Range Slider -->
+    <input class="js-range-slider" type="text" data-extra-classes="u-range-slider" data-type="double"
+        data-foreground-target="#foregroundBarChartDoubleResult" data-min="0" data-max="1000" data-from="250"
+        data-to="750" data-result-min="#rangeSliderExample5MinResult"
+        data-result-max="#rangeSliderExample5MaxResult">
+
+    <div class="d-flex justify-content-between align-items-center mt-4">
+        <div>
+            <span class="text-muted">Min price:</span>
+            <span id="rangeSliderExample5MinResult" class="text-muted"></span>
+        </div>
+        <div>
+            <span class="text-muted">Max price:</span>
+            <span id="rangeSliderExample5MaxResult" class="text-muted"></span>
+        </div>
+    </div>
+
+    <!-- End Go to Top -->
+
+    <!-- JS Global Compulsory -->
+    <script src="https://htmlstream.com/preview/front-v2.1/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script
+        src="https://htmlstream.com/preview/front-v2.1/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+
+    <script
+        src="https://htmlstream.com/preview/front-v2.1/assets/vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script src="https://htmlstream.com/preview/front-v2.1/assets/vendor/chartist/dist/chartist.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="https://htmlstream.com/preview/front-v2.1/assets/js/hs.core.js"></script>
+    <script src="https://htmlstream.com/preview/front-v2.1/assets/js/components/hs.range-slider.js"></script>
+    <script src="https://htmlstream.com/preview/front-v2.1/assets/js/components/hs.chartist-bar-chart.js"></script>
+    <script src="https://htmlstream.com/preview/front-v2.1/assets/js/components/hs.chartist-area-chart.js"></script>
+
+
+    <!-- JS Plugins Init. -->
+    <script>
+        $(document).on('ready', function () {
+            // initialization of header
+
+
+            // initialization of forms
+            $.HSCore.components.HSRangeSlider.init('.js-range-slider');
+
+            // initialization of chartist bar chart
+            $.HSCore.components.HSChartistBarChart.init('.js-bar-chart');
+
+        });
+
+        $(window).on('resize', function () {
+            setTimeout(function () {
+                $.HSCore.components.HSChartistBarChart.init('.js-bar-chart');
+                $.HSCore.components.HSChartistAreaChart.init('.js-area-chart');
+            }, 800);
+        });
+
+
+    </script>
+</body>
+
+</html>
