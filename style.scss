@@ -754,13 +754,42 @@ select {
   }
 }
 
+.bloglistingcarousel2 {
+  .slick-slide {
+    padding: 5px;
+
+    @media only screen and (min-width: 992px) {
+      padding: 20px;
+    }
+  }
+
+  .slick-list {
+    padding: 0 45% 0 0 !important;
+  }
+}
+
 .bloglistingcarousel {
   .slick-slide {
-    padding: 20px;
+    padding: 10px;
+
+    @media only screen and (min-width: 992px) {
+      padding: 20px;
+    }
   }
 
   .slick-list {
     padding: 0 20% 0 0 !important;
+  }
+}
+
+.hotelhomepagecontaienr {
+  @media (max-width: 575.98px) {
+    .container {
+      min-width: 100%;
+      padding: 0;
+      padding-left: 2%;
+
+    }
   }
 }
 
@@ -905,7 +934,7 @@ div#totalguests {
   h5 {
     color: #222;
     text-align: center;
-    font-size: 30px;
+    font-size: 18px;
 
     @media only screen and (min-width: 992px) {
       font-size: 40px;
@@ -3003,6 +3032,10 @@ img.pinned {
   .fs-sm-10 {
     font-size: 10px;
   }
+
+  .fs-sm-11 {
+    font-size: 11px;
+  }
 }
 
 .fs34 {
@@ -3623,8 +3656,14 @@ input[type="range"]::-webkit-slider-runnable-track {
 .accordion-button {
   padding-left: 0;
   color: var(--neutral-700, #404040) !important;
+  border-bottom: 1px solid #DDD;
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+
+  }
 
 }
-.accordion-button:not(.collapsed){
+
+.accordion-button:not(.collapsed) {
   background-color: transparent;
 }
