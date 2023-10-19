@@ -3657,6 +3657,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   padding-left: 0;
   color: var(--neutral-700, #404040) !important;
   border-bottom: 1px solid #DDD;
+
   @media only screen and (max-width: 600px) {
     font-size: 14px;
 
@@ -3667,9 +3668,20 @@ input[type="range"]::-webkit-slider-runnable-track {
 .accordion-button:not(.collapsed) {
   background-color: transparent;
 }
+
 .accordion-button::after {
   transition: none;
   width: 16px;
   height: 16px;
   background-size: contain;
+}
+
+.hotelhomepageslideimage {
+  img {
+    @media only screen and (max-width: 600px) {
+      height: 120px;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
 }

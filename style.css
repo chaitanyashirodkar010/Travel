@@ -3181,4 +3181,14 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 16px;
   height: 16px;
   background-size: contain;
+}
+
+@media only screen and (max-width: 600px) {
+  .hotelhomepageslideimage img {
+    height: 120px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
 }/*# sourceMappingURL=style.css.map */
