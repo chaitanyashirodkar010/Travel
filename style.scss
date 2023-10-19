@@ -3667,3 +3667,9 @@ input[type="range"]::-webkit-slider-runnable-track {
 .accordion-button:not(.collapsed) {
   background-color: transparent;
 }
+.accordion-button::after {
+  transition: none;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+}
