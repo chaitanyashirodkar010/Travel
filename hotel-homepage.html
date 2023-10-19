@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--  fontawesome -->
+
+    <script src="https://kit.fontawesome.com/b73881b7c2.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="assets/autoComplete.js"></script>
+    <link rel="stylesheet" href="assets/autoComplete.min.css">
+    <link href="assets/t-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="banner-container other-sections">
+        <div class="container position-relative">
+            <img src="images/homepagebanner.png" class="img-fluid d-none d-md-block w-100" alt="">
+            <img src="images/bannermobile.png" class="img-fluid d-md-none w-100" alt="">
+
+            <div class="banner-text">
+                Find and compare hotel <br> deals.
+            </div>
+        </div>
+    </div>
+    <div class="body typeahed mx-auto" align="center">
+        <div class="d-flex justify-content-center mb-20">
+
+
+            <ul class="nav nav-tabs border-0 w-100 justify-content-center w-50" id="myTab" role="tablist">
+                <li class="nav-item border-0 w-50" role="presentation">
+                    <button class="nav-link active tab-switch" id="home-tab" data-bs-toggle="tab"
+                        data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                        aria-selected="true"><span class="tab-switch active">
+                            Explore
+                        </span></button>
+                </li>
+                <li class="nav-item border-0 w-50" role="presentation">
+                    <button class="nav-link tab-switch" id="profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                        aria-selected="false">Hotels</button>
+                </li>
+            </ul>
+
+
+
+        </div>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="explore-search">
+                    <div class="search-box-icon">
+                        <img src="images/search.svg" class="search-icon" alt="">
+                    </div>
+                    <input type="text" id="autocompleteFive" placeholder="Select a color"></input>
+                    <ul id="results" class="autoCompletewrapper"></ul>
+                    <!-- <input id="autoCompletetwo" type="text" tabindex="1" placeholder="&#xF002; Search"> -->
+                </div>
+            </div>
+
+
+
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="search-filter remove-highlight d-md-flex">
+
+                    <div class="search-locations">
+                        <img src="images/search.svg" class="search-iconformobile d-md-none" alt="">
+                        <label for="checkout" class="label">Where</label>
+                        <div class="autoComplete_wrapper">
+                            <input id="autoCompletethree" type="text" tabindex="1" placeholder="&#xF002; Search">
+                        </div>
+                    </div>
+
+                    <div class="t-datepicker">
+                        <div class="t-check-in"></div>
+                        <div class="t-check-out"></div>
+                    </div>
+
+                    <div class="dropdown-custom">
+
+                        <div class="dropdown-custom-toggle ">
+                            <img src="images/usergrey.png" class="user-guests d-md-none" alt="">
+                            <label for="checkout" class="label">Who</label>
+                            <input type="number" id="totalguests" class="border-0 totalguests"
+                                placeholder="Add no. of guests" readonly>
+                        </div>
+                        <ul class="dropdown-menu p-0 border-0">
+                            <div class="rooms-num room-info b-20 border bg-white">
+                                <div class="p-24">
+                                    <div class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="person">Adult</p>
+                                            <p class="age"> Ages 13 or above</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span role="button" class="decrement dec">-</span>
+                                            <input type="number"
+                                                class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                placeholder="0" readonly>
+                                            <span role="button" class="adultincrement incdec">+</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="adults counter mb-30 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="person">Children</p>
+                                            <p class="age"> Ages 2-12</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span role="button" id="childrenSubtract" class="decrement dec">-</span>
+                                            <input type="number"
+                                                class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                placeholder="0" readonly>
+                                            <span role="button" id="childrenAdd" class="adultincrement incdec">+</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="adults counter d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="person">Infants</p>
+                                            <p class="age"> Under 2</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span role="button" class="decrement dec">-</span>
+                                            <input type="number"
+                                                class="border d-flex align-items-center rounded-3 border-1 border-dark inputfield"
+                                                placeholder="0" readonly>
+                                            <span role="button" class="adultincrement incdec">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="childrenDetails">
+
+                                </div>
+
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="search-icon d-none d-md-flex">
+                        <div class="search">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="selection d-none"></div>
+        <div class="selection2 d-none"></div>
+
+    </div>
+    <div class="container">
+
+
+
+
+
+
+
+
+        <section class="popular-cities other-sections text-start mt-md-4">
+            <h5 class="text-start my-md-5">Top 8 Popular Cities</h5>
+            <div class="row mb-md-5">
+                <div class="col-md-4">
+                    <div class="hotel-listing-card">
+                        <div class="">
+                            <div class="card-slider">
+
+                                <img src="images/heart.svg" alt="" class="heart">
+
+                                <div class="hotel-listing-slider slick-initialized slick-slider"><img
+                                        src="images/unsplash_7T1KOFfE1aM.png" alt=""
+                                        style="width: 100%; display: inline-block;">
+                                </div>
+                            </div>
+                            <div class="py-3 px-2 ">
+                                <div class="fs20 fs-sm-14 fw-500  mb-2">Taj Palace</div>
+                                <div class="d-flex justify-content-between align-items-start locationandothers ">
+                                    <ul class="mb-2 mb-md-2 d-flex flex-wrap fs-sm-10 fs14">
+                                        <li class=" d-flex align-items-center"><i class="fa  fa-heart"
+                                                aria-hidden="true"></i>
+                                            <span>89%</span>
+                                        </li>
+                                        <li class=" d-flex align-items-center"><i class="fa  fa-circle"
+                                                aria-hidden="true"></i>
+
+                                            <span><a href="">83 reviews</a></span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="color707070 fs14 mb-4">
+                                    New Delhi, India
+                                </div>
+                                <button type="button"
+                                    class="btn flex-sm-1 btn-outline-secondary px-4 py-2">₹7,999</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="hotel-listing-card">
+                        <div class="">
+                            <div class="card-slider">
+
+                                <img src="images/heart.svg" alt="" class="heart">
+
+                                <div class="hotel-listing-slider slick-initialized slick-slider"><img
+                                        src="images/unsplash_7T1KOFfE1aM.png" alt=""
+                                        style="width: 100%; display: inline-block;">
+                                </div>
+                            </div>
+                            <div class="py-3 px-2 ">
+                                <div class="fs20 fs-sm-14 fw-500  mb-2">Taj Palace</div>
+                                <div class="d-flex justify-content-between align-items-start locationandothers ">
+                                    <ul class="mb-2 mb-md-2 d-flex flex-wrap fs-sm-10 fs14">
+                                        <li class=" d-flex align-items-center"><i class="fa  fa-heart"
+                                                aria-hidden="true"></i>
+                                            <span>89%</span>
+                                        </li>
+                                        <li class=" d-flex align-items-center"><i class="fa  fa-circle"
+                                                aria-hidden="true"></i>
+
+                                            <span><a href="">83 reviews</a></span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="color707070 fs14 mb-4">
+                                    New Delhi, India
+                                </div>
+                                <button type="button"
+                                    class="btn flex-sm-1 btn-outline-secondary px-4 py-2">₹7,999</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="hotel-listing-card">
+                        <div class="">
+                            <div class="card-slider">
+
+                                <img src="images/heart.svg" alt="" class="heart">
+
+                                <div class="hotel-listing-slider slick-initialized slick-slider"><img
+                                        src="images/unsplash_7T1KOFfE1aM.png" alt=""
+                                        style="width: 100%; display: inline-block;">
+                                </div>
+                            </div>
+                            <div class="py-3 px-2 ">
+                                <div class="fs20 fs-sm-14 fw-500  mb-2">Taj Palace</div>
+                                <div class="d-flex justify-content-between align-items-start locationandothers ">
+                                    <ul class="mb-2 mb-md-2 d-flex flex-wrap fs-sm-10 fs14">
+                                        <li class=" d-flex align-items-center"><i class="fa  fa-heart"
+                                                aria-hidden="true"></i>
+                                            <span>89%</span>
+                                        </li>
+                                        <li class=" d-flex align-items-center"><i class="fa  fa-circle"
+                                                aria-hidden="true"></i>
+
+                                            <span><a href="">83 reviews</a></span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="color707070 fs14 mb-4">
+                                    New Delhi, India
+                                </div>
+                                <button type="button"
+                                    class="btn flex-sm-1 btn-outline-secondary px-4 py-2">₹7,999</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="text-start">Search cheap hotels by destination</h5>
+            <div class="fs14 my-md-4" style="color: #90919A;">Can I really save on hotels near me and accommodation in
+                other popular destinations by
+                using KAYAK? Yes! KAYAK searches for hotel deals on hundreds of hotel comparison sites to help you find
+                cheap hotels, holiday lettings, bed and breakfasts, motels, inns, resorts and more. Whether you are
+                looking for a last-minute hotel or a cheap hotel room at a later date, you can find the best deals
+                faster at KAYAK.</div>
+
+
+
+            <div class="accordion accordion-flush mb-4" id="accordionFlushExample">
+                <div class="row">
+
+                    <div class="accordion-item col-md-4 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Mumbai hotels
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="d-flex justify-content-between color707070 mb-2">
+                                    <div> Hotel Ajanta</div>
+                                    <div> ₹2,074+</div>
+                                </div>
+                                <div class="d-flex justify-content-between color707070 mb-2">
+                                    <div> Hotel City Empire</div>
+                                    <div> ₹2,474+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item col-md-4 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                New Delhi hotels
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                accordion
+                                body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item col-md-4 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Mumbai hotels
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                accordion
+                                body. Nothing more exciting happening here in terms of content, but just filling up
+                                the
+                                space to make it look, at least at first glance, a bit more representative of how
+                                this would
+                                look in a real-world application.</div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item col-md-4 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Mumbai hotels
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                accordion
+                                body. Nothing more exciting happening here in terms of content, but just filling up
+                                the
+                                space to make it look, at least at first glance, a bit more representative of how
+                                this would
+                                look in a real-world application.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h5 class="text-start mb-4">Frequently asked questions about hotels on Yaan</h5>
+
+            <div class="accordion accordion-flush mb-4" id="accordionFlushExample">
+                <div class="row">
+
+                    <div class="accordion-item col-md-6 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse5" aria-expanded="false"
+                                aria-controls="flush-collapse5">
+                                How does Yaan find such low hotel prices?
+                            </button>
+                        </h2>
+                        <div id="flush-collapse5" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="d-flex justify-content-between color707070 mb-2">
+                                    <div> Hotel Ajanta</div>
+                                    <div> ₹2,074+</div>
+                                </div>
+                                <div class="d-flex justify-content-between color707070 mb-2">
+                                    <div> Hotel City Empire</div>
+                                    <div> ₹2,474+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item col-md-6 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse6" aria-expanded="false"
+                                aria-controls="flush-collapse6">
+                                How do I find the best hotel deals on Yaan?
+                            </button>
+                        </h2>
+                        <div id="flush-collapse6" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                accordion
+                                body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+    <script src="assets/t-datepicker.min.js"></script>
+
+    <script src="index.js"></script>
+
+    <script src="autocomplete1.js"></script>
+    <script src="autocomplete2.js"></script>
+    <script src="datepicker-homepage.js"></script>
+    <script src="datepicker-hotelpage.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

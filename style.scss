@@ -851,7 +851,6 @@ div#totalguests {
     left: 0;
     right: 0;
     margin: auto;
-    max-width: 437px;
     font-size: 56px;
 
     @media only screen and (min-width: 992px) {
@@ -913,7 +912,7 @@ div#totalguests {
     }
 
     margin-bottom: 12px;
-    font-weight: 800;
+    font-weight: 600;
 
   }
 
@@ -3619,4 +3618,13 @@ input[type="range"]::-webkit-slider-runnable-track {
       margin-right: 15px;
     }
   }
+}
+
+.accordion-button {
+  padding-left: 0;
+  color: var(--neutral-700, #404040) !important;
+
+}
+.accordion-button:not(.collapsed){
+  background-color: transparent;
 }
