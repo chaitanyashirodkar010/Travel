@@ -2937,6 +2937,7 @@ img.pinned {
 .topamenities {
   margin-top: 8px;
   margin-bottom: 18px;
+  flex-wrap: wrap;
 
   img {
     width: 14.56px;
@@ -2950,6 +2951,7 @@ img.pinned {
 
   .amens {
     margin-right: 12px;
+    margin-bottom: 10px;
   }
 }
 

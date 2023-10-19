@@ -2537,6 +2537,7 @@ img.pinned {
 .topamenities {
   margin-top: 8px;
   margin-bottom: 18px;
+  flex-wrap: wrap;
   display: flex;
   color: var(--n600, #717171);
   font-size: 11px;
@@ -2548,6 +2549,7 @@ img.pinned {
 }
 .topamenities .amens {
   margin-right: 12px;
+  margin-bottom: 10px;
 }
 
 .stars {
