@@ -2923,11 +2923,16 @@ img.pinned {
 
 .hotel-rating {
   border-radius: 4px 4px 4px 0px;
+@media only screen and (min-width: 600px) {
   border: 1px solid var(--neutral-500, #707070);
+}
   height: 29px;
   width: 29px;
   color: var(--neutral-900, #222);
+  font-size: 10px;
+@media only screen and (min-width: 992px) {
   font-size: 14px;
+}
   font-weight: 500;
   display: flex;
   justify-content: center;
@@ -3179,16 +3184,25 @@ img.pinned {
 .filtertitle {
   color: #222;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
+
+  @media only screen and (min-width: 992px) {
+    font-weight: 700;
+  }
+
   margin-bottom: 20px;
 }
 
 .filter-drop-down {
-  border-radius: 16px;
+
   background: #FFF;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-  padding: 24px;
-  min-width: 358px;
+
+  @media only screen and (min-width: 992px) {
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    min-width: 358px;
+  }
 
   .hote-class {
     display: flex;
@@ -3255,6 +3269,25 @@ img.pinned {
 .reviews-toggle {
   color: #707070;
   font-size: 14px;
+
+
+}
+
+.Guest-Rating {
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    align-items: center;
+
+    &>div {
+      border-radius: 16px;
+      border: 1px solid #E2E2E2;
+
+    }
+
+    label {
+      font-size: 12px;
+    }
+  }
 }
 
 input[type="radio"]+.btn {
@@ -3262,7 +3295,11 @@ input[type="radio"]+.btn {
   border: 1px solid #E2E2E2;
   background: var(--neutral-100, #F7F7F7);
   display: flex;
-  width: 84px;
+
+  @media only screen and (min-width: 992px) {
+    width: 84px;
+  }
+
   height: 37px;
   padding: 8px 12px;
   justify-content: center;
@@ -3271,14 +3308,20 @@ input[type="radio"]+.btn {
   margin-right: 16px;
 }
 
+.btn-check:checked+.btn {
+  color: white;
+  border-radius: 31px;
+  background: var(--900, #222);
+}
+
 .btn-check+.btn:hover {
   border: 1px solid #aeaeae;
   background: var(--neutral-100, #e6e6e6);
 }
 
 input[type="radio"]:checked+.btn {
-  border: 1px solid #aeaeae;
-  background: var(--neutral-100, #cecece);
+  border: 1px solid #222;
+  background: var(--900, #222);
 }
 
 .filterdropdown {
@@ -3479,7 +3522,8 @@ input[type="range"]::-webkit-slider-runnable-track {
       width: 100%;
       margin: 8px;
       border: 1px solid rgba(221, 221, 221, 0.86);
-      background: var(--neutral-100, #F7F7F7);
+      background: var(--900, #222);
+      color: var(--White, #FFF);
     }
   }
 }
@@ -3505,8 +3549,12 @@ input[type="range"]::-webkit-slider-runnable-track {
 
     label {
       color: #737373;
+      font-size: 12px;
 
-      font-size: 14px;
+      @media only screen and (min-width: 992px) {
+        font-size: 14px;
+      }
+
       padding: 0;
       font-weight: 400;
       width: 100%;
@@ -3686,4 +3734,105 @@ input[type="range"]::-webkit-slider-runnable-track {
       object-position: bottom;
     }
   }
+}
+
+.Locationtabscity {
+  li {
+    flex: 1;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .nav-link {
+    color: var(--500, #707070);
+    margin-bottom: 16px;
+  }
+
+  .nav-link.active {
+    color: #525252 !important;
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+    border-bottom: 1px solid #525252 !important;
+  }
+}
+
+.pricepenight {
+  color: var(--n900, #222);
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  b {
+    font-weight: 500;
+    margin-right: 8px;
+  }
+
+  line-height: normal;
+}
+
+.guestratings {
+  &>div {
+    flex: 1;
+  }
+
+  input[type=radio]+.btn {
+    width: 100%;
+  }
+}
+
+#sortfilter {
+  .modal-header {
+    padding: 16px;
+
+    border-bottom: 1px solid var(--200, #DDD);
+  }
+
+  h6.modal-title {
+    color: var(--n900, #222);
+    font-size: 16px !important;
+    font-weight: 500;
+    background: #FFF;
+    padding: 0;
+    text-decoration: none;
+    margin: 0;
+  }
+}
+
+.mindev-sortfilter {
+  display: flex;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: var(--shade, #EDF1F3);
+  justify-content: center;
+  height: 37px;
+
+  &>div {
+    flex: 1;
+    color: var(--neutral-700, #404040);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+  }
+}
+
+.infotagicon {
+  display: flex;
+  height: 37px;
+  padding: 0px 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  background: var(--shade, #EDF1F3);
+  margin-left: 8px;
 }
