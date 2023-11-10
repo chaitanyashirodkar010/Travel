@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!--  fontawesome -->
+
+  <script src="https://kit.fontawesome.com/b73881b7c2.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <script src="assets/autoComplete.js"></script>
+  <link rel="stylesheet" href="assets/autoComplete.min.css">
+  <link href="assets/t-datepicker.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+  <div class="weather-page py-5">
+    <div class="container">
+
+      <div class="weather-points">
+        <div>1. What is the average temperature</div>
+        <div>2. How much does it rain</div>
+        <div>3. How cloudy is it</div>
+        <div>4. When is sunrise and sunset</div>
+        <div>5. How humid is it</div>
+        <div>6. How windy is it</div>
+        <div>7. What to wear</div>
+      </div>
+
+
+
+      <div class="weather-small-title">
+        What is the average temperature in November
+      </div>
+      <div class="weather-para">
+        The average temperature in Almaty in May for a typical day ranges from a high of 66°F (19°C) to a low of 44°F
+        (6°C).
+        Some would describe it as moderately chilly with a gentle breeze.
+        For comparison, the hottest month in Almaty, July, has days with highs of 81°F (27°C) and lows of 57°F (14°C).
+        The
+        coldest month, January has days with highs of 31°F (-1°C) and lows of 12°F (-11°C). This graph shows how an
+        average
+        day looks like in Almaty in May based on historical data.
+      </div>
+
+
+      <div class="weather-small-title-grey my-5">
+        Highs and lows in Almaty in May
+      </div>
+
+
+
+      <div>
+        <canvas id="temperature"></canvas>
+      </div>
+
+
+      <div class="weather-small-title">
+        How much does it rain or snow in November
+      </div>
+      <div class="weather-para">
+        In Almaty in May, there's a 29% chance of rain or snow on an average day. And on the average day it rains or
+        snows, we get 0.37 in (9.5 mm) of precipitation. In more common terms of how much that is, some would describe
+        it as flurries.
+        The wettest month in Almaty is June where a typical day has a 33% chance of precipitation and gets 0.09 inches
+        (2.4 mm) of precipitation, while the driest month in Almaty is January where a typical day has a 9% chance of
+        precipitation and gets 0.10 inches (2.5 mm) of precipitation. These graphs show the probability of it
+        raining/snowing in May and the amount of rainfall.
+      </div>
+
+
+      <div class="weather-small-title-grey my-5">
+        Chance of rain or snow on an average Almaty day by month
+      </div>
+      <div>
+        <canvas id="rain"></canvas>
+      </div>
+
+
+
+      <div class="weather-small-title-grey my-5">
+        Average precipitation by hour of day
+      </div>
+      <div>
+        <canvas id="cloudy"></canvas>
+      </div>
+
+
+
+
+
+
+      <div class="weather-small-title">
+        How cloudy is Almaty in May
+
+
+      </div>
+      <div class="weather-para">
+        When is sunrise and sunset in November
+
+        The average day in Almaty during May has 14.6 hours of daylight, with sunrise at 5:29 AM and sunset at 8:07 PM.
+        The day with the longest amount of daylight in Almaty is June 20th with 15.4 hours while December 21st has the
+        shortest amount of daylight with only 9.0 hours.
+        This graph shows the average amount of daylight in Almaty in May based on historical data.
+      </div>
+
+
+      <div class="weather-small-title-grey my-5">
+        Monthly clear skies percent of time in Almaty
+
+      </div>
+      <div>
+        <canvas id="skies"></canvas>
+      </div>
+
+
+
+
+
+
+
+      <div class="weather-small-title">
+        When is sunrise and sunset in November
+
+
+
+      </div>
+      <div class="weather-para">
+        The average day in Almaty during May has 14.6 hours of daylight, with sunrise at 5:29 AM and sunset at 8:07 PM.
+        The day with the longest amount of daylight in Almaty is June 20th with 15.4 hours while December 21st has the
+        shortest amount of daylight with only 9.0 hours.
+        This graph shows the average amount of daylight in Almaty in May based on historical data.
+      </div>
+
+
+      <div class="weather-small-title-grey my-5">
+        Average hours of daylight in Almaty by month
+
+      </div>
+      <div>
+        <canvas id="daylight"></canvas>
+      </div>
+
+
+
+
+      <div class="weather-small-title">
+        When is sunrise and sunset in November
+
+
+
+      </div>
+      <div class="weather-para">
+        The average day in Almaty during May has 14.6 hours of daylight, with sunrise at 5:29 AM and sunset at 8:07 PM.
+        The day with the longest amount of daylight in Almaty is June 20th with 15.4 hours while December 21st has the
+        shortest amount of daylight with only 9.0 hours.
+        This graph shows the average amount of daylight in Almaty in May based on historical data.
+      </div>
+
+
+      <div class="weather-small-title-grey my-5">
+        Average hours of daylight in Almaty by month
+
+      </div>
+      <div>
+        <canvas id="humidity"></canvas>
+      </div>
+
+
+
+
+
+      <div class="weather-small-title">
+        When is sunrise and sunset in November
+      </div>
+      <div class="weather-para">
+        The average day in Almaty during May has 14.6 hours of daylight, with sunrise at 5:29 AM and sunset at 8:07 PM.
+        The day with the longest amount of daylight in Almaty is June 20th with 15.4 hours while December 21st has the
+        shortest amount of daylight with only 9.0 hours.
+        This graph shows the average amount of daylight in Almaty in May based on historical data.
+      </div>
+
+
+      <div class="weather-small-title-grey my-5">
+        Average hours of daylight in Almaty by month
+
+      </div>
+      <div>
+        <canvas id="windy"></canvas>
+      </div>
+
+
+
+
+      <div class="weather-small-title">
+        What to wear in November
+
+      </div>
+      <div class="weather-para">
+        With an average high of 66°F (19°C) and a low of 44°F (6°C), it generally feels moderately chilly with a gentle
+        breeze. There might also be a small chance of rain. With that in mind, most people would dress in something
+        moderately warm like a sweater.
+      </div>
+
+
+
+      <div class="weather-small-title">
+        What's the weather like in Almaty the rest of the year
+
+
+      </div>
+
+      <div class="weather-small-title-grey my-5" style="font-weight: 400;">
+        <p>We've collected the weather data for Almaty during all other months of the year too:</p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="my-3">Weather in Almaty in January</div>
+            <div class="my-3">Weather in Almaty in May</div>
+            <div class="my-3">Weather in Almaty in September</div>
+            <div class="my-3">Weather in Almaty in February</div>
+          </div>
+          <div class="col-md-4">
+            <div class="my-3">Weather in Almaty in June</div>
+            <div class="my-3">Weather in Almaty in October</div>
+            <div class="my-3">Weather in Almaty in March</div>
+            <div class="my-3">Weather in Almaty in July</div>
+          </div>
+          <div class="col-md-4">
+            <div class="my-3">Weather in Almaty in November</div>
+            <div class="my-3">Weather in Almaty in April</div>
+            <div class="my-3">Weather in Almaty in August</div>
+            <div class="my-3">Weather in Almaty in December</div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="weather-small-title">
+        Where does this data come from
+
+      </div>
+      <div class="weather-para">
+        Weather data for Almaty was collected from the MERRA-2 project from NASA, which used a climate model combined
+        with historical data from weather stations around the world to estimate what the conditions were like for every
+        point on the Earth.
+        For all data based on historical data, we've averaged the data from the past 11 years (2010-2020). For example,
+        for the hourly temperature at 10am, we've looked at the temperature at 10am on every day in May (e.g., May 1,
+        May 2, etc. in 2010, 2011, etc.) and took the arithmetic mean. We did not smooth the data, so for example, our
+        daily temperature line will have some randomness due to the fact that weather is random in the first place.
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="d-flex justify-content-between align-items-center  mt-5 mb-5 pt-4">
+        <div class="h4"> Top Searches in Almaty</div>
+        <a href="#" class="see-all"> See All</a>
+      </div>
+
+
+
+
+
+      <div class="row bloglistingcarousel">
+        <div class="col-md-4 ">
+          <!-- Card START -->
+          <div class="card card-img-scale border-0 overflow-hidden bg-transparent">
+            <!-- Image and overlay -->
+            <div class="card-img-scale-wrapper rounded-3">
+              <!-- Image -->
+              <img src="images/hotel/hotel.png" class="card-img br-10 mb-12" alt="hotel image">
+
+            </div>
+
+            <!-- Card body -->
+            <div class="py-3 px-2 ">
+              <div class="d-flex text-neutral-2 align-items-center mb-2">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+              </div>
+              <div class="fs20 fs-sm-14 fw-500  mb-2">The Taj Mahal
+                Palace, Mumbai</div>
+              <div class="d-flex justify-content-between align-items-start locationandothers ">
+                <ul class="mb-2 mb-md-4 d-flex flex-wrap fs-sm-10 fs14">
+                  <li class=" d-flex align-items-center"><i class="fa  fa-heart" aria-hidden="true"></i>
+                    <span>89%</span>
+                  </li>
+                  <li class=" d-flex align-items-center"><i class="fa  fa-circle" aria-hidden="true"></i>
+
+                    <span><a href="">83 reviews</a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <!-- Card START -->
+          <div class="card card-img-scale border-0 overflow-hidden bg-transparent">
+            <!-- Image and overlay -->
+            <div class="card-img-scale-wrapper rounded-3">
+              <!-- Image -->
+              <img src="images/hotel/hotel.png" class="card-img br-10 mb-12" alt="hotel image">
+
+            </div>
+
+            <!-- Card body -->
+            <div class="py-3 px-2 ">
+              <div class="d-flex text-neutral-2 align-items-center mb-2">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+              </div>
+              <div class="fs20 fs-sm-14 fw-500  mb-2">The Taj Mahal
+                Palace, Mumbai</div>
+              <div class="d-flex justify-content-between align-items-start locationandothers ">
+                <ul class="mb-2 mb-md-4 d-flex flex-wrap fs-sm-10 fs14">
+                  <li class=" d-flex align-items-center"><i class="fa  fa-heart" aria-hidden="true"></i>
+                    <span>89%</span>
+                  </li>
+                  <li class=" d-flex align-items-center"><i class="fa  fa-circle" aria-hidden="true"></i>
+
+                    <span><a href="">83 reviews</a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <!-- Card START -->
+          <div class="card card-img-scale border-0 overflow-hidden bg-transparent">
+            <!-- Image and overlay -->
+            <div class="card-img-scale-wrapper rounded-3">
+              <!-- Image -->
+              <img src="images/hotel/hotel.png" class="card-img br-10 mb-12" alt="hotel image">
+
+            </div>
+
+            <!-- Card body -->
+            <div class="py-3 px-2 ">
+              <div class="d-flex text-neutral-2 align-items-center mb-2">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+                <img src="images/star.svg" alt="" class="stars">
+              </div>
+              <div class="fs20 fs-sm-14 fw-500  mb-2">The Taj Mahal
+                Palace, Mumbai</div>
+              <div class="d-flex justify-content-between align-items-start locationandothers ">
+                <ul class="mb-2 mb-md-4 d-flex flex-wrap fs-sm-10 fs14">
+                  <li class=" d-flex align-items-center"><i class="fa  fa-heart" aria-hidden="true"></i>
+                    <span>89%</span>
+                  </li>
+                  <li class=" d-flex align-items-center"><i class="fa  fa-circle" aria-hidden="true"></i>
+
+                    <span><a href="">83 reviews</a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <!-- Card END -->
+      </div>
+
+
+
+
+      <div class="d-flex justify-content-between align-items-center  mt-5 mb-5 pt-4">
+        <div class="h4"> Popular road trips from Almaty</div>
+        <a href="#" class="see-all"> See All</a>
+      </div>
+
+
+
+
+
+      <div class="row bloglistingcarousel">
+        <div class="col-md-4 ">
+          <!-- Card START -->
+          <div class="card card-img-scale border-0 overflow-hidden bg-transparent">
+            <!-- Image and overlay -->
+            <div class="card-img-scale-wrapper rounded-3">
+              <!-- Image -->
+              <img src="images/hotel/hotel.png" class="card-img br-10 mb-12" alt="hotel image">
+
+            </div>
+
+            <!-- Card body -->
+            <div class="py-3 px-2 ">
+
+              <div class="fs20 fs-sm-14 fw-500  mb-2">The Taj Mahal
+                Palace, Mumbai</div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <!-- Card START -->
+          <div class="card card-img-scale border-0 overflow-hidden bg-transparent">
+            <!-- Image and overlay -->
+            <div class="card-img-scale-wrapper rounded-3">
+              <!-- Image -->
+              <img src="images/hotel/hotel.png" class="card-img br-10 mb-12" alt="hotel image">
+
+            </div>
+
+            <!-- Card body -->
+            <div class="py-3 px-2 ">
+
+              <div class="fs20 fs-sm-14 fw-500  mb-2">The Taj Mahal
+                Palace, Mumbai</div>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <!-- Card START -->
+          <div class="card card-img-scale border-0 overflow-hidden bg-transparent">
+            <!-- Image and overlay -->
+            <div class="card-img-scale-wrapper rounded-3">
+              <!-- Image -->
+              <img src="images/hotel/hotel.png" class="card-img br-10 mb-12" alt="hotel image">
+
+            </div>
+
+            <!-- Card body -->
+            <div class="py-3 px-2 ">
+
+              <div class="fs20 fs-sm-14 fw-500  mb-2">The Taj Mahal
+                Palace, Mumbai</div>
+
+
+
+            </div>
+          </div>
+        </div>
+        <!-- Card END -->
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+  <script src="assets/t-datepicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+
+
+
+    const ctx = document.getElementById('temperature');
+
+
+    var dataFirst = {
+      label: "",
+      data: [4, 5, 6, 6, 7, 8, 6, 5, 4, 3, 4, 5, 4, 3, 2, 1],
+      borderColor: '#E86831',
+      borderWidth: 1
+    };
+
+    var dataSecond = {
+      label: "",
+      data: [2, 2.5, 3, 3, 3.5, 4, 3, 2.5, 2.5, 1.5, 2, 2.5, 2, 1.5, 1, 0.5],
+      borderColor: '#222',
+      borderWidth: 1
+    };
+
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [
+          'Nov1',
+          'Nov3',
+          'Nov5',
+          'Nov7',
+          'Nov9',
+          'Nov11',
+          'Nov13',
+          'Nov15',
+          'Nov17',
+          'Nov19',
+          'Nov21',
+          'Nov23',
+          'Nov25',
+          'Nov27',
+          'Nov29',
+          'Nov30'
+        ],
+        datasets: [
+          dataFirst, dataSecond, {
+       
+          }]
+      },
+      options: {
+        tooltips: {
+          yAlign: 'top'
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+
+        tension: 0.3,
+        scales: {
+          x: {
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+
+    const ctx2 = document.getElementById('rain');
+
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Jan',
+          'Feb',
+          'Mar',
+          'Apr',
+          'May',
+          'Jun',
+          'Jul',
+          'Aug',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dec'
+        ],
+        datasets: [{
+          label: 'weather',
+          data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+          borderWidth: 1,
+          backgroundColor: [
+            '#EDF1F3',
+            '#E86831',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+          ]
+        }]
+      },
+      options: {
+        tooltips: {
+          yAlign: 'top'
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false,
+
+            }
+          },
+          y: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+
+
+
+    const ctx3 = document.getElementById('cloudy');
+
+    new Chart(ctx3, {
+
+      type: 'bar',
+      data: {
+        labels: [
+          '1am',
+          '2am',
+          '3am',
+          '4am',
+          '5am',
+          '6am',
+          '7am',
+          '8am',
+          '9am',
+          '10am',
+          '11am',
+          '12am',
+          '1pm',
+          '2pm',
+          '3pm',
+          '4pm',
+          '5pm',
+          '6pm',
+          '7pm',
+          '8pm',
+          '9pm',
+          '10pm',
+          '11pm',
+          '12pm'
+        ],
+        datasets: [{
+          label: 'weather',
+          data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+          borderWidth: 1,
+          backgroundColor: [
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#E86831',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+
+          ]
+        }]
+      },
+      options: {
+        tooltips: {
+          yAlign: 'top'
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+
+
+    const ctx4 = document.getElementById('skies');
+
+    new Chart(ctx4, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Jan',
+          'Feb',
+          'Mar',
+          'Apr',
+          'May',
+          'Jun',
+          'Jul',
+          'Aug',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dec'
+        ],
+        datasets: [{
+          label: 'weather',
+          data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+          borderWidth: 1,
+          backgroundColor: [
+            '#EDF1F3',
+            '#E86831',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+          ]
+        }]
+      },
+      options: {
+        tooltips: {
+          yAlign: 'top'
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false,
+
+            }
+          },
+          y: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+
+
+    const ctx5 = document.getElementById('daylight');
+
+    new Chart(ctx5, {
+      type: 'line',
+      data: {
+        labels: [
+          'Nov1',
+          'Nov3',
+          'Nov5',
+          'Nov7',
+          'Nov9',
+          'Nov11',
+          'Nov13',
+          'Nov15',
+          'Nov17',
+          'Nov19',
+          'Nov21',
+          'Nov23',
+          'Nov25',
+          'Nov27',
+          'Nov29',
+          'Nov30'
+        ],
+        datasets: [{
+          label: 'weather',
+          data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+          borderWidth: 1,
+          borderColor: '#E86831',
+        }]
+      },
+      options: {
+        tooltips: {
+          yAlign: 'top'
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+
+    const ctx7 = document.getElementById('humidity');
+
+    new Chart(ctx7, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Jan',
+          'Feb',
+          'Mar',
+          'Apr',
+          'May',
+          'Jun',
+          'Jul',
+          'Aug',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dec'
+        ],
+        datasets: [{
+          label: 'weather',
+          data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+          borderWidth: 1,
+          backgroundColor: [
+            '#EDF1F3',
+            '#E86831',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+            '#EDF1F3',
+          ]
+        }]
+      },
+      options: {
+        tooltips: {
+          yAlign: 'top'
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false,
+
+            }
+          },
+          y: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+
+
+
+
+    const ctx8 = document.getElementById('windy');
+
+    new Chart(ctx8, {
+      type: 'line',
+      data: {
+        labels: [
+          'Nov1',
+          'Nov3',
+          'Nov5',
+          'Nov7',
+          'Nov9',
+          'Nov11',
+          'Nov13',
+          'Nov15',
+          'Nov17',
+          'Nov19',
+          'Nov21',
+          'Nov23',
+          'Nov25',
+          'Nov27',
+          'Nov29',
+          'Nov30'
+        ],
+        datasets: [{
+          label: 'weather',
+          data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        tooltips: {
+          yAlign: 'top'
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>

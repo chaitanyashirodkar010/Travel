@@ -3326,4 +3326,50 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 4px;
   background: var(--shade, #EDF1F3);
   margin-left: 8px;
+}
+
+.weather-points {
+  border-radius: 16px;
+  border: 1px solid #F7F7F7;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+  color: var(--400, #B0B0B0);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 16px;
+}
+.weather-points > div {
+  margin-bottom: 13px;
+}
+
+.weather-small-title {
+  color: var(--900, #222);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 44px;
+  margin-bottom: 36px;
+}
+
+.weather-para {
+  color: var(--500, #707070);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.weather-small-title-grey {
+  color: var(--500, #707070);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+canvas {
+  height: 270px;
 }/*# sourceMappingURL=style.css.map */
