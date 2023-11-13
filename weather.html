@@ -25,7 +25,228 @@
 
 <body>
   <div class="weather-page py-5">
+
+
+
+
+
+
+
+
+
     <div class="container">
+
+      <div class="temp-widget">
+        <img src="images/sun clouds.svg" alt="">
+        <div class="tempa">
+          91°F
+        </div>
+
+        <div class="high">
+          <div>
+            High : 91°F
+          </div>
+          <div> Low : 61°F</div>
+
+        </div>
+      </div>
+
+      <div class="row my-5">
+        <div class="col-md-3">
+          <div class="humidity widget">
+            <div class="d-flex justify-content-between">
+              <h6>
+                Humidity
+              </h6>
+              <img src="images/hum.svg" alt="">
+            </div>
+            <div class="value">
+              79% <span>
+                bad
+              </span>
+            </div>
+            <div class="row d-flex mt-3">
+
+              <div class="progressBar col-md-4">
+                <div class="proglab">
+                  Good
+                </div>
+                <div class="progressBarcontainer">
+
+                  <div class="progressBarValue ht "></div>
+                </div>
+              </div>
+
+              <div class="progressBar col-md-4">
+                <div class="proglab">
+                  Normal
+                </div>
+                <div class="progressBarcontainer">
+
+                  <div class="progressBarValue cs"></div>
+                </div>
+              </div>
+
+              <div class="progressBar col-md-4">
+                <div class="proglab">
+                  Bad
+                </div>
+                <div class="progressBarcontainer">
+
+                  <div class="progressBarValue js"></div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="humidity widget">
+            <div class="d-flex justify-content-between">
+              <h6>
+                Feels like
+              </h6>
+              <img src="images/Frame 1244832727 (1).svg" alt="">
+            </div>
+            <div class="value">
+              30°
+            </div>
+            <div class="row d-flex">
+              <div class="proglab d-flex justify-content-between mt-3">
+                <span>
+                  0%
+                </span>
+                <span>
+                  25%
+                </span>
+                <span>
+                  50%
+                </span>
+              </div>
+              <div class="progressBar">
+
+                <div class="progressBarcontainer">
+
+                  <div class="progressBarValue ht "></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="humidity widget">
+            <div class="d-flex justify-content-between">
+              <h6>
+                Chances of rain
+              </h6>
+              <img src="images/Frame 1244832727 (2).svg" alt="">
+            </div>
+            <div class="value">
+              30°
+            </div>
+            <div class="row d-flex">
+              <div class="proglab d-flex justify-content-between mt-3">
+                <span>0%</span>
+                <span>25%</span>
+                <span>50%</span>
+                <span>75%</span>
+                <span>100%</span>
+              </div>
+              <div class="progressBar">
+
+                <div class="progressBarcontainer">
+
+                  <div class="progressBarValue ht "></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="humidity widget">
+            <div class="d-flex justify-content-between">
+              <h6>
+                Chances of rain
+              </h6>
+              <img src="images/Frame 1244832727 (3).svg" alt="">
+            </div>
+            <div class="value">
+              30°
+            </div>
+            <div class="row d-flex">
+              <div class="proglab d-flex justify-content-between mt-3">
+                <span>0</span>
+                <span>10</span>
+                <span>20</span>
+                <span>40</span>
+                <span>50</span>
+                <span>60</span>
+                <span>70</span>
+                <span>80</span>
+                <span>90</span>
+              </div>
+              <div class="progressBar">
+
+                <div class="progressBarcontainer">
+
+                  <div class="progressBarValue ht "></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- <div class="container">
+        <div class="progress-container">
+          <ul id="progressbar">
+            <li class="active" id="step1">
+              <strong>0%</strong>
+            </li>
+            <li id="step2">
+              <strong>25%</strong>
+            </li>
+            <li id="step3">
+              <strong>50%</strong>
+            </li>
+          </ul>
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="step-container">
+          <fieldset>
+            <h2>Welcome To GFG Step 1</h2>
+            <input type="button" name="next-step" class="next-step" value="Next Step" />
+          </fieldset>
+          <fieldset>
+            <h2>Welcome To GFG Step 2</h2>
+            <input type="button" name="next-step" class="next-step" value="Next Step" />
+            <input type="button" name="previous-step" class="previous-step" value="Previous Step" />
+          </fieldset>
+          <fieldset>
+            <h2>Welcome To GFG Step 3</h2>
+            <input type="button" name="next-step" class="next-step" value="Final Step" />
+            <input type="button" name="previous-step" class="previous-step" value="Previous Step" />
+          </fieldset>
+          <fieldset>
+            <div class="finish">
+              <h2 class="text">
+                <strong>FINISHED</strong>
+              </h2>
+            </div>
+            <input type="button" name="previous-step" class="previous-step" value="Previous Step" />
+          </fieldset>
+        </div>
+      </div> -->
+
+
+
 
       <div class="weather-points">
         <div>1. What is the average temperature</div>
@@ -532,7 +753,7 @@
         ],
         datasets: [
           dataFirst, dataSecond, {
-       
+
           }]
       },
       options: {
@@ -926,6 +1147,92 @@
       }
     });
 
+    var skills = {
+      ht: 90,
+      cs: 80,
+      js: 60,
+      rc: 50,
+      jq: 60
+    };
+
+    $.each(skills, function (key, value) {
+      var skillbar = $("." + key);
+
+      skillbar.animate(
+        {
+          width: value + "%"
+        },
+        3000,
+        function () {
+
+        }
+      );
+    });
+
+
+    // script.js 
+    document.addEventListener("DOMContentLoaded", function () {
+      const progressListItems =
+        document.querySelectorAll("#progressbar li");
+      const progressBar =
+        document.querySelector(".progress-bar");
+      let currentStep = 0;
+
+      function updateProgress() {
+        const percent =
+          (currentStep / (progressListItems.length - 1)) * 100;
+        progressBar.style.width = percent + "%";
+
+        progressListItems.forEach((item, index) => {
+          if (index === currentStep) {
+            item.classList.add("active");
+          } else {
+            item.classList.remove("active");
+          }
+        });
+      }
+
+      function showStep(stepIndex) {
+        const steps =
+          document.querySelectorAll(".step-container fieldset");
+        steps.forEach((step, index) => {
+          if (index === stepIndex) {
+            step.style.display = "block";
+          } else {
+            step.style.display = "none";
+          }
+        });
+      }
+
+      function nextStep() {
+        if (currentStep < progressListItems.length - 1) {
+          currentStep++;
+          showStep(currentStep);
+          updateProgress();
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 0) {
+          currentStep--;
+          showStep(currentStep);
+          updateProgress();
+        }
+      }
+
+      const nextStepButtons =
+        document.querySelectorAll(".next-step");
+      const prevStepButtons =
+        document.querySelectorAll(".previous-step");
+
+      nextStepButtons.forEach((button) => {
+        button.addEventListener("click", nextStep);
+      });
+
+      prevStepButtons.forEach((button) => {
+        button.addEventListener("click", prevStep);
+      });
+    });
 
 
   </script>
